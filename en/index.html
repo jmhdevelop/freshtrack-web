@@ -8,6 +8,13 @@
 <link rel="icon" href="../img/icon.png">
 <link rel="alternate" hreflang="es" href="https://jmhdevelop.github.io/freshtrack-web/">
 <link rel="alternate" hreflang="en" href="https://jmhdevelop.github.io/freshtrack-web/en/">
+<script>
+  (function () {
+    try {
+      if (localStorage.getItem("ft-lang") === "es") location.replace("../");
+    } catch (e) {}
+  })();
+</script>
 <style>
   :root {
     --brand: #0D9E78;
@@ -185,7 +192,7 @@
     <div class="nav-links">
       <a href="#features">Features</a>
       <a href="#privacy">Privacy</a>
-      <a class="lang" href="../">ES</a>
+      <a class="lang" href="../" onclick="try{localStorage.setItem('ft-lang','es')}catch(e){}">ES</a>
       <a class="pill" href="#hero">Coming soon</a>
     </div>
   </div>
@@ -201,7 +208,7 @@
         <span class="badge soft">iPhone & iPad · Free</span>
       </div>
     </div>
-    <div class="phone float reveal"><span class="parallax"><img src="../img/products.png" alt="FreshTrack: products grouped by expiry urgency"></span></div>
+    <div class="phone float reveal"><span class="parallax"><img src="../img/en-products.png" alt="FreshTrack: products grouped by expiry urgency"></span></div>
   </div>
 </header>
 
@@ -222,7 +229,7 @@
           <li>Multipacks detected (“24 × 330 ml” → 24 units)</li>
         </ul>
       </div>
-      <div class="phone reveal"><span class="parallax"><img src="../img/add.png" alt="Add product sheet: scan or manual"></span></div>
+      <div class="phone reveal"><span class="parallax"><img src="../img/en-add.png" alt="Add product sheet: scan or manual"></span></div>
     </div>
 
     <div class="row flip">
@@ -236,7 +243,7 @@
           <li>Nothing leaves your device</li>
         </ul>
       </div>
-      <div class="phone reveal"><span class="parallax"><img src="../img/detail.png" alt="Product detail with data read by on-device AI"></span></div>
+      <div class="phone reveal"><span class="parallax"><img src="../img/en-detail.png" alt="Product detail with data read by on-device AI"></span></div>
     </div>
 
     <div class="row">
@@ -250,7 +257,7 @@
           <li>With an AI-generated photo of the dish</li>
         </ul>
       </div>
-      <div class="phone reveal"><span class="parallax"><img src="../img/tuppers.png" alt="Containers with dish image and expiry"></span></div>
+      <div class="phone reveal"><span class="parallax"><img src="../img/en-tuppers.png" alt="Containers with dish image and expiry"></span></div>
     </div>
 
     <div class="row flip">
@@ -264,7 +271,7 @@
           <li>Custom accent color and app icon per home</li>
         </ul>
       </div>
-      <div class="phone reveal"><span class="parallax"><img src="../img/casas.png" alt="FreshTrack homes manager"></span></div>
+      <div class="phone reveal"><span class="parallax"><img src="../img/en-casas.png" alt="FreshTrack homes manager"></span></div>
     </div>
 
     <div class="row">
@@ -278,7 +285,7 @@
           <li>Rescan after shopping and the product re-adds itself</li>
         </ul>
       </div>
-      <div class="phone reveal"><span class="parallax"><img src="../img/compra.png" alt="FreshTrack shopping list"></span></div>
+      <div class="phone reveal"><span class="parallax"><img src="../img/en-compra.png" alt="FreshTrack shopping list"></span></div>
     </div>
 
     <div class="strip">

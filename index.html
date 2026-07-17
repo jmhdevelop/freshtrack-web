@@ -8,6 +8,18 @@
 <link rel="icon" href="img/icon.png">
 <link rel="alternate" hreflang="es" href="https://jmhdevelop.github.io/freshtrack-web/">
 <link rel="alternate" hreflang="en" href="https://jmhdevelop.github.io/freshtrack-web/en/">
+<script>
+  // Idioma del navegador manda la primera vez; el selector ES/EN lo fija.
+  (function () {
+    try {
+      var pref = localStorage.getItem("ft-lang");
+      var nav = (navigator.language || "es").toLowerCase();
+      if (pref === "en" || (!pref && !nav.startsWith("es"))) {
+        location.replace("en/");
+      }
+    } catch (e) {}
+  })();
+</script>
 <style>
   :root {
     --brand: #0D9E78;
@@ -185,7 +197,7 @@
     <div class="nav-links">
       <a href="#funciones">Funciones</a>
       <a href="#privacidad">Privacidad</a>
-      <a class="lang" href="en/">EN</a>
+      <a class="lang" href="en/" onclick="try{localStorage.setItem('ft-lang','en')}catch(e){}">EN</a>
       <a class="pill" href="#hero">Próximamente</a>
     </div>
   </div>
