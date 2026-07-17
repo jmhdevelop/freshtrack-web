@@ -43,7 +43,7 @@
     backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
     background: rgba(245, 248, 246, .8); border-bottom: 1px solid var(--border);
   }
-  .nav-inner { display: flex; align-items: center; gap: 10px; padding: 12px 0; }
+  .nav-inner { display: flex; align-items: center; gap: 10px; padding-block: 12px; }
   .nav-inner img { width: 32px; height: 32px; border-radius: 8px; }
   .nav-inner .name { font-weight: 700; font-size: 17px; }
   .nav-links { margin-left: auto; display: flex; gap: 22px; align-items: center; }
@@ -57,7 +57,7 @@
   @media (max-width: 620px) {
     .nav-links a:not(.pill):not(.lang) { display: none; }
     .nav-links { gap: 14px; }
-    .nav-inner { padding: 10px 0; }
+    .nav-inner { padding-block: 10px; }
     .nav-inner .name { font-size: 16px; }
     .pill { padding: 6px 13px; font-size: 13.5px; }
   }
