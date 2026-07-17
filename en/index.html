@@ -114,9 +114,10 @@
   }
   @media (max-width: 820px) {
     .row { grid-template-columns: 1fr; gap: 28px; }
-    /* En columna: siempre texto primero e imagen después, sin alternar. */
-    .row.flip .text { order: 0; }
-    .row .parallax { order: 1; }
+    /* En columna: siempre texto primero e imagen después, sin alternar.
+       (div.* para ganar a la regla base de .row.flip, que va después). */
+    div.row.flip .text { order: 0; }
+    div.row .parallax { order: 1; }
   }
   .row.flip .text { order: 2; }
   @media (max-width: 820px) { .row.flip .text { order: 2; } }
