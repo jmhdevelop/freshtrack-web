@@ -29,7 +29,7 @@
     --radius: 20px;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
     background: var(--bg); color: var(--text); line-height: 1.65;
@@ -172,6 +172,15 @@
   .parallax { will-change: transform; }
   nav { transition: box-shadow .3s ease; }
   nav.scrolled { box-shadow: 0 10px 30px rgba(18,42,33,.1); }
+  @media (max-width: 820px) {
+    header { padding: 56px 0 28px; }
+    section { padding: 48px 0 8px; }
+    .row { padding: 34px 0; }
+    .row .phone { width: min(240px, 66vw); }
+    .phone { width: min(250px, 68vw); }
+    .row .text.reveal, .row.flip .text.reveal { transform: translateY(24px); }
+    .row .phone.reveal { transform: translateY(28px); }
+  }
   @media (prefers-reduced-motion: reduce) {
     .reveal, .row .text.reveal, .row .phone.reveal { opacity: 1; transform: none; transition: none; }
     .float { animation: none; }
@@ -379,7 +388,8 @@
   });
 
   // Parallax sutil de los teléfonos + sombra de la nav + barra de progreso.
-  const phones = [...document.querySelectorAll(".parallax")];
+  const fine = matchMedia("(pointer: fine) and (min-width: 821px)").matches;
+  const phones = fine ? [...document.querySelectorAll(".parallax")] : [];
   const nav = document.querySelector("nav");
   let ticking = false;
   const onScroll = () => {
