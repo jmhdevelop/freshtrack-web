@@ -175,7 +175,7 @@
   .row .phone.reveal { transform: translateY(40px) scale(.94) rotate(1.5deg); }
   .row.flip .phone.reveal { transform: translateY(40px) scale(.94) rotate(-1.5deg); }
   .reveal.visible { opacity: 1; transform: none; }
-  .phone .parallax { display: block; will-change: transform; }
+  .parallax { will-change: transform; }
   nav { transition: box-shadow .3s ease; }
   nav.scrolled { box-shadow: 0 10px 30px rgba(18,42,33,.1); }
   @media (prefers-reduced-motion: reduce) {
@@ -213,7 +213,7 @@
         <span class="badge soft">iPhone y iPad · Gratis</span>
       </div>
     </div>
-    <div class="phone float reveal"><span class="parallax"><img src="img/products.png" alt="FreshTrack: productos agrupados por urgencia de caducidad"></span></div>
+    <div class="parallax"><div class="phone float reveal"><img src="img/products.png" alt="FreshTrack: productos agrupados por urgencia de caducidad"></div></div>
   </div>
 </header>
 
@@ -234,7 +234,7 @@
           <li>Multipacks detectados («24 × 330 ml» → 24 unidades)</li>
         </ul>
       </div>
-      <div class="phone reveal"><span class="parallax"><img src="img/add.png" alt="Hoja de añadir producto: escanear o a mano"></span></div>
+      <div class="parallax"><div class="phone reveal"><img src="img/add.png" alt="Hoja de añadir producto: escanear o a mano"></div></div>
     </div>
 
     <div class="row flip">
@@ -248,7 +248,7 @@
           <li>Nada sale de tu dispositivo</li>
         </ul>
       </div>
-      <div class="phone reveal"><span class="parallax"><img src="img/detail.png" alt="Detalle de producto con datos leídos por IA local"></span></div>
+      <div class="parallax"><div class="phone reveal"><img src="img/detail.png" alt="Detalle de producto con datos leídos por IA local"></div></div>
     </div>
 
     <div class="row">
@@ -262,7 +262,7 @@
           <li>Con su foto del plato, generada por IA</li>
         </ul>
       </div>
-      <div class="phone reveal"><span class="parallax"><img src="img/tuppers.png" alt="Tuppers con imagen del plato y caducidad"></span></div>
+      <div class="parallax"><div class="phone reveal"><img src="img/tuppers.png" alt="Tuppers con imagen del plato y caducidad"></div></div>
     </div>
 
     <div class="row flip">
@@ -276,21 +276,35 @@
           <li>Color de acento e icono propios por casa</li>
         </ul>
       </div>
-      <div class="phone reveal"><span class="parallax"><img src="img/casas.png" alt="Gestor de casas de FreshTrack"></span></div>
+      <div class="parallax"><div class="phone reveal"><img src="img/casas.png" alt="Gestor de casas de FreshTrack"></div></div>
     </div>
 
     <div class="row">
       <div class="text reveal">
-        <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 10a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></div>
-        <h3>Avisos con cabeza</h3>
-        <p>Un aviso al día con lo que está a punto de caducar, agrupado y sin spam. Y el ciclo completo de la comida resuelto.</p>
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 4h2l2.5 12h11L21 8H6"/></svg></div>
+        <h3>La compra, en círculo</h3>
+        <p>Lo que se consume pasa al historial, y del historial a la lista de la compra con un gesto. Al volver del súper, reescanea y el producto se re-añade solo con todos sus datos.</p>
         <ul>
-          <li>Grupos por urgencia: caducado, hoy, esta semana</li>
-          <li>Historial de consumidos → lista de la compra en un gesto</li>
-          <li>Reescanea al volver del súper y el producto se re-añade solo</li>
+          <li>Marca comprado con un toque, con nota por artículo</li>
+          <li>Añade desde el historial o escríbelo directamente</li>
+          <li>Cada casa con su propia lista, sincronizada con iCloud</li>
         </ul>
       </div>
-      <div class="phone reveal"><span class="parallax"><img src="img/compra.png" alt="Lista de la compra de FreshTrack"></span></div>
+      <div class="parallax"><div class="phone reveal"><img src="img/compra.png" alt="Lista de la compra de FreshTrack"></div></div>
+    </div>
+
+    <div class="row flip">
+      <div class="text reveal">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 10a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></div>
+        <h3>Avisos con cabeza</h3>
+        <p>Un aviso al día con lo que está a punto de caducar, agrupado y sin spam. Tú eliges con cuánta antelación.</p>
+        <ul>
+          <li>Un aviso diario por sección: productos y tuppers</li>
+          <li>Grupos por urgencia: caducado, hoy, esta semana</li>
+          <li>Toca el aviso y se abre la pestaña que toca</li>
+        </ul>
+      </div>
+      <div class="parallax"><div class="phone reveal"><img src="img/settings.png" alt="Ajustes de FreshTrack con la configuración de avisos"></div></div>
     </div>
 
     <div class="strip">
@@ -371,7 +385,7 @@
   });
 
   // Parallax sutil de los teléfonos + sombra de la nav + barra de progreso.
-  const phones = [...document.querySelectorAll(".phone .parallax")];
+  const phones = [...document.querySelectorAll(".parallax")];
   const nav = document.querySelector("nav");
   let ticking = false;
   const onScroll = () => {
