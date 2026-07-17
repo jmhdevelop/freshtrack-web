@@ -59,7 +59,13 @@
     padding: 7px 14px; border-radius: 999px;
   }
   .lang { font-weight: 700; }
-  @media (max-width: 620px) { .nav-links a:not(.pill):not(.lang) { display: none; } }
+  @media (max-width: 620px) {
+    .nav-links a:not(.pill):not(.lang) { display: none; }
+    .nav-links { gap: 14px; }
+    .nav-inner { padding: 10px 0; }
+    .nav-inner .name { font-size: 16px; }
+    .pill { padding: 6px 13px; font-size: 13.5px; }
+  }
 
   /* ---- Hero ---- */
   header { position: relative; padding: 84px 0 40px; overflow: hidden; }
@@ -88,11 +94,11 @@
   .badge.soft { background: var(--card); border: 1px solid var(--border); color: var(--text); box-shadow: var(--shadow); }
 
   .phone {
-    border-radius: 46px; border: 1px solid rgba(18,42,33,.14); background: #101311;
-    padding: 12px; box-shadow: 0 30px 70px rgba(18, 42, 33, .22);
+    border-radius: 42px; border: 1px solid rgba(18,42,33,.14); background: #101311;
+    padding: 7px; box-shadow: 0 30px 70px rgba(18, 42, 33, .22);
     width: min(300px, 78vw); margin: 0 auto;
   }
-  .phone img { display: block; width: 100%; border-radius: 34px; }
+  .phone img { display: block; width: 100%; border-radius: 36px; }
   .float { animation: float 5.5s ease-in-out infinite; }
   @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
 
