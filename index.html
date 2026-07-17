@@ -148,16 +148,35 @@
   footer a { color: var(--muted); }
 
   /* ---- Animaciones de scroll ---- */
-  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+  #progress {
+    position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+    background: linear-gradient(90deg, var(--brand), #34b48d);
+    z-index: 60; border-radius: 0 3px 3px 0;
+  }
+  .reveal {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1);
+    transition-delay: var(--d, 0s);
+  }
+  .row .text.reveal { transform: translateX(-34px); }
+  .row.flip .text.reveal { transform: translateX(34px); }
+  .row .phone.reveal { transform: translateY(40px) scale(.94) rotate(1.5deg); }
+  .row.flip .phone.reveal { transform: translateY(40px) scale(.94) rotate(-1.5deg); }
   .reveal.visible { opacity: 1; transform: none; }
+  .phone .parallax { display: block; will-change: transform; }
+  nav { transition: box-shadow .3s ease; }
+  nav.scrolled { box-shadow: 0 10px 30px rgba(18,42,33,.1); }
   @media (prefers-reduced-motion: reduce) {
-    .reveal { opacity: 1; transform: none; transition: none; }
+    .reveal, .row .text.reveal, .row .phone.reveal { opacity: 1; transform: none; transition: none; }
     .float { animation: none; }
     html { scroll-behavior: auto; }
+    #progress { display: none; }
   }
 </style>
 </head>
 <body>
+
+<div id="progress"></div>
 
 <nav>
   <div class="wrap nav-inner">
@@ -182,7 +201,7 @@
         <span class="badge soft">iPhone y iPad · Gratis</span>
       </div>
     </div>
-    <div class="phone float reveal"><img src="img/products.png" alt="FreshTrack: productos agrupados por urgencia de caducidad"></div>
+    <div class="phone float reveal"><span class="parallax"><img src="img/products.png" alt="FreshTrack: productos agrupados por urgencia de caducidad"></span></div>
   </div>
 </header>
 
@@ -203,7 +222,7 @@
           <li>Multipacks detectados («24 × 330 ml» → 24 unidades)</li>
         </ul>
       </div>
-      <div class="phone reveal"><img src="img/add.png" alt="Hoja de añadir producto: escanear o a mano"></div>
+      <div class="phone reveal"><span class="parallax"><img src="img/add.png" alt="Hoja de añadir producto: escanear o a mano"></span></div>
     </div>
 
     <div class="row flip">
@@ -217,7 +236,7 @@
           <li>Nada sale de tu dispositivo</li>
         </ul>
       </div>
-      <div class="phone reveal"><img src="img/detail.png" alt="Detalle de producto con datos leídos por IA local"></div>
+      <div class="phone reveal"><span class="parallax"><img src="img/detail.png" alt="Detalle de producto con datos leídos por IA local"></span></div>
     </div>
 
     <div class="row">
@@ -231,7 +250,7 @@
           <li>Con su foto del plato, generada por IA</li>
         </ul>
       </div>
-      <div class="phone reveal"><img src="img/tuppers.png" alt="Tuppers con imagen del plato y caducidad"></div>
+      <div class="phone reveal"><span class="parallax"><img src="img/tuppers.png" alt="Tuppers con imagen del plato y caducidad"></span></div>
     </div>
 
     <div class="row flip">
@@ -245,7 +264,7 @@
           <li>Color de acento e icono propios por casa</li>
         </ul>
       </div>
-      <div class="phone reveal"><img src="img/casas.png" alt="Gestor de casas de FreshTrack"></div>
+      <div class="phone reveal"><span class="parallax"><img src="img/casas.png" alt="Gestor de casas de FreshTrack"></span></div>
     </div>
 
     <div class="row">
@@ -259,13 +278,13 @@
           <li>Reescanea al volver del súper y el producto se re-añade solo</li>
         </ul>
       </div>
-      <div class="phone reveal"><img src="img/dark.png" alt="FreshTrack en modo oscuro"></div>
+      <div class="phone reveal"><span class="parallax"><img src="img/compra.png" alt="Lista de la compra de FreshTrack"></span></div>
     </div>
 
     <div class="strip">
       <div class="stat reveal"><div class="big">0</div><div class="label">datos recopilados</div></div>
-      <div class="stat reveal"><div class="big">100 %</div><div class="label">IA en tu dispositivo</div></div>
-      <div class="stat reveal"><div class="big">22</div><div class="label">tipos de producto con caducidad estándar</div></div>
+      <div class="stat reveal"><div class="big" data-count="100" data-suffix=" %">100 %</div><div class="label">IA en tu dispositivo</div></div>
+      <div class="stat reveal"><div class="big" data-count="22">22</div><div class="label">tipos de producto con caducidad estándar</div></div>
       <div class="stat reveal"><div class="big">∞</div><div class="label">casas, tuppers y productos</div></div>
     </div>
   </div>
@@ -293,6 +312,17 @@
 </footer>
 
 <script>
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Aparición escalonada por bloque.
+  document.querySelectorAll(".row, .hero, .strip").forEach(group => {
+    group.querySelectorAll(".reveal").forEach((el, i) => el.style.setProperty("--d", (i * .12) + "s"));
+    group.querySelectorAll("li").forEach((li, i) => {
+      li.classList.add("reveal");
+      li.style.setProperty("--d", (.25 + i * .1) + "s");
+    });
+  });
+
   const observer = new IntersectionObserver(entries => {
     for (const entry of entries) {
       if (entry.isIntersecting) {
@@ -302,6 +332,53 @@
     }
   }, { threshold: 0.12 });
   document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+  // Contadores de la cinta de stats.
+  const countUp = el => {
+    const target = parseInt(el.dataset.count, 10);
+    const t0 = performance.now();
+    const step = now => {
+      const p = Math.min((now - t0) / 900, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + (el.dataset.suffix || "");
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const statObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        countUp(entry.target);
+        statObserver.unobserve(entry.target);
+      }
+    }
+  }, { threshold: 0.6 });
+  document.querySelectorAll(".big[data-count]").forEach(el => {
+    if (reduced) { el.textContent = el.dataset.count + (el.dataset.suffix || ""); return; }
+    el.textContent = "0" + (el.dataset.suffix || "");
+    statObserver.observe(el);
+  });
+
+  // Parallax sutil de los teléfonos + sombra de la nav + barra de progreso.
+  const phones = [...document.querySelectorAll(".phone .parallax")];
+  const nav = document.querySelector("nav");
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking || reduced) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const mid = innerHeight / 2;
+      for (const el of phones) {
+        const r = el.getBoundingClientRect();
+        el.style.transform = `translateY(${(r.top + r.height / 2 - mid) * -0.05}px)`;
+      }
+      nav.classList.toggle("scrolled", scrollY > 8);
+      document.getElementById("progress").style.width =
+        (scrollY / (document.body.scrollHeight - innerHeight) * 100) + "%";
+      ticking = false;
+    });
+  };
+  addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 </script>
 
 </body>
