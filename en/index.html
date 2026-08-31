@@ -11,7 +11,8 @@
 <link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/">
 <link rel="canonical" href="https://freshtrack.softapp.tech/en/">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#f5f8f6">
+<meta name="theme-color" content="#f5f8f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c110f" media="(prefers-color-scheme: dark)">
 <link rel="apple-touch-icon" href="../img/icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="FreshTrack">
@@ -68,7 +69,7 @@
     --card: #ffffff;
     --border: rgba(18, 42, 33, .08);
     --text: #14231d;
-    --muted: rgba(20, 35, 29, .58);
+    --muted: rgba(20, 35, 29, .66);
     --shadow: 0 8px 28px rgba(18, 42, 33, .08);
     --radius: 20px;
     --nav-h: 56px;
@@ -160,7 +161,7 @@
     padding: 7px; box-shadow: 0 30px 70px rgba(18, 42, 33, .22);
     width: min(300px, 78vw); margin: 0 auto;
   }
-  .phone img { display: block; width: 100%; border-radius: 36px; }
+  .phone img { display: block; width: 100%; height: auto; border-radius: 36px; }
   .float { animation: float 5.5s ease-in-out infinite; }
   @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
 
@@ -362,7 +363,7 @@
 
 <nav>
   <div class="wrap nav-inner">
-    <img src="../img/icon.png" alt="">
+    <img src="../img/icon.png" alt="" width="256" height="256">
     <span class="name">FreshTrack</span>
     <div class="nav-links">
       <a href="#features">Features</a>
@@ -384,7 +385,7 @@
         <span class="badge soft">iPhone & iPad · Free forever</span>
       </div>
     </div>
-    <div class="parallax"><div class="phone float reveal"><img src="../img/en-products.jpg" data-light="../img/en-products.jpg" data-dark="../img/en-products-dark.jpg" alt="FreshTrack: products grouped by expiry urgency"></div></div>
+    <div class="parallax"><div class="phone float reveal"><img fetchpriority="high" src="../img/en-products.jpg" data-light="../img/en-products.jpg" data-dark="../img/en-products-dark.jpg" alt="FreshTrack: products grouped by expiry urgency" width="496" height="1080"></div></div>
   </div>
 </header>
 
@@ -403,12 +404,12 @@
           <div class="device" role="button" tabindex="0" aria-label="Everything it does for you">
             <div class="island"></div>
             <div class="screens">
-              <img class="screen is-active" src="../img/en-add.jpg" data-light="../img/en-add.jpg" data-dark="../img/en-add-dark.jpg" alt="Add product sheet: scan or manual" data-tap="18%,95%">
-              <img class="screen" loading="lazy" src="../img/en-detail.jpg" data-light="../img/en-detail.jpg" data-dark="../img/en-detail-dark.jpg" alt="Product detail with data read by on-device AI" data-tap="18%,95%">
-              <img class="screen" loading="lazy" src="../img/en-tuppers.jpg" data-light="../img/en-tuppers.jpg" data-dark="../img/en-tuppers-dark.jpg" alt="Containers with dish image and expiry" data-tap="39%,95%">
-              <img class="screen" loading="lazy" src="../img/en-casas.jpg" data-light="../img/en-casas.jpg" data-dark="../img/en-casas-dark.jpg" alt="FreshTrack homes manager" data-tap="82%,95%">
-              <img class="screen" loading="lazy" src="../img/en-compra.jpg" data-light="../img/en-compra.jpg" data-dark="../img/en-compra-dark.jpg" alt="FreshTrack shopping list" data-tap="61%,95%">
-              <img class="screen" loading="lazy" src="../img/en-settings.jpg" data-light="../img/en-settings.jpg" data-dark="../img/en-settings-dark.jpg" alt="FreshTrack settings with alert configuration" data-tap="82%,95%">
+              <img class="screen is-active" src="../img/en-add.jpg" data-light="../img/en-add.jpg" data-dark="../img/en-add-dark.jpg" alt="Add product sheet: scan or manual" data-tap="18%,95%" width="496" height="1080">
+              <img class="screen" loading="lazy" src="../img/en-detail.jpg" data-light="../img/en-detail.jpg" data-dark="../img/en-detail-dark.jpg" alt="Product detail with data read by on-device AI" data-tap="18%,95%" width="496" height="1080">
+              <img class="screen" loading="lazy" src="../img/en-tuppers.jpg" data-light="../img/en-tuppers.jpg" data-dark="../img/en-tuppers-dark.jpg" alt="Containers with dish image and expiry" data-tap="39%,95%" width="496" height="1080">
+              <img class="screen" loading="lazy" src="../img/en-casas.jpg" data-light="../img/en-casas.jpg" data-dark="../img/en-casas-dark.jpg" alt="FreshTrack homes manager" data-tap="82%,95%" width="496" height="1080">
+              <img class="screen" loading="lazy" src="../img/en-compra.jpg" data-light="../img/en-compra.jpg" data-dark="../img/en-compra-dark.jpg" alt="FreshTrack shopping list" data-tap="61%,95%" width="496" height="1080">
+              <img class="screen" loading="lazy" src="../img/en-settings.jpg" data-light="../img/en-settings.jpg" data-dark="../img/en-settings-dark.jpg" alt="FreshTrack settings with alert configuration" data-tap="82%,95%" width="496" height="1080">
               <span class="tap"></span>
               <span class="glare"></span>
             </div>
@@ -418,7 +419,7 @@
 
       <div class="panels">
       <article class="panel is-active">
-        <div class="panel-shot"><div class="phone"><img loading="lazy" src="../img/en-add.jpg" data-light="../img/en-add.jpg" data-dark="../img/en-add-dark.jpg" alt="Add product sheet: scan or manual"></div></div>
+        <div class="panel-shot"><div class="phone"><img loading="lazy" src="../img/en-add.jpg" data-light="../img/en-add.jpg" data-dark="../img/en-add-dark.jpg" alt="Add product sheet: scan or manual" width="496" height="1080"></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M4 12h16"/></svg></div>
         <h3>Adding is scanning</h3>
         <p>Point at the barcode and the product sheet fills itself in with the online lookup. No typing.</p>
@@ -429,7 +430,7 @@
         </ul>
       </article>
       <article class="panel">
-        <div class="panel-shot"><div class="phone"><img loading="lazy" src="../img/en-detail.jpg" data-light="../img/en-detail.jpg" data-dark="../img/en-detail-dark.jpg" alt="Product detail with data read by on-device AI"></div></div>
+        <div class="panel-shot"><div class="phone"><img loading="lazy" src="../img/en-detail.jpg" data-light="../img/en-detail.jpg" data-dark="../img/en-detail-dark.jpg" alt="Product detail with data read by on-device AI" width="496" height="1080"></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.7 4.6L18.3 9.3l-4.6 1.7L12 15.6l-1.7-4.6L5.7 9.3l4.6-1.7L12 3z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z"/></svg></div>
         <h3>AI reads the label</h3>
         <p>Apple Intelligence reads the package with the camera and saves everything, running entirely on your iPhone.</p>
@@ -440,7 +441,7 @@
         </ul>
       </article>
       <article class="panel">
-        <div class="panel-shot"><div class="phone"><img loading="lazy" src="../img/en-tuppers.jpg" data-light="../img/en-tuppers.jpg" data-dark="../img/en-tuppers-dark.jpg" alt="Containers with dish image and expiry"></div></div>
+        <div class="panel-shot"><div class="phone"><img loading="lazy" src="../img/en-tuppers.jpg" data-light="../img/en-tuppers.jpg" data-dark="../img/en-tuppers-dark.jpg" alt="Containers with dish image and expiry" width="496" height="1080"></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 9h16v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V9z"/><path d="M4.5 9L6 5h12l1.5 4"/></svg></div>
         <h3>Containers with NFC tags</h3>
         <p>Stick a rewritable NFC tag on the lid, write it from the app and tap your iPhone to see what’s inside and when it expires.</p>
@@ -451,7 +452,7 @@
         </ul>
       </article>
       <article class="panel">
-        <div class="panel-shot"><div class="phone"><img loading="lazy" src="../img/en-casas.jpg" data-light="../img/en-casas.jpg" data-dark="../img/en-casas-dark.jpg" alt="FreshTrack homes manager"></div></div>
+        <div class="panel-shot"><div class="phone"><img loading="lazy" src="../img/en-casas.jpg" data-light="../img/en-casas.jpg" data-dark="../img/en-casas-dark.jpg" alt="FreshTrack homes manager" width="496" height="1080"></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9.5"/></svg></div>
         <h3>All your homes</h3>
         <p>Your everyday home, the beach house, the village house. Each with its own pantry, containers, shopping list and settings.</p>
@@ -462,7 +463,7 @@
         </ul>
       </article>
       <article class="panel">
-        <div class="panel-shot"><div class="phone"><img loading="lazy" src="../img/en-compra.jpg" data-light="../img/en-compra.jpg" data-dark="../img/en-compra-dark.jpg" alt="FreshTrack shopping list"></div></div>
+        <div class="panel-shot"><div class="phone"><img loading="lazy" src="../img/en-compra.jpg" data-light="../img/en-compra.jpg" data-dark="../img/en-compra-dark.jpg" alt="FreshTrack shopping list" width="496" height="1080"></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 4h2l2.5 12h11L21 8H6"/></svg></div>
         <h3>Shopping, come full circle</h3>
         <p>What you consume goes to the history, and from the history to the shopping list in one gesture. Back from the store, rescan and the product re-adds itself with all its data.</p>
@@ -473,7 +474,7 @@
         </ul>
       </article>
       <article class="panel">
-        <div class="panel-shot"><div class="phone"><img loading="lazy" src="../img/en-settings.jpg" data-light="../img/en-settings.jpg" data-dark="../img/en-settings-dark.jpg" alt="FreshTrack settings with alert configuration"></div></div>
+        <div class="panel-shot"><div class="phone"><img loading="lazy" src="../img/en-settings.jpg" data-light="../img/en-settings.jpg" data-dark="../img/en-settings-dark.jpg" alt="FreshTrack settings with alert configuration" width="496" height="1080"></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 10a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></div>
         <h3>Smart alerts</h3>
         <p>One alert a day with what’s about to expire, grouped and spam-free. You choose how far in advance.</p>
