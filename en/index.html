@@ -600,7 +600,7 @@
     const narrow = () => innerWidth <= 900;
     const off = () => narrow() || reduced;   // sin escaparate: manda el CSS
 
-    let active = -1, ticking = false;
+    let active = -1;
 
     // Posición continua de la pila (0..n-1): cada pantalla se coloca según su
     // distancia a ese punto, así el deslizamiento sigue al scroll píxel a píxel.
@@ -650,30 +650,67 @@
       });
     };
 
-    const paint = () => {
-      ticking = false;
-      if (off()) return;
+    // ---- Movimiento ----
+    // Dos cosas lo separan de seguir al scroll 1:1, que es lo que se notaba
+    // seco. Una: el objetivo se persigue con inercia, así los tirones de la
+    // rueda y del trackpad dejan de llegar tal cual a la pantalla.
+    //
+    // Y dos: el tramo entre dos bloques ya no se recorre a velocidad
+    // constante. Con la lineal, la pantalla llegaba a su sitio y en ese mismo
+    // instante arrancaba la siguiente, con un cambio brusco de velocidad justo
+    // en la frontera. Smoothstep sale de cero y llega a uno con velocidad
+    // nula, así que cada pantalla se posa y la siguiente arranca suave.
+    //
+    // Cuidado con tentarse y meter aquí una curva fuerte (easeOutCubic y
+    // compañía): al ir atada al scroll, deja la pantalla colocada en el primer
+    // tercio del recorrido y luego quieta mientras sigues bajando. Se nota
+    // peor que la lineal. El asentamiento lo pone la inercia, no esta curva.
+    const ease = t => t * t * (3 - 2 * t);
+
+    let objetivo = 0, suave = 0, raf = 0, previo = 0;
+
+    // Leer posiciones obliga al navegador a calcular la maquetación, así que
+    // se hace solo cuando hay scroll, no en cada fotograma de la animación.
+    const medir = () => {
       const focus = innerHeight / 2;
       // Posición fraccionaria: 0 en el centro del primer bloque, 1 en el del
-      // segundo… interpolando entre centros. Es lo que hace que la pantalla
-      // se arrastre con el scroll en vez de saltar.
-      const centers = panels.map(p => {
+      // segundo… interpolando entre centros.
+      const centros = panels.map(p => {
         const r = p.getBoundingClientRect();
         return r.top + r.height / 2;
       });
-      let pos;
-      if (focus <= centers[0]) pos = 0;
-      else if (focus >= centers[centers.length - 1]) pos = centers.length - 1;
+      if (focus <= centros[0]) objetivo = 0;
+      else if (focus >= centros[centros.length - 1]) objetivo = centros.length - 1;
       else {
         let i = 0;
-        while (focus > centers[i + 1]) i++;
-        pos = i + (focus - centers[i]) / (centers[i + 1] - centers[i]);
+        while (focus > centros[i + 1]) i++;
+        objetivo = i + (focus - centros[i]) / (centros[i + 1] - centros[i]);
       }
-      place(pos);
-      setActive(Math.round(pos));
     };
 
-    const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(paint); } };
+    const pintar = () => {
+      const i = Math.min(screens.length - 1, Math.floor(suave));
+      place(i + ease(suave - i));
+      setActive(Math.round(suave));
+    };
+
+    const paso = ahora => {
+      if (off()) { raf = 0; return; }
+      const dt = Math.min(64, ahora - previo || 16);
+      previo = ahora;
+      // Constante de tiempo de 110 ms, independiente de los FPS: se mueve
+      // igual a 60 Hz que a 120.
+      suave += (objetivo - suave) * (1 - Math.exp(-dt / 110));
+      if (Math.abs(objetivo - suave) < 4e-4) { suave = objetivo; raf = 0; pintar(); return; }
+      pintar();
+      raf = requestAnimationFrame(paso);
+    };
+
+    const onScroll = () => {
+      if (off()) return;
+      medir();
+      if (!raf) { previo = performance.now(); raf = requestAnimationFrame(paso); }
+    };
     addEventListener("scroll", onScroll, { passive: true });
     addEventListener("resize", onScroll);
 
@@ -722,7 +759,9 @@
       });
     }
 
-    paint();
+    // El primer fotograma se coloca sin inercia: la página no debe recibirte
+    // animándose sola.
+    if (!off()) { medir(); suave = objetivo; pintar(); }
   })();
 
   // Parallax del teléfono del hero + sombra de la nav + barra de progreso.
