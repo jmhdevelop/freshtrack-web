@@ -92,6 +92,7 @@
     --shadow: 0 8px 28px rgba(0, 0, 0, .4);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  picture { display: contents; }
   /* clip y no hidden: hidden convierte a html/body en contenedor de scroll
      y eso deja muerto el position:sticky del escaparate. */
   html { scroll-behavior: smooth; overflow-x: clip; }
@@ -392,7 +393,7 @@
         <span class="badge soft">iPhone y iPad · Gratis para siempre</span>
       </div>
     </div>
-    <div class="parallax"><div class="phone float reveal"><img fetchpriority="high" src="img/products.jpg" data-light="img/products.jpg" data-dark="img/products-dark.jpg" alt="FreshTrack: productos agrupados por urgencia de caducidad" width="496" height="1080"></div></div>
+    <div class="parallax"><div class="phone float reveal"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/products-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/products-dark.jpg"><source type="image/avif" srcset="img/products.avif"><img fetchpriority="high" src="img/products.jpg" alt="FreshTrack: productos agrupados por urgencia de caducidad" width="496" height="1080"></picture></div></div>
   </div>
 </header>
 
@@ -411,12 +412,12 @@
           <div class="device" role="button" tabindex="0" aria-label="Todo lo que hace por ti">
             <div class="island"></div>
             <div class="screens">
-              <img class="screen is-active" src="img/add.jpg" data-light="img/add.jpg" data-dark="img/add-dark.jpg" alt="Hoja de añadir producto: escanear o a mano" data-tap="18%,95%" width="496" height="1080">
-              <img class="screen" loading="lazy" src="img/detail.jpg" data-light="img/detail.jpg" data-dark="img/detail-dark.jpg" alt="Detalle de producto con datos leídos por IA local" data-tap="18%,95%" width="496" height="1080">
-              <img class="screen" loading="lazy" src="img/tuppers.jpg" data-light="img/tuppers.jpg" data-dark="img/tuppers-dark.jpg" alt="Tuppers con imagen del plato y caducidad" data-tap="39%,95%" width="496" height="1080">
-              <img class="screen" loading="lazy" src="img/casas.jpg" data-light="img/casas.jpg" data-dark="img/casas-dark.jpg" alt="Gestor de casas de FreshTrack" data-tap="82%,95%" width="496" height="1080">
-              <img class="screen" loading="lazy" src="img/compra.jpg" data-light="img/compra.jpg" data-dark="img/compra-dark.jpg" alt="Lista de la compra de FreshTrack" data-tap="61%,95%" width="496" height="1080">
-              <img class="screen" loading="lazy" src="img/settings.jpg" data-light="img/settings.jpg" data-dark="img/settings-dark.jpg" alt="Ajustes de FreshTrack con la configuración de avisos" data-tap="82%,95%" width="496" height="1080">
+              <picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/add-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/add-dark.jpg"><source type="image/avif" srcset="img/add.avif"><img class="screen is-active" src="img/add.jpg" alt="Hoja de añadir producto: escanear o a mano" data-tap="18%,95%" width="496" height="1080"></picture>
+              <picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/detail-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/detail-dark.jpg"><source type="image/avif" srcset="img/detail.avif"><img class="screen" loading="lazy" src="img/detail.jpg" alt="Detalle de producto con datos leídos por IA local" data-tap="18%,95%" width="496" height="1080"></picture>
+              <picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/tuppers-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/tuppers-dark.jpg"><source type="image/avif" srcset="img/tuppers.avif"><img class="screen" loading="lazy" src="img/tuppers.jpg" alt="Tuppers con imagen del plato y caducidad" data-tap="39%,95%" width="496" height="1080"></picture>
+              <picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/casas-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/casas-dark.jpg"><source type="image/avif" srcset="img/casas.avif"><img class="screen" loading="lazy" src="img/casas.jpg" alt="Gestor de casas de FreshTrack" data-tap="82%,95%" width="496" height="1080"></picture>
+              <picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/compra-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/compra-dark.jpg"><source type="image/avif" srcset="img/compra.avif"><img class="screen" loading="lazy" src="img/compra.jpg" alt="Lista de la compra de FreshTrack" data-tap="61%,95%" width="496" height="1080"></picture>
+              <picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/settings-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/settings-dark.jpg"><source type="image/avif" srcset="img/settings.avif"><img class="screen" loading="lazy" src="img/settings.jpg" alt="Ajustes de FreshTrack con la configuración de avisos" data-tap="82%,95%" width="496" height="1080"></picture>
               <span class="tap"></span>
               <span class="glare"></span>
             </div>
@@ -426,7 +427,7 @@
 
       <div class="panels">
       <article class="panel is-active">
-        <div class="panel-shot"><div class="phone"><img loading="lazy" src="img/add.jpg" data-light="img/add.jpg" data-dark="img/add-dark.jpg" alt="Hoja de añadir producto: escanear o a mano" width="496" height="1080"></div></div>
+        <div class="panel-shot"><div class="phone"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/add-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/add-dark.jpg"><source type="image/avif" srcset="img/add.avif"><img loading="lazy" src="img/add.jpg" alt="Hoja de añadir producto: escanear o a mano" width="496" height="1080"></picture></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M4 12h16"/></svg></div>
         <h3>Añadir es escanear</h3>
         <p>Apunta al código de barras y la ficha se rellena sola con la búsqueda online. Sin teclear.</p>
@@ -437,7 +438,7 @@
         </ul>
       </article>
       <article class="panel">
-        <div class="panel-shot"><div class="phone"><img loading="lazy" src="img/detail.jpg" data-light="img/detail.jpg" data-dark="img/detail-dark.jpg" alt="Detalle de producto con datos leídos por IA local" width="496" height="1080"></div></div>
+        <div class="panel-shot"><div class="phone"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/detail-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/detail-dark.jpg"><source type="image/avif" srcset="img/detail.avif"><img loading="lazy" src="img/detail.jpg" alt="Detalle de producto con datos leídos por IA local" width="496" height="1080"></picture></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.7 4.6L18.3 9.3l-4.6 1.7L12 15.6l-1.7-4.6L5.7 9.3l4.6-1.7L12 3z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z"/></svg></div>
         <h3>La IA lee la etiqueta</h3>
         <p>Apple Intelligence interpreta el envase con la cámara y lo guarda todo, funcionando por completo en tu iPhone.</p>
@@ -448,7 +449,7 @@
         </ul>
       </article>
       <article class="panel">
-        <div class="panel-shot"><div class="phone"><img loading="lazy" src="img/tuppers.jpg" data-light="img/tuppers.jpg" data-dark="img/tuppers-dark.jpg" alt="Tuppers con imagen del plato y caducidad" width="496" height="1080"></div></div>
+        <div class="panel-shot"><div class="phone"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/tuppers-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/tuppers-dark.jpg"><source type="image/avif" srcset="img/tuppers.avif"><img loading="lazy" src="img/tuppers.jpg" alt="Tuppers con imagen del plato y caducidad" width="496" height="1080"></picture></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 9h16v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V9z"/><path d="M4.5 9L6 5h12l1.5 4"/></svg></div>
         <h3>Tuppers con etiqueta NFC</h3>
         <p>Pega una etiqueta NFC regrabable en la tapa, grábala desde la app y acerca el iPhone para saber qué hay dentro y cuándo caduca.</p>
@@ -459,7 +460,7 @@
         </ul>
       </article>
       <article class="panel">
-        <div class="panel-shot"><div class="phone"><img loading="lazy" src="img/casas.jpg" data-light="img/casas.jpg" data-dark="img/casas-dark.jpg" alt="Gestor de casas de FreshTrack" width="496" height="1080"></div></div>
+        <div class="panel-shot"><div class="phone"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/casas-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/casas-dark.jpg"><source type="image/avif" srcset="img/casas.avif"><img loading="lazy" src="img/casas.jpg" alt="Gestor de casas de FreshTrack" width="496" height="1080"></picture></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9.5"/></svg></div>
         <h3>Todas tus casas</h3>
         <p>La de diario, la de la playa, la del pueblo. Cada casa con su despensa, sus tuppers, su lista de la compra y sus ajustes.</p>
@@ -470,7 +471,7 @@
         </ul>
       </article>
       <article class="panel">
-        <div class="panel-shot"><div class="phone"><img loading="lazy" src="img/compra.jpg" data-light="img/compra.jpg" data-dark="img/compra-dark.jpg" alt="Lista de la compra de FreshTrack" width="496" height="1080"></div></div>
+        <div class="panel-shot"><div class="phone"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/compra-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/compra-dark.jpg"><source type="image/avif" srcset="img/compra.avif"><img loading="lazy" src="img/compra.jpg" alt="Lista de la compra de FreshTrack" width="496" height="1080"></picture></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 4h2l2.5 12h11L21 8H6"/></svg></div>
         <h3>La compra, en círculo</h3>
         <p>Lo que se consume pasa al historial, y del historial a la lista de la compra con un gesto. Al volver del súper, reescanea y el producto se re-añade solo con todos sus datos.</p>
@@ -481,7 +482,7 @@
         </ul>
       </article>
       <article class="panel">
-        <div class="panel-shot"><div class="phone"><img loading="lazy" src="img/settings.jpg" data-light="img/settings.jpg" data-dark="img/settings-dark.jpg" alt="Ajustes de FreshTrack con la configuración de avisos" width="496" height="1080"></div></div>
+        <div class="panel-shot"><div class="phone"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/settings-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/settings-dark.jpg"><source type="image/avif" srcset="img/settings.avif"><img loading="lazy" src="img/settings.jpg" alt="Ajustes de FreshTrack con la configuración de avisos" width="496" height="1080"></picture></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 10a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></div>
         <h3>Avisos con cabeza</h3>
         <p>Un aviso al día con lo que está a punto de caducar, agrupado y sin spam. Tú eliges con cuánta antelación.</p>
@@ -535,9 +536,11 @@
   // ---- Tema: sigue al sistema, el botón lo fija, y las capturas van a juego ----
   const applyTheme = t => {
     document.documentElement.dataset.theme = t;
-    document.querySelectorAll("img[data-dark]").forEach(im => {
-      const want = t === "dark" ? im.dataset.dark : im.dataset.light;
-      if (im.getAttribute("src") !== want) im.setAttribute("src", want);
+    // "not all" nunca casa, así que apagar la fuente oscura devuelve la clara.
+    // Antes del primer applyTheme las fuentes llevan (prefers-color-scheme: dark),
+    // así que el navegador ya acierta solo y no se descarga la imagen dos veces.
+    document.querySelectorAll("picture source[data-dark]").forEach(f => {
+      f.media = t === "dark" ? "all" : "not all";
     });
   };
   let theme;
