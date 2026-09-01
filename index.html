@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FreshTrack — Nunca más comida caducada</title>
-<meta name="description" content="FreshTrack controla las caducidades de tu despensa, nevera y congelador, y tus tuppers con etiquetas NFC. Escanea, deja que la IA local lea la etiqueta y no vuelvas a tirar comida.">
+<title>Caducidades, despensa, nevera y tuppers NFC — FreshTrack</title>
+<meta name="description" content="Controla la caducidad de tu despensa, nevera y congelador, y sabe qué hay en cada tupper acercando el iPhone a su etiqueta NFC. Gratis y sin anuncios.">
 <link rel="icon" href="img/icon.png">
 <link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/">
 <link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/">
@@ -41,7 +41,11 @@
       "operatingSystem": "iOS",
       "applicationCategory": "LifestyleApplication",
       "inLanguage": "es",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
       "author": {
         "@type": "Organization",
         "name": "SOFTAPP SOLUTIONS LLC",
@@ -49,7 +53,73 @@
         "url": "https://freshtrack.softapp.tech/"
       }
     },
-    { "@type": "WebSite", "name": "FreshTrack", "url": "https://freshtrack.softapp.tech/", "inLanguage": "es" }
+    {
+      "@type": "WebSite",
+      "name": "FreshTrack",
+      "url": "https://freshtrack.softapp.tech/",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿FreshTrack es gratis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, del todo: sin límites, sin suscripciones, sin compras dentro de la app y sin anuncios. Todo está desbloqueado desde el primer día."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito etiquetas NFC para usar la app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Los tuppers se crean, editan y borran a mano desde la app; la etiqueta solo añade poder acercar el iPhone al tupper para ver qué hay dentro y cuándo caduca. Sirven las NTAG213 o NTAG215 regrabables, pegadas en la tapa y lejos del metal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Funciona sin Apple Intelligence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. En un dispositivo sin Apple Intelligence, la lectura de etiquetas usa el OCR clásico y las imágenes de producto son las de serie por tipo de comida. Ninguna función queda bloqueada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se sincroniza entre el iPhone y el iPad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, por iCloud y de forma automática entre los dispositivos con tu misma cuenta de Apple. Si iCloud no está disponible, la app sigue funcionando en local."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿FreshTrack recopila mis datos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No recopila ninguno. Todo vive en tu dispositivo y en tu base de datos privada de iCloud. Al escanear un código de barras solo se envía el número del producto a Open Food Facts, sin ningún identificador tuyo ni de tu dispositivo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo llevar más de una casa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Cada casa tiene su despensa, sus tuppers, su lista de la compra y sus ajustes, y se cambia de una a otra en dos toques."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué necesito para usarla?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un iPhone o iPad con iOS 17 o posterior. Leer y grabar etiquetas NFC necesita además un iPhone 7 o posterior."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
@@ -162,6 +232,21 @@
   .badge.main { background: var(--brand); color: #fff; box-shadow: 0 10px 26px rgba(13,158,120,.3); }
   .badge.soft { background: var(--card); border: 1px solid var(--border); color: var(--text); box-shadow: var(--shadow); }
   :root[data-theme="dark"] header::before { opacity: .5; }
+
+  /* ---- Preguntas frecuentes ---- */
+  .faq { max-width: 760px; margin: 28px auto 0; }
+  .faq details { background: var(--card); border: 1px solid var(--border);
+                 border-radius: var(--radius); padding: 0 20px; margin-top: 10px;
+                 box-shadow: var(--shadow); }
+  .faq summary { cursor: pointer; font-weight: 600; padding: 15px 0; list-style: none;
+                 display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: ""; flex: none; width: 9px; height: 9px; margin-right: 3px;
+                        border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+                        transform: rotate(45deg) translateY(-2px);
+                        transition: transform .25s var(--ease); }
+  .faq details[open] summary::after { transform: rotate(-135deg) translateY(-1px); }
+  .faq details p { color: var(--muted); padding: 0 0 17px; }
 
   .phone {
     border-radius: 42px; border: 1px solid rgba(18,42,33,.14); background: #101311;
@@ -401,7 +486,7 @@
 <section id="funciones">
   <div class="wrap">
     <div class="kicker reveal">Funciones</div>
-    <h2 class="reveal">Todo lo que hace por ti</h2>
+    <h2 class="reveal">Caducidades, tuppers con NFC y lista de la compra</h2>
     <p class="sub reveal">Cada función pensada para una cosa: que no se te caduque nada y que añadirlo todo cueste segundos.</p>
   </div>
 
@@ -519,6 +604,43 @@
   </div>
 </section>
 
+
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker reveal">Preguntas frecuentes</div>
+    <h2 class="reveal">Lo que se suele preguntar</h2>
+    <div class="faq reveal">
+      <details>
+        <summary>¿FreshTrack es gratis?</summary>
+        <p>Sí, del todo: sin límites, sin suscripciones, sin compras dentro de la app y sin anuncios. Todo está desbloqueado desde el primer día.</p>
+      </details>
+      <details>
+        <summary>¿Necesito etiquetas NFC para usar la app?</summary>
+        <p>No. Los tuppers se crean, editan y borran a mano desde la app; la etiqueta solo añade poder acercar el iPhone al tupper para ver qué hay dentro y cuándo caduca. Sirven las NTAG213 o NTAG215 regrabables, pegadas en la tapa y lejos del metal.</p>
+      </details>
+      <details>
+        <summary>¿Funciona sin Apple Intelligence?</summary>
+        <p>Sí. En un dispositivo sin Apple Intelligence, la lectura de etiquetas usa el OCR clásico y las imágenes de producto son las de serie por tipo de comida. Ninguna función queda bloqueada.</p>
+      </details>
+      <details>
+        <summary>¿Se sincroniza entre el iPhone y el iPad?</summary>
+        <p>Sí, por iCloud y de forma automática entre los dispositivos con tu misma cuenta de Apple. Si iCloud no está disponible, la app sigue funcionando en local.</p>
+      </details>
+      <details>
+        <summary>¿FreshTrack recopila mis datos?</summary>
+        <p>No recopila ninguno. Todo vive en tu dispositivo y en tu base de datos privada de iCloud. Al escanear un código de barras solo se envía el número del producto a Open Food Facts, sin ningún identificador tuyo ni de tu dispositivo.</p>
+      </details>
+      <details>
+        <summary>¿Puedo llevar más de una casa?</summary>
+        <p>Sí. Cada casa tiene su despensa, sus tuppers, su lista de la compra y sus ajustes, y se cambia de una a otra en dos toques.</p>
+      </details>
+      <details>
+        <summary>¿Qué necesito para usarla?</summary>
+        <p>Un iPhone o iPad con iOS 17 o posterior. Leer y grabar etiquetas NFC necesita además un iPhone 7 o posterior.</p>
+      </details>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>

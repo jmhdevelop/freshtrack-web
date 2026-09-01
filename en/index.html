@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FreshTrack — No more expired food</title>
-<meta name="description" content="FreshTrack tracks expiry dates across your pantry, fridge and freezer, plus your food containers with NFC tags. Scan, let on-device AI read the label and stop wasting food.">
+<title>Expiry tracker: pantry, fridge, NFC containers — FreshTrack</title>
+<meta name="description" content="Track expiry dates across your pantry, fridge and freezer, and tap your iPhone on a container's NFC tag to see what's inside. Free and no ads.">
 <link rel="icon" href="../img/icon.png">
 <link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/">
 <link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/">
@@ -41,7 +41,11 @@
       "operatingSystem": "iOS",
       "applicationCategory": "LifestyleApplication",
       "inLanguage": "en",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
       "author": {
         "@type": "Organization",
         "name": "SOFTAPP SOLUTIONS LLC",
@@ -49,7 +53,73 @@
         "url": "https://freshtrack.softapp.tech/"
       }
     },
-    { "@type": "WebSite", "name": "FreshTrack", "url": "https://freshtrack.softapp.tech/", "inLanguage": "en" }
+    {
+      "@type": "WebSite",
+      "name": "FreshTrack",
+      "url": "https://freshtrack.softapp.tech/",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is FreshTrack free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, completely: no limits, no subscriptions, no in-app purchases and no ads. Everything is unlocked from day one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need NFC tags to use the app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Containers can be created, edited and deleted by hand in the app; the tag only adds being able to tap your iPhone on the container to see what's inside and when it expires. Rewritable NTAG213 or NTAG215 tags work, stuck on the lid and away from metal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work without Apple Intelligence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. On a device without Apple Intelligence, label reading falls back to classic OCR and product images are the built-in ones per food type. No feature is blocked."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it sync between my iPhone and iPad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, over iCloud and automatically across devices signed in to the same Apple Account. If iCloud is unavailable, the app keeps working locally."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does FreshTrack collect my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It collects none. Everything lives on your device and in your private iCloud database. Scanning a barcode sends only the product number to Open Food Facts, with no identifier of you or your device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I keep more than one home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Each home has its own pantry, containers, shopping list and settings, and you switch between them in two taps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do I need to use it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An iPhone or iPad running iOS 17 or later. Reading and writing NFC tags also needs an iPhone 7 or later."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
@@ -156,6 +226,21 @@
   .badge.main { background: var(--brand); color: #fff; box-shadow: 0 10px 26px rgba(13,158,120,.3); }
   .badge.soft { background: var(--card); border: 1px solid var(--border); color: var(--text); box-shadow: var(--shadow); }
   :root[data-theme="dark"] header::before { opacity: .5; }
+
+  /* ---- Preguntas frecuentes ---- */
+  .faq { max-width: 760px; margin: 28px auto 0; }
+  .faq details { background: var(--card); border: 1px solid var(--border);
+                 border-radius: var(--radius); padding: 0 20px; margin-top: 10px;
+                 box-shadow: var(--shadow); }
+  .faq summary { cursor: pointer; font-weight: 600; padding: 15px 0; list-style: none;
+                 display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: ""; flex: none; width: 9px; height: 9px; margin-right: 3px;
+                        border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+                        transform: rotate(45deg) translateY(-2px);
+                        transition: transform .25s var(--ease); }
+  .faq details[open] summary::after { transform: rotate(-135deg) translateY(-1px); }
+  .faq details p { color: var(--muted); padding: 0 0 17px; }
 
   .phone {
     border-radius: 42px; border: 1px solid rgba(18,42,33,.14); background: #101311;
@@ -395,7 +480,7 @@
 <section id="features">
   <div class="wrap">
     <div class="kicker reveal">Features</div>
-    <h2 class="reveal">Everything it does for you</h2>
+    <h2 class="reveal">Expiry dates, NFC containers and the shopping list</h2>
     <p class="sub reveal">Every feature built for one thing: nothing expires on you, and adding it all takes seconds.</p>
   </div>
 
@@ -513,6 +598,43 @@
   </div>
 </section>
 
+
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker reveal">FAQ</div>
+    <h2 class="reveal">The questions people ask</h2>
+    <div class="faq reveal">
+      <details>
+        <summary>Is FreshTrack free?</summary>
+        <p>Yes, completely: no limits, no subscriptions, no in-app purchases and no ads. Everything is unlocked from day one.</p>
+      </details>
+      <details>
+        <summary>Do I need NFC tags to use the app?</summary>
+        <p>No. Containers can be created, edited and deleted by hand in the app; the tag only adds being able to tap your iPhone on the container to see what's inside and when it expires. Rewritable NTAG213 or NTAG215 tags work, stuck on the lid and away from metal.</p>
+      </details>
+      <details>
+        <summary>Does it work without Apple Intelligence?</summary>
+        <p>Yes. On a device without Apple Intelligence, label reading falls back to classic OCR and product images are the built-in ones per food type. No feature is blocked.</p>
+      </details>
+      <details>
+        <summary>Does it sync between my iPhone and iPad?</summary>
+        <p>Yes, over iCloud and automatically across devices signed in to the same Apple Account. If iCloud is unavailable, the app keeps working locally.</p>
+      </details>
+      <details>
+        <summary>Does FreshTrack collect my data?</summary>
+        <p>It collects none. Everything lives on your device and in your private iCloud database. Scanning a barcode sends only the product number to Open Food Facts, with no identifier of you or your device.</p>
+      </details>
+      <details>
+        <summary>Can I keep more than one home?</summary>
+        <p>Yes. Each home has its own pantry, containers, shopping list and settings, and you switch between them in two taps.</p>
+      </details>
+      <details>
+        <summary>What do I need to use it?</summary>
+        <p>An iPhone or iPad running iOS 17 or later. Reading and writing NFC tags also needs an iPhone 7 or later.</p>
+      </details>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
