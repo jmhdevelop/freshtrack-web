@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NFC labels for food containers: complete guide — FreshTrack</title>
+<meta name="description" content="How to label food containers with NFC: which tag to buy (NTAG213 or NTAG215), where to stick it, how to write it, and if it survives the freezer.">
+<link rel="canonical" href="https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html">
+<link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html">
+<link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html">
+<link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html">
+<link rel="icon" href="../../img/icon.png">
+<link rel="apple-touch-icon" href="../../img/icon.png">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f5f8f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c110f" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FreshTrack">
+<meta property="og:title" content="NFC labels for food containers: complete guide">
+<meta property="og:description" content="Which NFC tag to buy, where to stick it, how to write it with your iPhone, and whether it survives the freezer and condensation.">
+<meta property="og:url" content="https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html">
+<meta property="og:image" content="https://freshtrack.softapp.tech/img/og-en.png">
+<meta property="og:locale" content="en_US">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to label food containers with NFC so you know what's inside",
+  "description": "A guide to choosing, sticking, writing and reusing rewritable NFC tags on food containers, so you can tell what's inside and when it expires without opening them.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Choose the tag",
+      "text": "Buy rewritable NTAG213 or NTAG215 NFC tags, laminated and sold for fridge or freezer use."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Stick it on the lid",
+      "text": "Place it on a flat, accessible spot on the lid, away from any metal parts and away from a hinge or clasp that flexes when you open it."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Write it with your iPhone",
+      "text": "Using any NDEF-compatible NFC app, create a text record with the contents and the date, then hold the top back of your iPhone against the tag until the app confirms the write."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Read it to see what's inside",
+      "text": "Tap your iPhone on the tag to read the contents without opening the container."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Reuse it once the container is empty",
+      "text": "Write over the same tag with the next contents; an NFC tag handles hundreds of thousands of rewrites."
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --brand: #0D9E78;
+    --brand-bright: #0b8a69;
+    --brand-soft: rgba(13, 158, 120, .12);
+    --bg: #f5f8f6;
+    --card: #ffffff;
+    --border: rgba(18, 42, 33, .08);
+    --text: #14231d;
+    --muted: rgba(20, 35, 29, .66);
+    --shadow: 0 8px 28px rgba(18, 42, 33, .08);
+    --radius: 20px;
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c110f;
+    --card: #151c18;
+    --border: rgba(255, 255, 255, .09);
+    --text: #e9f2ee;
+    --muted: rgba(233, 242, 238, .6);
+    --shadow: 0 8px 28px rgba(0, 0, 0, .4);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { overflow-x: clip; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    -webkit-font-smoothing: antialiased; overflow-x: clip;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--brand-bright); }
+  .skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: #fff;
+          padding: 10px 16px; border-radius: 0 0 10px 0; z-index: 100; }
+  .skip:focus { left: 0; }
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+  nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+        background: color-mix(in srgb, var(--bg) 80%, transparent); border-bottom: 1px solid var(--border); }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .theme {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); cursor: pointer; padding: 0;
+  }
+  .theme svg { width: 17px; height: 17px; stroke: currentColor; stroke-width: 1.8;
+               fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .theme .moon { display: none; }
+  :root[data-theme="dark"] .theme .sun { display: none; }
+  :root[data-theme="dark"] .theme .moon { display: block; }
+  .nav-inner { display: flex; align-items: center; gap: 10px; padding-block: 12px; }
+  .nav-inner img { width: 32px; height: 32px; border-radius: 8px; }
+  .nav-inner .name { font-weight: 700; font-size: 17px; }
+  .nav-links { margin-left: auto; display: flex; gap: 22px; align-items: center; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 14.5px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover, .nav-links a[aria-current] { color: var(--text); }
+  .pill { background: var(--brand); color: #fff !important; font-weight: 600; padding: 7px 14px; border-radius: 999px; }
+  .lang { font-weight: 700; }
+  @media (max-width: 700px) {
+    .nav-links a:not(.pill):not(.lang) { display: none; }
+    .nav-links { gap: 14px; }
+    .nav-inner { padding-block: 10px; }
+    .nav-inner .name { font-size: 16px; }
+    .pill { padding: 6px 13px; font-size: 13.5px; }
+  }
+
+  .kicker { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 14px; font-weight: 600;
+            text-transform: uppercase; letter-spacing: .08em; }
+  .kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--brand); }
+
+  .doc { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+  .doc h1 { font-size: clamp(30px, 5vw, 42px); font-weight: 800; letter-spacing: -.02em; margin-top: 12px; line-height: 1.12; }
+  .doc .lead { color: var(--muted); font-size: 18px; margin-top: 14px; }
+  .doc h2 { font-size: clamp(20px, 3vw, 25px); font-weight: 800; letter-spacing: -.01em; margin-top: 52px; margin-bottom: 10px; scroll-margin-top: 76px; }
+  .doc h3 { font-size: 16.5px; font-weight: 700; margin-top: 22px; margin-bottom: 4px; }
+  .doc p { margin-top: 12px; }
+  .doc ul, .doc ol { margin: 14px 0 0 22px; }
+  .doc li { margin-top: 8px; }
+  .doc .fine { color: var(--muted); font-size: 14.5px; }
+  .doc strong { font-weight: 700; }
+
+  .toc { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+         box-shadow: var(--shadow); padding: 20px 22px; margin-top: 26px; }
+  .toc p { margin: 0; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  .toc ol { margin: 12px 0 0 20px; columns: 2; column-gap: 24px; }
+  .toc li { margin-top: 6px; font-size: 14.5px; break-inside: avoid; }
+  @media (max-width: 560px) { .toc ol { columns: 1; } }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-top: 18px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+          padding: 20px 20px 22px; box-shadow: var(--shadow); }
+  .card h3 { margin-top: 0; }
+  .card p { margin-top: 8px; font-size: 15px; color: var(--muted); }
+  .card .fail { color: var(--text); font-size: 14px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .card .fail b { color: var(--brand-bright); }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 420px; }
+  th, td { padding: 11px 14px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
+  td:first-child, th:first-child { white-space: normal; }
+  thead th { color: var(--muted); font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; background: var(--bg); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  ol.steps { list-style: none; margin: 18px 0 0; counter-reset: step; }
+  ol.steps li { position: relative; padding-left: 44px; margin-top: 16px; counter-increment: step; }
+  /* El numero va posicionado, no como item de flex: con `display:flex` en el <li>
+     cada <strong> y cada trozo de texto se convertia en un item independiente y la
+     frase se descolocaba en columnas. */
+  ol.steps li::before {
+    content: counter(step); position: absolute; left: 0; top: 1px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--brand-soft); color: var(--brand-bright); font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .box { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+         box-shadow: var(--shadow); padding: 20px 22px; margin-top: 18px; }
+  .box p:first-child { margin-top: 0; }
+
+  .cta { background: var(--card); border: 1px solid var(--border); border-radius: 26px;
+         padding: 44px 30px; text-align: center; margin-top: 20px; box-shadow: var(--shadow); }
+  .cta p { color: var(--muted); max-width: 520px; margin: 12px auto 24px; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px;
+           border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; }
+  .badge svg { flex: none; width: 18px; height: 21px; }
+  .badge.main { background: var(--brand); color: #fff; box-shadow: 0 10px 26px rgba(13,158,120,.3); }
+  a.badge.main { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+  a.badge.main:hover { background: var(--brand-bright); transform: translateY(-2px); box-shadow: 0 14px 32px rgba(13,158,120,.38); }
+
+  footer { padding: 56px 0 64px; text-align: center; color: var(--muted); font-size: 14px; }
+  footer .links { display: flex; gap: 22px; justify-content: center; margin-bottom: 14px; flex-wrap: wrap; }
+  footer a { color: var(--muted); }
+
+  #langbar[hidden] { display: none }
+  #langbar {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    padding: 10px 20px; background: var(--card); border-bottom: 1px solid var(--border);
+    font-size: 14px; color: var(--muted);
+  }
+  #langbar p { margin: 0 }
+  #langbar a { color: var(--brand-bright); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px }
+  #langbar button {
+    margin-left: auto; background: none; border: 0; color: var(--muted); font-size: 20px;
+    line-height: 1; cursor: pointer; padding: 2px 6px; border-radius: 6px;
+  }
+  #langbar button:hover { color: var(--text); background: var(--brand-soft) }
+</style>
+  <script defer src="https://softmetrics.softapp.tech/b.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="langbar" hidden>
+  <p lang="es">Esta página también está disponible en español.</p>
+  <a id="langgo" href="../../guias/etiquetas-nfc-tuppers.html" hreflang="es" lang="es">Leerla en español</a>
+  <button id="langno" type="button" aria-label="Dismiss">&times;</button>
+</div>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="../">
+      <img src="../../img/icon.png" alt="" width="256" height="256">
+      <span class="name">FreshTrack</span>
+    </a>
+    <div class="nav-links">
+      <a href="../#features">Features</a>
+      <a href="nfc-labels-food-containers.html" aria-current="page">NFC Guide</a>
+      <a href="../support.html">Support</a>
+      <button class="theme" type="button" aria-label="Toggle theme"><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M19.2 4.8l-1.7 1.7M6.5 17.5l-1.7 1.7"/></svg><svg class="moon" viewBox="0 0 24 24"><path d="M20.4 14.2A8.4 8.4 0 0 1 9.8 3.6a8.4 8.4 0 1 0 10.6 10.6z"/></svg></button>
+      <a class="lang" href="../../guias/etiquetas-nfc-tuppers.html" hreflang="es" lang="es" onclick="try{localStorage.setItem('ft-lang','es')}catch(e){}">ES</a>
+      <a class="pill" href="https://apps.apple.com/app/id6791699550">Download</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main" class="doc">
+  <span class="kicker">Guide</span>
+  <h1>NFC labels for food containers: complete guide</h1>
+  <p class="lead">Which tag to buy, where to stick it, how to write and read it with your iPhone, and whether it really survives the freezer. You can follow the whole thing without installing anything.</p>
+
+  <nav class="toc" aria-label="Guide contents">
+    <p>In this guide</p>
+    <ol>
+      <li><a href="#problem">The three-week mystery block</a></li>
+      <li><a href="#today">How this gets solved today</a></li>
+      <li><a href="#what-is">What an NFC tag is</a></li>
+      <li><a href="#buy">Which tag to buy</a></li>
+      <li><a href="#stick">Where to stick it</a></li>
+      <li><a href="#write">How to write it with your iPhone</a></li>
+      <li><a href="#freezer">Does it survive the freezer?</a></li>
+      <li><a href="#duration">How long frozen food lasts</a></li>
+      <li><a href="#freshtrack">By hand, or with FreshTrack</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="problem">The three-week mystery block</h2>
+  <p>You freeze six containers on Sunday, and three weeks later you open the freezer to find six white plastic blocks that could be lentils, could be tomato sauce, or could have been in there since last summer. No photo, the marker smeared under the frost, and opening each one to check breaks the cold chain for the rest. It's a small problem, but it repeats every week.</p>
+
+  <h2 id="today">How this gets solved today, and where each option falls short</h2>
+  <p>Before getting to NFC, it's worth being honest about what already exists. None of these three options is bad; each just fails in a different place.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Marker and packing tape</h3>
+      <p>Free, you already have it in a drawer, nothing to buy.</p>
+      <p class="fail"><b>Falls short:</b> the tape peels off in the freezer's humidity and the marker smears or fades as it thaws. You end up rewriting it every time.</p>
+    </div>
+    <div class="card">
+      <h3>Paper sticker</h3>
+      <p>Reads better than plain marker, and you can print or write it more cleanly.</p>
+      <p class="fail"><b>Falls short:</b> it's single-use. Emptying the container means peeling it off — it usually leaves glue behind — and sticking a new one next time.</p>
+    </div>
+    <div class="card">
+      <h3>Thermal label printer</h3>
+      <p>Legible, durable labels with a clean look, no handwriting involved.</p>
+      <p class="fail"><b>Falls short:</b> you need the printer itself plus refill rolls of label or thermal paper. For two or three containers a week, that's a cost not everyone wants to take on.</p>
+    </div>
+  </div>
+
+  <h2 id="what-is">What an NFC tag is, and why it's different</h2>
+  <p>An NFC tag is a thin sticker with a tiny chip and a printed antenna inside — no battery, no visible electronics. Nothing is pre-written on it: you write to it from your phone, and because it's not ink or print, you can write to it again thousands of times. The difference from the three options above isn't that it looks nicer — it's that it doesn't get used up. Empty the container, wash it, and next time you write over the same tag without peeling or sticking anything.</p>
+
+  <h2 id="buy">Which tag to buy: NTAG213 or NTAG215</h2>
+  <p>Almost every cheap rewritable NFC tag you'll find uses a chip from NXP's NTAG21x family, almost always NTAG213 or NTAG215. Both work with iPhone (from the iPhone 7 onward) with no extra hardware. The real difference between the two, per the manufacturer's own datasheet, is the memory available for writing: the NTAG213 has 144 bytes of user memory and the NTAG215 has 504 bytes.</p>
+  <p>For what you need here — a short text like "Lentils · Frozen Sep 6" — about 30-40 bytes is plenty, so the NTAG213 has more than enough room and is usually the cheaper option. The NTAG215 only pays off if you want to write longer notes (ingredients, allergens) or combine text with a link.</p>
+  <p>In durability, the two chips are equal: the manufacturer specifies 10 years of data retention and 100,000 rewrite cycles for both models. Rewriting a tag once a week, that 100,000 figure covers centuries' worth of containers.</p>
+  <p>What actually varies when you buy is the adhesive, not the chip: look for tags explicitly sold for fridge or freezer use, with a protective laminate over the printed part. A bare paper sticker can pick up moisture and peel over time; a laminated one holds up much better.</p>
+  <p class="fine">This guide deliberately has no purchase links: we don't want it to read as an ad, we want it to be useful.</p>
+
+  <h2 id="stick">Where to stick it on the lid, and why there</h2>
+  <ul>
+    <li><strong>On the lid, not the body of the container</strong>, so you can read it without opening it or pulling it out of the freezer stack.</li>
+    <li><strong>On a flat area, away from any metal.</strong> Metal blocks the antenna's field and the phone won't be able to read the chip; if your lid has a metal clasp or reinforcement, stick the tag on the plastic area farthest from it.</li>
+    <li><strong>Away from a hinge or clasp that flexes</strong> every time you open the container: the antenna is a very thin printed trace, and repeated bending can eventually crack it.</li>
+  </ul>
+
+  <h2 id="write">How to write it with your iPhone</h2>
+  <p>This works the same with any NDEF-compatible NFC app you already have installed — it doesn't need to be FreshTrack.</p>
+  <ol class="steps">
+    <li>Open the app and look for the <strong>write</strong> option (sometimes labeled "Write" or "Write tag").</li>
+    <li>Choose a <strong>text</strong> record (or a URL record, if you'd rather link to something instead of writing a note).</li>
+    <li>Write what you want to remember: the contents and, if you like, the date or when it expires.</li>
+    <li>Hold the <strong>top back</strong> of your iPhone — where the NFC antenna is, near the camera — against the tag and keep it still for a second or two, until the app confirms the write.</li>
+    <li>To reuse the container, repeat the same process: writing overwrites the previous content, no need to erase anything first.</li>
+  </ol>
+  <p class="fine">You need an iPhone 7 or later; that's the minimum Apple supports for reading and writing NFC tags from third-party apps.</p>
+
+  <h2 id="freezer">Does it survive the freezer? Cold and humidity</h2>
+  <p>Per the manufacturer's specification, the chip operates between -25°C and +70°C (-13°F to 158°F), well past a typical home freezer's -18°C (0°F). The electronics themselves aren't the issue.</p>
+  <p>What can fail is the adhesive and printed layer if the tag wasn't made for this — hence the advice to buy one sold for fridge or freezer use with a protective laminate. And the real trouble spot isn't the cold itself, it's <strong>condensation</strong> when you pull the container out: a laminated tag handles surface droplets fine without affecting the read; what can damage it over time is water working its way under the adhesive and lifting it, so it's worth drying the lid off before putting it back if it came out very wet.</p>
+
+  <h2 id="duration">How long each type of frozen food lasts</h2>
+  <p>This has nothing to do with the tag, but it's the question that comes right after you've organized the freezer, so it belongs here. At -18°C (0°F), food stays <strong>safe</strong> indefinitely; the times below are for quality, not safety. These are the official FDA times for already-cooked food, which is exactly what usually ends up in a container:</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Cooked food</th><th>Freezer</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Soups, stews and sauces with vegetables or meat</td><td>2-3 months</td></tr>
+        <tr><td>Cooked beef and beef dishes</td><td>2-3 months</td></tr>
+        <tr><td>Cooked chicken, plain pieces</td><td>4 months</td></tr>
+        <tr><td>Cooked chicken dishes, with sauce</td><td>4-6 months</td></tr>
+        <tr><td>Cooked fish</td><td>4-6 months</td></tr>
+        <tr><td>Ready-to-heat meals / already-frozen casseroles</td><td>3-4 months</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="fine">Source: US FDA, <a href="https://www.fda.gov/media/76116/download">Refrigerator &amp; Freezer Storage Chart</a> (March 2018, Spanish-language edition). Raw foods — meat, fish — have their own timelines, different from the ones above, which are for already-cooked dishes.</p>
+
+  <h2 id="freshtrack">By hand, or with FreshTrack</h2>
+  <div class="cta">
+    <p style="margin-top:0;color:var(--text);font-weight:700;font-size:18px">You can do all of this by hand with any NFC app from the App Store, exactly as explained above.</p>
+    <p>We built FreshTrack because we didn't want to write the date and work out the expiry by hand every Sunday: the app writes the tag, works out how long it keeps based on the food type and where you store it, and reminds you before it expires. It's free, and it's ours.</p>
+    <a class="badge main" href="https://apps.apple.com/app/id6791699550"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.05 12.54c-.03-2.9 2.37-4.29 2.48-4.36-1.35-1.97-3.45-2.24-4.2-2.27-1.78-.18-3.48 1.05-4.39 1.05-.9 0-2.3-1.03-3.78-1-1.95.03-3.75 1.14-4.75 2.88-2.02 3.5-.51 8.7 1.46 11.54.96 1.4 2.1 2.96 3.61 2.9 1.45-.05 2-.93 3.75-.93s2.25.93 3.78.9c1.56-.02 2.55-1.42 3.5-2.81 1.1-1.62 1.56-3.18 1.58-3.26-.03-.01-3.03-1.16-3.06-4.62zM14.29 4.03c.8-.97 1.34-2.32 1.19-3.66-1.15.05-2.55.77-3.37 1.73-.75.87-1.4 2.24-1.22 3.55 1.29.1 2.6-.65 3.4-1.62z"/></svg> Download FreshTrack on the App Store</a>
+  </div>
+
+  <hr style="border:0;border-top:1px solid var(--border);margin:3rem 0 1.5rem">
+  <p><a href="../../guias/etiquetas-nfc-tuppers.html" hreflang="es" lang="es">Lee esta guía en español</a></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="../">Home</a>
+      <a href="../support.html">Support</a>
+      <a href="../privacy.html">Privacy</a>
+      <a href="https://dibus.softapp.tech/">Dibus</a>
+      <a href="https://devtoolbox.softapp.tech/">DevToolbox</a>
+      <a href="https://softapp.tech/">SoftApp Solutions</a>
+      <a href="https://apps.apple.com/app/id6791699550">App Store</a>
+    </div>
+    © 2026 SOFTAPP SOLUTIONS LLC
+  </div>
+</footer>
+
+<script>
+  let theme;
+  try { theme = localStorage.getItem("ft-theme"); } catch (e) {}
+  if (theme !== "dark" && theme !== "light")
+    theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.dataset.theme = theme;
+  document.querySelector(".theme")?.addEventListener("click", () => {
+    theme = theme === "dark" ? "light" : "dark";
+    try { localStorage.setItem("ft-theme", theme); } catch (e) {}
+    document.documentElement.dataset.theme = theme;
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+    let stored; try { stored = localStorage.getItem("ft-theme"); } catch (err) {}
+    if (!stored) { theme = e.matches ? "dark" : "light"; document.documentElement.dataset.theme = theme; }
+  });
+</script>
+<script>
+  (function () {
+    try {
+      var KEY = "ft-lang", here = "en", other = "es";
+      var bar = document.getElementById("langbar");
+      if (!bar) return;
+      var go = document.getElementById("langgo"), no = document.getElementById("langno");
+      function remember(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+      go.addEventListener("click", function () { remember(other); });
+      no.addEventListener("click", function () { remember(here); bar.hidden = true; });
+      if (localStorage.getItem(KEY)) return;
+      var list = navigator.languages || [navigator.language || "en"];
+      var wants = list.some(function (l) { return l.toLowerCase().indexOf("es") === 0; }) ? "es" : "en";
+      if (wants !== here) bar.hidden = false;
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Etiquetas NFC para tuppers: guía completa — FreshTrack</title>
+<meta name="description" content="Cómo etiquetar tuppers con NFC: qué etiqueta comprar (NTAG213 o NTAG215), dónde pegarla, cómo grabarla con el iPhone y si aguanta el congelador.">
+<link rel="canonical" href="https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html">
+<link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html">
+<link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html">
+<link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html">
+<link rel="icon" href="../img/icon.png">
+<link rel="apple-touch-icon" href="../img/icon.png">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f5f8f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c110f" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FreshTrack">
+<meta property="og:title" content="Etiquetas NFC para tuppers: guía completa">
+<meta property="og:description" content="Qué etiqueta NFC comprar, dónde pegarla, cómo grabarla con el iPhone y si aguanta el congelador y la humedad.">
+<meta property="og:url" content="https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html">
+<meta property="og:image" content="https://freshtrack.softapp.tech/img/og.png">
+<meta property="og:locale" content="es_ES">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo etiquetar tuppers con NFC para saber qué hay dentro",
+  "description": "Guía para elegir, pegar, grabar y reutilizar etiquetas NFC regrabables en tuppers, para saber qué hay dentro y cuándo caduca sin abrirlos.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Elige la etiqueta",
+      "text": "Compra etiquetas NFC NTAG213 o NTAG215 regrabables, laminadas y anunciadas para frigorífico o congelador."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Pégala en la tapa",
+      "text": "Colócala en una zona plana y accesible de la tapa, lejos de partes metálicas y de la zona de bisagra o cierre que se dobla al abrir."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Grábala con el iPhone",
+      "text": "Con cualquier app de NFC compatible con NDEF, crea un registro de texto con el contenido y la fecha, y acerca la parte superior trasera del iPhone a la etiqueta hasta que la app confirme la escritura."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Léela para saber qué hay dentro",
+      "text": "Acerca el iPhone a la etiqueta para leer el contenido sin abrir el tupper."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Reutilízala al vaciar el tupper",
+      "text": "Escribe de nuevo sobre la misma etiqueta con el contenido siguiente; una etiqueta NFC aguanta cientos de miles de reescrituras."
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --brand: #0D9E78;
+    --brand-bright: #0b8a69;
+    --brand-soft: rgba(13, 158, 120, .12);
+    --bg: #f5f8f6;
+    --card: #ffffff;
+    --border: rgba(18, 42, 33, .08);
+    --text: #14231d;
+    --muted: rgba(20, 35, 29, .66);
+    --shadow: 0 8px 28px rgba(18, 42, 33, .08);
+    --radius: 20px;
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c110f;
+    --card: #151c18;
+    --border: rgba(255, 255, 255, .09);
+    --text: #e9f2ee;
+    --muted: rgba(233, 242, 238, .6);
+    --shadow: 0 8px 28px rgba(0, 0, 0, .4);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { overflow-x: clip; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    -webkit-font-smoothing: antialiased; overflow-x: clip;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--brand-bright); }
+  .skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: #fff;
+          padding: 10px 16px; border-radius: 0 0 10px 0; z-index: 100; }
+  .skip:focus { left: 0; }
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+  nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+        background: color-mix(in srgb, var(--bg) 80%, transparent); border-bottom: 1px solid var(--border); }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .theme {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); cursor: pointer; padding: 0;
+  }
+  .theme svg { width: 17px; height: 17px; stroke: currentColor; stroke-width: 1.8;
+               fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .theme .moon { display: none; }
+  :root[data-theme="dark"] .theme .sun { display: none; }
+  :root[data-theme="dark"] .theme .moon { display: block; }
+  .nav-inner { display: flex; align-items: center; gap: 10px; padding-block: 12px; }
+  .nav-inner img { width: 32px; height: 32px; border-radius: 8px; }
+  .nav-inner .name { font-weight: 700; font-size: 17px; }
+  .nav-links { margin-left: auto; display: flex; gap: 22px; align-items: center; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 14.5px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover, .nav-links a[aria-current] { color: var(--text); }
+  .pill { background: var(--brand); color: #fff !important; font-weight: 600; padding: 7px 14px; border-radius: 999px; }
+  .lang { font-weight: 700; }
+  @media (max-width: 700px) {
+    .nav-links a:not(.pill):not(.lang) { display: none; }
+    .nav-links { gap: 14px; }
+    .nav-inner { padding-block: 10px; }
+    .nav-inner .name { font-size: 16px; }
+    .pill { padding: 6px 13px; font-size: 13.5px; }
+  }
+
+  .kicker { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 14px; font-weight: 600;
+            text-transform: uppercase; letter-spacing: .08em; }
+  .kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--brand); }
+
+  /* ---- Documento / artículo ---- */
+  .doc { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+  .doc h1 { font-size: clamp(30px, 5vw, 42px); font-weight: 800; letter-spacing: -.02em; margin-top: 12px; line-height: 1.12; }
+  .doc .lead { color: var(--muted); font-size: 18px; margin-top: 14px; }
+  .doc h2 { font-size: clamp(20px, 3vw, 25px); font-weight: 800; letter-spacing: -.01em; margin-top: 52px; margin-bottom: 10px; scroll-margin-top: 76px; }
+  .doc h3 { font-size: 16.5px; font-weight: 700; margin-top: 22px; margin-bottom: 4px; }
+  .doc p { margin-top: 12px; }
+  .doc ul, .doc ol { margin: 14px 0 0 22px; }
+  .doc li { margin-top: 8px; }
+  .doc .fine { color: var(--muted); font-size: 14.5px; }
+  .doc strong { font-weight: 700; }
+
+  /* Índice */
+  .toc { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+         box-shadow: var(--shadow); padding: 20px 22px; margin-top: 26px; }
+  .toc p { margin: 0; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  .toc ol { margin: 12px 0 0 20px; columns: 2; column-gap: 24px; }
+  .toc li { margin-top: 6px; font-size: 14.5px; break-inside: avoid; }
+  @media (max-width: 560px) { .toc ol { columns: 1; } }
+
+  /* Tarjetas de comparación */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-top: 18px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+          padding: 20px 20px 22px; box-shadow: var(--shadow); }
+  .card h3 { margin-top: 0; }
+  .card p { margin-top: 8px; font-size: 15px; color: var(--muted); }
+  .card .fail { color: var(--text); font-size: 14px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .card .fail b { color: var(--brand-bright); }
+
+  /* Tabla NTAG213 vs NTAG215 y tabla de congelación */
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 420px; }
+  th, td { padding: 11px 14px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
+  td:first-child, th:first-child { white-space: normal; }
+  thead th { color: var(--muted); font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; background: var(--bg); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* Pasos numerados */
+  ol.steps { list-style: none; margin: 18px 0 0; counter-reset: step; }
+  ol.steps li { position: relative; padding-left: 44px; margin-top: 16px; counter-increment: step; }
+  /* El numero va posicionado, no como item de flex: con `display:flex` en el <li>
+     cada <strong> y cada trozo de texto se convertia en un item independiente y la
+     frase se descolocaba en columnas. */
+  ol.steps li::before {
+    content: counter(step); position: absolute; left: 0; top: 1px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--brand-soft); color: var(--brand-bright); font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* Recuadro de aviso/consejo */
+  .box { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+         box-shadow: var(--shadow); padding: 20px 22px; margin-top: 18px; }
+  .box p:first-child { margin-top: 0; }
+
+  /* CTA final */
+  .cta { background: var(--card); border: 1px solid var(--border); border-radius: 26px;
+         padding: 44px 30px; text-align: center; margin-top: 20px; box-shadow: var(--shadow); }
+  .cta p { color: var(--muted); max-width: 520px; margin: 12px auto 24px; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px;
+           border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; }
+  .badge svg { flex: none; width: 18px; height: 21px; }
+  .badge.main { background: var(--brand); color: #fff; box-shadow: 0 10px 26px rgba(13,158,120,.3); }
+  a.badge.main { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+  a.badge.main:hover { background: var(--brand-bright); transform: translateY(-2px); box-shadow: 0 14px 32px rgba(13,158,120,.38); }
+
+  footer { padding: 56px 0 64px; text-align: center; color: var(--muted); font-size: 14px; }
+  footer .links { display: flex; gap: 22px; justify-content: center; margin-bottom: 14px; flex-wrap: wrap; }
+  footer a { color: var(--muted); }
+
+  #langbar[hidden] { display: none }
+  #langbar {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    padding: 10px 20px; background: var(--card); border-bottom: 1px solid var(--border);
+    font-size: 14px; color: var(--muted);
+  }
+  #langbar p { margin: 0 }
+  #langbar a { color: var(--brand-bright); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px }
+  #langbar button {
+    margin-left: auto; background: none; border: 0; color: var(--muted); font-size: 20px;
+    line-height: 1; cursor: pointer; padding: 2px 6px; border-radius: 6px;
+  }
+  #langbar button:hover { color: var(--text); background: var(--brand-soft) }
+</style>
+  <script defer src="https://softmetrics.softapp.tech/b.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div id="langbar" hidden>
+  <p lang="en">This page is also available in English.</p>
+  <a id="langgo" href="../en/guides/nfc-labels-food-containers.html" hreflang="en" lang="en">Read it in English</a>
+  <button id="langno" type="button" lang="en" aria-label="Dismiss">&times;</button>
+</div>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="../">
+      <img src="../img/icon.png" alt="" width="256" height="256">
+      <span class="name">FreshTrack</span>
+    </a>
+    <div class="nav-links">
+      <a href="../#funciones">Funciones</a>
+      <a href="etiquetas-nfc-tuppers.html" aria-current="page">Guía NFC</a>
+      <a href="../soporte.html">Soporte</a>
+      <button class="theme" type="button" aria-label="Cambiar tema"><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M19.2 4.8l-1.7 1.7M6.5 17.5l-1.7 1.7"/></svg><svg class="moon" viewBox="0 0 24 24"><path d="M20.4 14.2A8.4 8.4 0 0 1 9.8 3.6a8.4 8.4 0 1 0 10.6 10.6z"/></svg></button>
+      <a class="lang" href="../en/guides/nfc-labels-food-containers.html" hreflang="en" lang="en" onclick="try{localStorage.setItem('ft-lang','en')}catch(e){}">EN</a>
+      <a class="pill" href="https://apps.apple.com/app/id6791699550">Descargar</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main" class="doc">
+  <span class="kicker">Guía</span>
+  <h1>Etiquetas NFC para tuppers: guía completa</h1>
+  <p class="lead">Qué etiqueta comprar, dónde pegarla, cómo grabarla y leerla con el iPhone, y si de verdad aguanta el congelador. Se puede hacer entera sin instalar nada.</p>
+
+  <nav class="toc" aria-label="Contenido de la guía">
+    <p>En esta guía</p>
+    <ol>
+      <li><a href="#problema">El bloque opaco de tres semanas</a></li>
+      <li><a href="#hoy">Cómo se resuelve hoy</a></li>
+      <li><a href="#que-es">Qué es una etiqueta NFC</a></li>
+      <li><a href="#comprar">Qué etiqueta comprar</a></li>
+      <li><a href="#pegarla">Dónde pegarla</a></li>
+      <li><a href="#grabarla">Cómo grabarla con el iPhone</a></li>
+      <li><a href="#congelador">¿Aguanta el congelador?</a></li>
+      <li><a href="#duracion">Cuánto dura la comida congelada</a></li>
+      <li><a href="#freshtrack">A mano, o con FreshTrack</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="problema">El bloque opaco de tres semanas</h2>
+  <p>Congelas el domingo, seis tuppers, y a las tres semanas abres el congelador y te encuentras seis bloques de plástico blanco que podrían ser lentejas, podrían ser salsa de tomate o podrían llevar ahí desde el verano pasado. No hay foto, el rotulador se ha corrido con la escarcha, y abrir cada uno para comprobarlo rompe la cadena de frío del resto. Es un problema pequeño, pero se repite cada semana.</p>
+
+  <h2 id="hoy">Cómo se resuelve hoy, y qué falla en cada opción</h2>
+  <p>Antes de llegar al NFC, vale la pena ser honestos con lo que ya existe. Ninguna de estas tres opciones es mala; cada una falla en un sitio distinto.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Rotulador y cinta de carrocero</h3>
+      <p>Gratis, lo tienes ya en el cajón, no hay que comprar nada.</p>
+      <p class="fail"><b>Falla:</b> la cinta se despega con la humedad del congelador y el rotulador se corre o se borra al descongelarse. Hay que volver a escribir cada vez.</p>
+    </div>
+    <div class="card">
+      <h3>Etiqueta de papel adhesiva</h3>
+      <p>Se lee mejor que un rotulador y se puede imprimir o escribir a mano con más limpieza.</p>
+      <p class="fail"><b>Falla:</b> es de un solo uso. Al vaciar el tupper hay que arrancarla —suele dejar pegamento— y pegar una nueva la próxima vez.</p>
+    </div>
+    <div class="card">
+      <h3>Etiquetadora térmica</h3>
+      <p>Etiquetas legibles, resistentes y con buena pinta, sin escritura a mano.</p>
+      <p class="fail"><b>Falla:</b> hay que comprar el aparato y reponer rollos de etiqueta o de papel térmico. Para dos o tres tuppers a la semana es un gasto que no todo el mundo quiere hacer.</p>
+    </div>
+  </div>
+
+  <h2 id="que-es">Qué es una etiqueta NFC, y por qué es distinta</h2>
+  <p>Una etiqueta NFC es una pegatina fina con un chip diminuto y una antena impresa dentro, sin pila ni electrónica visible. No lleva nada escrito de fábrica: se graba desde el teléfono, y como no es tinta ni impresión, se puede volver a grabar miles de veces. Frente a las tres opciones de arriba, la diferencia no es que sea más bonita: es que no se gasta. Vacías el tupper, lo friegas, y la próxima vez escribes encima de lo mismo sin tener que arrancar ni pegar nada.</p>
+
+  <h2 id="comprar">Qué etiqueta comprar: NTAG213 o NTAG215</h2>
+  <p>Prácticamente todas las etiquetas NFC regrabables baratas que vas a encontrar llevan un chip de la familia NXP NTAG21x, casi siempre NTAG213 o NTAG215. Son compatibles con el iPhone (desde el iPhone 7) sin ningún accesorio. La diferencia real entre las dos, según la hoja de características del propio fabricante, es la memoria disponible para escribir: el NTAG213 tiene 144 bytes de memoria de usuario y el NTAG215 tiene 504 bytes.</p>
+  <p>Para lo que necesitas aquí —un texto corto tipo «Lentejas · Congelado 6 sept»— sobran unos 30-40 bytes, así que el NTAG213 va más que sobrado y suele ser el más barato. El NTAG215 solo compensa si quieres escribir notas largas (ingredientes, alérgenos) o combinar texto con un enlace.</p>
+  <p>En resistencia, los dos chips son iguales: el fabricante especifica una retención de datos de 10 años y una resistencia de 100.000 ciclos de reescritura para ambos modelos. Reescribiendo una etiqueta cada semana, esas 100.000 veces dan para siglos de tuppers.</p>
+  <p>Lo que sí marca la diferencia al comprar es el adhesivo, no el chip: busca etiquetas anunciadas explícitamente para frigorífico o congelador, con una capa protectora (laminado) sobre la parte impresa. Una pegatina de papel sin protección se puede humedecer y despegarse con el uso; una laminada aguanta mucho mejor.</p>
+  <p class="fine">No hay enlaces de compra en esta guía a propósito: no queremos que sea publicidad, queremos que sea útil.</p>
+
+  <h2 id="pegarla">Dónde pegarla en la tapa, y por qué ahí</h2>
+  <ul>
+    <li><strong>En la tapa, no en el cuerpo del tupper</strong>, para poder leerla sin abrirlo ni sacarlo de la pila del congelador.</li>
+    <li><strong>En una zona plana y lejos de partes metálicas.</strong> El metal bloquea el campo de la antena y el teléfono no llega a leer el chip; si tu tapa tiene algún cierre o refuerzo metálico, pega la etiqueta en la zona de plástico más alejada de él.</li>
+    <li><strong>Lejos de una bisagra o de un cierre que se dobla</strong> cada vez que abres el tupper: la antena es una pista impresa muy fina y el pliegue repetido puede acabar agrietándola.</li>
+  </ul>
+
+  <h2 id="grabarla">Cómo grabarla con el iPhone</h2>
+  <p>Esto funciona igual con cualquier app de NFC compatible con NDEF que tengas instalada —no hace falta que sea FreshTrack—.</p>
+  <ol class="steps">
+    <li>Abre la app y busca la opción de <strong>escribir</strong> o <strong>grabar</strong> una etiqueta (a veces aparece como «Write» o «Grabar tag»).</li>
+    <li>Elige un registro de <strong>texto</strong> (o de URL, si prefieres enlazar a algo en vez de escribir una nota).</li>
+    <li>Escribe lo que quieras recordar: el contenido y, si te interesa, la fecha o cuándo caduca.</li>
+    <li>Acerca la parte <strong>superior trasera</strong> del iPhone —donde está la antena NFC, cerca de la cámara— a la etiqueta y mantenlo quieto uno o dos segundos, hasta que la app confirme que ha grabado.</li>
+    <li>Para reutilizar el tupper, repite el mismo proceso: escribir sobrescribe el contenido anterior, no hace falta borrar nada antes.</li>
+  </ol>
+  <p class="fine">Hace falta un iPhone 7 o posterior; es el mínimo con el que Apple permite leer y grabar etiquetas NFC desde apps de terceros.</p>
+
+  <h2 id="congelador">¿Aguanta el congelador? Frío y humedad</h2>
+  <p>El chip, por especificación del fabricante, funciona entre -25 °C y +70 °C, muy por debajo de los -18 °C habituales de un congelador doméstico. La electrónica en sí no es el problema.</p>
+  <p>Lo que sí puede fallar es el adhesivo y la capa impresa si la etiqueta no está pensada para esto —de ahí la recomendación de comprarla ya anunciada para frigorífico o congelador y con laminado protector—. Y el otro punto crítico no es el frío, es la <strong>condensación</strong> al sacar el tupper: una etiqueta laminada aguanta bien esas gotas en la superficie sin que afecte a la lectura; lo que sí puede estropearla con el tiempo es que el agua se cuele por debajo del adhesivo y lo despegue, así que conviene secar la tapa antes de volver a meterla si ha quedado muy húmeda.</p>
+
+  <h2 id="duracion">Cuánto dura cada tipo de comida congelada</h2>
+  <p>Esto no depende de la etiqueta, pero es la pregunta que viene justo después de organizar el congelador, así que va aquí. Con el congelador a -18 °C la comida se mantiene <strong>segura</strong> por tiempo indefinido; estos plazos son orientativos para que siga sabiendo bien, no por seguridad. Son los tiempos oficiales de la FDA estadounidense para alimentos ya cocinados, que es justo lo que suele acabar en un tupper:</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Alimento cocinado</th><th>Congelador</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sopas, guisos y salsas con verduras o carne</td><td>2-3 meses</td></tr>
+        <tr><td>Carne de res cocida y platos de carne</td><td>2-3 meses</td></tr>
+        <tr><td>Pollo cocido, en trozos sin condimentar</td><td>4 meses</td></tr>
+        <tr><td>Platos de pollo cocido, con salsa</td><td>4-6 meses</td></tr>
+        <tr><td>Pescado cocido</td><td>4-6 meses</td></tr>
+        <tr><td>Comidas listas para calentar / guisos ya congelados</td><td>3-4 meses</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="fine">Fuente: FDA (EE. UU.), <a href="https://www.fda.gov/media/76116/download">Tabla de almacenamiento en refrigerador y congelador</a> (marzo de 2018). Los alimentos crudos —carne, pescado— tienen sus propios plazos, distintos de los de arriba, que son para platos ya cocinados.</p>
+
+  <h2 id="freshtrack">A mano, o con FreshTrack</h2>
+  <div class="cta">
+    <p style="margin-top:0;color:var(--text);font-weight:700;font-size:18px">Esto se puede hacer entero a mano con cualquier app de NFC del App Store, tal como se explica arriba.</p>
+    <p>Nosotros hicimos FreshTrack porque no queríamos escribir la fecha y calcular la caducidad a mano cada domingo: la app graba la etiqueta, calcula cuánto dura según el tipo de comida y dónde lo guardes, y te avisa antes de que caduque. Es gratis y es nuestra.</p>
+    <a class="badge main" href="https://apps.apple.com/app/id6791699550"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.05 12.54c-.03-2.9 2.37-4.29 2.48-4.36-1.35-1.97-3.45-2.24-4.2-2.27-1.78-.18-3.48 1.05-4.39 1.05-.9 0-2.3-1.03-3.78-1-1.95.03-3.75 1.14-4.75 2.88-2.02 3.5-.51 8.7 1.46 11.54.96 1.4 2.1 2.96 3.61 2.9 1.45-.05 2-.93 3.75-.93s2.25.93 3.78.9c1.56-.02 2.55-1.42 3.5-2.81 1.1-1.62 1.56-3.18 1.58-3.26-.03-.01-3.03-1.16-3.06-4.62zM14.29 4.03c.8-.97 1.34-2.32 1.19-3.66-1.15.05-2.55.77-3.37 1.73-.75.87-1.4 2.24-1.22 3.55 1.29.1 2.6-.65 3.4-1.62z"/></svg> Descargar FreshTrack en el App Store</a>
+  </div>
+
+  <hr style="border:0;border-top:1px solid var(--border);margin:3rem 0 1.5rem">
+  <p><a href="../en/guides/nfc-labels-food-containers.html" hreflang="en" lang="en">Read this guide in English</a></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="../">Inicio</a>
+      <a href="../soporte.html">Soporte</a>
+      <a href="../privacidad.html">Privacidad</a>
+      <a href="https://dibus.softapp.tech/">Dibus</a>
+      <a href="https://devtoolbox.softapp.tech/">DevToolbox</a>
+      <a href="https://softapp.tech/">SoftApp Solutions</a>
+      <a href="https://apps.apple.com/app/id6791699550">App Store</a>
+    </div>
+    © 2026 SOFTAPP SOLUTIONS LLC
+  </div>
+</footer>
+
+<script>
+  let theme;
+  try { theme = localStorage.getItem("ft-theme"); } catch (e) {}
+  if (theme !== "dark" && theme !== "light")
+    theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.dataset.theme = theme;
+  document.querySelector(".theme")?.addEventListener("click", () => {
+    theme = theme === "dark" ? "light" : "dark";
+    try { localStorage.setItem("ft-theme", theme); } catch (e) {}
+    document.documentElement.dataset.theme = theme;
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+    let stored; try { stored = localStorage.getItem("ft-theme"); } catch (err) {}
+    if (!stored) { theme = e.matches ? "dark" : "light"; document.documentElement.dataset.theme = theme; }
+  });
+</script>
+<script>
+  (function () {
+    try {
+      var KEY = "ft-lang", here = "es", other = "en";
+      var bar = document.getElementById("langbar");
+      if (!bar) return;
+      var go = document.getElementById("langgo"), no = document.getElementById("langno");
+      function remember(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+      go.addEventListener("click", function () { remember(other); });
+      no.addEventListener("click", function () { remember(here); bar.hidden = true; });
+      if (localStorage.getItem(KEY)) return;
+      var list = navigator.languages || [navigator.language || "en"];
+      var wants = list.some(function (l) { return l.toLowerCase().indexOf("es") === 0; }) ? "es" : "en";
+      if (wants !== here) bar.hidden = false;
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
