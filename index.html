@@ -424,22 +424,13 @@
                gap: 48px; align-items: start; margin-top: 40px; }
   @media (max-width: 820px) { .siri-grid { grid-template-columns: 1fr; gap: 30px; } }
   .siri-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
-               box-shadow: var(--shadow); padding: 26px 24px; }
+               box-shadow: var(--shadow); padding: 26px 24px; max-width: 424px; }
   .siri-card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
   .siri-card-head span { font-weight: 700; font-size: 16px; }
-  .siri-list { list-style: none; }
-  .siri-list li { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
-  .siri-list li:last-child { border-bottom: none; padding-bottom: 0; }
-  .siri-list .e { flex: none; width: 38px; height: 38px; border-radius: 11px; background: var(--bg);
-                  display: flex; align-items: center; justify-content: center; font-size: 19px; }
-  .siri-list .n { flex: 1; font-weight: 600; font-size: 15px; }
-  .chip { flex: none; display: inline-flex; align-items: center; padding: 5px 12px;
-          border-radius: 999px; font-weight: 700; font-size: 13px; white-space: nowrap; }
-  .chip-red { background: #ff3b30; color: #fff; }
-  .chip-orange { background: rgba(255,149,0,.16); color: #a15a00; }
-  .chip-green { background: rgba(13,158,120,.16); color: var(--brand-bright); }
-  :root[data-theme="dark"] .chip-orange { background: rgba(255,159,10,.22); color: #ffcf8a; }
-  :root[data-theme="dark"] .chip-green { background: rgba(13,158,120,.24); color: #5eeab3; }
+  .siri-render { display: block; width: 100%; height: auto; max-width: 376px; }
+  .siri-render.is-dark { display: none; }
+  :root[data-theme="dark"] .siri-render.is-light { display: none; }
+  :root[data-theme="dark"] .siri-render.is-dark { display: block; }
   .check-list { list-style: none; margin-top: 4px; }
   .check-list li { display: flex; gap: 10px; color: var(--muted); font-size: 15.5px; margin-top: 14px; line-height: 1.5; }
   .check-list li:first-child { margin-top: 0; }
@@ -677,11 +668,8 @@
           <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M6 11a6 6 0 0 0 12 0"/><path d="M12 17v4"/><path d="M9 21h6"/></svg></div>
           <span>«¿Qué caduca en FreshTrack?»</span>
         </div>
-        <ul class="siri-list">
-          <li><span class="e" aria-hidden="true">🥛</span><span class="n">Leche entera</span><span class="chip chip-red">Caducado</span></li>
-          <li><span class="e" aria-hidden="true">🥚</span><span class="n">Huevos camperos</span><span class="chip chip-red">Hoy</span></li>
-          <li><span class="e" aria-hidden="true">🍲</span><span class="n">Lentejas de la abuela</span><span class="chip chip-orange">2 días</span></li>
-        </ul>
+        <img class="siri-render is-light" src="img/siri-card-es-light@2x.png" width="376" height="224" loading="lazy" alt="Leche entera, caduca hoy. Lentejas de la abuela, caduca en 2 días. Huevos camperos ×12, caduca en 5 días. Queso curado, caduca en 12 días. Atún en lata ×3, no caduca. 3 más.">
+        <img class="siri-render is-dark" src="img/siri-card-es-dark@2x.png" width="376" height="224" loading="lazy" alt="Leche entera, caduca hoy. Lentejas de la abuela, caduca en 2 días. Huevos camperos ×12, caduca en 5 días. Queso curado, caduca en 12 días. Atún en lata ×3, no caduca. 3 más.">
       </div>
 
       <div class="reveal">
