@@ -91,7 +91,7 @@
   .skip:focus { left: 0; }
   :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
 
-  nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  nav:not(.toc) { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
         background: color-mix(in srgb, var(--bg) 80%, transparent); border-bottom: 1px solid var(--border); }
   .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
   .theme {
