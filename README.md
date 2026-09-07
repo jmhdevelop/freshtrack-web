@@ -12,3 +12,5 @@ Sitio estático servido por GitHub Pages desde la raíz del repositorio.
 
 - [Dibus](https://dibus.softapp.tech/) — colorear para niños
 - [DevToolbox](https://devtoolbox.softapp.tech/) — limpieza y monitorización para Mac
+
+Todas las apps de la casa, en <https://softapp.tech>.
