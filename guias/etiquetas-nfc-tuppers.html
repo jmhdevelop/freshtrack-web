@@ -66,7 +66,7 @@
       "url": "https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html",
       "image": "https://freshtrack.softapp.tech/img/og.png",
       "datePublished": "2026-09-07",
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-09-11",
       "author": {
         "@type": "Organization",
         "name": "SOFTAPP SOLUTIONS LLC",
@@ -282,7 +282,7 @@
   <span class="kicker">Guía</span>
   <h1>Etiquetas NFC para tuppers: guía completa</h1>
   <p class="lead">Qué etiqueta comprar, dónde pegarla, cómo grabarla y leerla con el iPhone, y si de verdad aguanta el congelador. Se puede hacer entera sin instalar nada.</p>
-  <p class="byline">Publicada el 7 de septiembre de 2026 por SOFTAPP SOLUTIONS LLC</p>
+  <p class="byline">Publicada el 7 de septiembre de 2026 por SOFTAPP SOLUTIONS LLC · Actualizada el 11 de septiembre de 2026</p>
 
   <nav class="toc" aria-label="Contenido de la guía">
     <p>En esta guía</p>
@@ -293,6 +293,7 @@
       <li><a href="#comprar">Qué etiqueta comprar</a></li>
       <li><a href="#pegarla">Dónde pegarla</a></li>
       <li><a href="#grabarla">Cómo grabarla con el iPhone</a></li>
+      <li><a href="#sin-app">Leerla sin abrir ninguna app</a></li>
       <li><a href="#congelador">¿Aguanta el congelador?</a></li>
       <li><a href="#duracion">Cuánto dura la comida congelada</a></li>
       <li><a href="#freshtrack">A mano, o con FreshTrack</a></li>
@@ -349,6 +350,31 @@
     <li>Para reutilizar el tupper, repite el mismo proceso: escribir sobrescribe el contenido anterior, no hace falta borrar nada antes.</li>
   </ol>
   <p class="fine">Hace falta un iPhone 7 o posterior; es el mínimo con el que Apple permite leer y grabar etiquetas NFC desde apps de terceros.</p>
+
+  <h2 id="sin-app">Leerla sin abrir ninguna app: la lectura en segundo plano</h2>
+  <p>Hay una parte que casi nadie conoce y que cambia el uso diario: desde el <strong>iPhone XS</strong>, el propio sistema lee etiquetas NFC <strong>sin que abras nada</strong>. No hace falta que la app esté abierta, ni siquiera que esté en marcha. Acercas el teléfono a la etiqueta, aparece un aviso en pantalla y, si lo tocas, iOS abre la app que corresponda y le entrega lo que había escrito. Apple lo llama <em>background tag reading</em> y en su documentación lo dice con estas palabras: «iPhone XS and later support background tag reading».</p>
+  <p>En el manual del iPhone, los modelos que lo traen activado de fábrica son el iPhone XR, el XS, el XS Max, el SE (2.ª generación) y todos los posteriores. Apple no indica la versión de iOS en esa página; lo que sí está fechado es la parte de la API que entrega a la app el contenido de una etiqueta leída así, disponible <strong>desde iOS 12.0</strong>.</p>
+
+  <h3>Qué hace falta para que salte el aviso</h3>
+  <p>La condición general es que el iPhone <strong>esté en uso</strong>, es decir, con la pantalla encendida. No hace falta que esté desbloqueado para que aparezca el aviso: si está bloqueado, el sistema pide desbloquearlo antes de pasarle los datos a la app. Y aun con la pantalla encendida, Apple enumera cinco situaciones en las que la lectura en segundo plano <strong>no</strong> está disponible:</p>
+  <ul>
+    <li>El iPhone <strong>no se ha desbloqueado ni una sola vez</strong> desde que se encendió.</li>
+    <li>Hay una <strong>sesión de lectura NFC de una app</strong> en marcha: si ya estás escaneando desde una app, el sistema no se mete.</li>
+    <li>Está en uso el <strong>Wallet de Apple Pay</strong>.</li>
+    <li>Está en uso la <strong>cámara</strong>.</li>
+    <li>Está activado el <strong>modo avión</strong>.</li>
+  </ul>
+
+  <h3>Qué tiene que llevar grabado la etiqueta</h3>
+  <p>Aquí está el detalle que cambia lo que conviene escribir. El sistema no mira todo el contenido de la etiqueta: busca dentro del mensaje NDEF un <strong>registro de URI</strong> (el de tipo «U») y, si hay varios, se queda con el primero. Esa URI tiene que ser un <strong>enlace universal</strong> de una app o uno de los esquemas que Apple admite: direcciones web https, mailto, sms, tel, FaceTime y FaceTime Audio, mapas de Apple y configuración de accesorios HomeKit. Los esquemas propios de una app no sirven.</p>
+  <div class="box">
+    <p><strong>La consecuencia práctica para esta guía:</strong> un registro de <strong>texto</strong> —el que se recomienda más arriba para escribir «Lentejas · Congelado 6 sept»— <strong>no</strong> hace aparecer el aviso. La etiqueta se lee perfectamente, pero abriendo una app de NFC. Si lo que quieres es acercar el teléfono al tupper y que te salte solo, la etiqueta tiene que llevar una <strong>URL</strong>, no una nota de texto.</p>
+  </div>
+  <p>Al tocar el aviso pasa una de dos cosas: si la URL es un enlace universal de una app que tienes instalada, iOS abre esa app (o la trae al frente) y le entrega el mensaje de la etiqueta; si ninguna app instalada está asociada a ese enlace, lo abre en Safari.</p>
+
+  <h3>Dónde no funciona</h3>
+  <p>El iPhone 7, el 7 Plus, el 8, el 8 Plus y el iPhone X <strong>no</strong> tienen lectura en segundo plano. Leen y graban etiquetas igual de bien, pero hay que pedírselo: o desde una app, o activando el <strong>lector de etiquetas NFC</strong> en el centro de control. Para este uso concreto, esa es la diferencia real entre un iPhone de 2017 y uno de 2018 en adelante.</p>
+  <p class="fine">Fuentes: Apple, <a href="https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading">Adding Support for Background Tag Reading</a> (documentación de Core NFC) y <a href="https://support.apple.com/es-es/guide/iphone/aside/asd-nfc-reader/15.0/ios">Modelos compatibles con el lector de etiquetas NFC</a> (manual del iPhone).</p>
 
   <h2 id="congelador">¿Aguanta el congelador? Frío y humedad</h2>
   <p>El chip, por especificación del fabricante, funciona entre -25 °C y +70 °C, muy por debajo de los -18 °C habituales de un congelador doméstico. La electrónica en sí no es el problema.</p>

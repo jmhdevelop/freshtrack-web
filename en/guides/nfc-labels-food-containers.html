@@ -66,7 +66,7 @@
       "url": "https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html",
       "image": "https://freshtrack.softapp.tech/img/og-en.png",
       "datePublished": "2026-09-07",
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-09-11",
       "author": {
         "@type": "Organization",
         "name": "SOFTAPP SOLUTIONS LLC",
@@ -275,7 +275,7 @@
   <span class="kicker">Guide</span>
   <h1>NFC labels for food containers: complete guide</h1>
   <p class="lead">Which tag to buy, where to stick it, how to write and read it with your iPhone, and whether it really survives the freezer. You can follow the whole thing without installing anything.</p>
-  <p class="byline">Published on 7 September 2026 by SOFTAPP SOLUTIONS LLC</p>
+  <p class="byline">Published on 7 September 2026 by SOFTAPP SOLUTIONS LLC · Updated on 11 September 2026</p>
 
   <nav class="toc" aria-label="Guide contents">
     <p>In this guide</p>
@@ -286,6 +286,7 @@
       <li><a href="#buy">Which tag to buy</a></li>
       <li><a href="#stick">Where to stick it</a></li>
       <li><a href="#write">How to write it with your iPhone</a></li>
+      <li><a href="#no-app">Reading it without opening an app</a></li>
       <li><a href="#freezer">Does it survive the freezer?</a></li>
       <li><a href="#duration">How long frozen food lasts</a></li>
       <li><a href="#freshtrack">By hand, or with FreshTrack</a></li>
@@ -342,6 +343,31 @@
     <li>To reuse the container, repeat the same process: writing overwrites the previous content, no need to erase anything first.</li>
   </ol>
   <p class="fine">You need an iPhone 7 or later; that's the minimum Apple supports for reading and writing NFC tags from third-party apps.</p>
+
+  <h2 id="no-app">Reading it without opening an app: background tag reading</h2>
+  <p>Here is the part almost nobody knows, and it changes how you use this day to day: from the <strong>iPhone XS</strong> onward, iOS reads NFC tags <strong>without you opening anything</strong>. The app doesn't have to be open, or even running. You hold the phone near the tag, a notification appears on screen, and if you tap it, iOS opens the right app and hands it whatever was written on the tag. Apple calls this <em>background tag reading</em>, and its documentation puts it in exactly these words: "iPhone XS and later support background tag reading."</p>
+  <p>In the iPhone User Guide, the models that have it on out of the box are the iPhone XR, XS, XS Max, SE (2nd generation) and everything after them. Apple doesn't state an iOS version on that page; what is dated is the API property that delivers a tag read this way to the app, available <strong>from iOS 12.0</strong>.</p>
+
+  <h3>What has to be true for the notification to show up</h3>
+  <p>The general condition is that the iPhone is <strong>in use</strong> — screen on. It does not have to be unlocked for the notification to appear: if it's locked, the system asks you to unlock before it hands the data to the app. And even with the screen on, Apple lists five situations where background reading is <strong>not</strong> available:</p>
+  <ul>
+    <li>The iPhone <strong>has never been unlocked</strong> since it was switched on.</li>
+    <li>An <strong>app's NFC reader session is already running</strong>: if you're scanning from an app, the system stays out of the way.</li>
+    <li><strong>Apple Pay Wallet</strong> is in use.</li>
+    <li>The <strong>camera</strong> is in use.</li>
+    <li><strong>Airplane mode</strong> is on.</li>
+  </ul>
+
+  <h3>What the tag has to have written on it</h3>
+  <p>This is the detail that changes what's worth writing. The system doesn't look at everything on the tag: it looks inside the NDEF message for a <strong>URI record</strong> (the one of type "U") and, if there is more than one, it takes the first. That URI has to be either a <strong>universal link</strong> belonging to an app or one of the schemes Apple supports: https web addresses, mailto, sms, tel, FaceTime and FaceTime Audio, Apple Maps and HomeKit accessory setup. An app's own custom scheme won't do.</p>
+  <div class="box">
+    <p><strong>What that means for this guide:</strong> a <strong>text</strong> record — the kind recommended above for writing "Lentils · Frozen 6 Sept" — will <strong>not</strong> make the notification appear. The tag still reads perfectly well, but you have to open an NFC app to do it. If what you want is to hold the phone near the container and have it pop up on its own, the tag has to carry a <strong>URL</strong>, not a text note.</p>
+  </div>
+  <p>Tapping the notification does one of two things: if the URL is a universal link for an app you have installed, iOS opens that app (or brings it to the foreground) and hands it the tag's message; if no installed app is associated with that link, it opens in Safari.</p>
+
+  <h3>Where it doesn't work</h3>
+  <p>The iPhone 7, 7 Plus, 8, 8 Plus and iPhone X <strong>don't</strong> have background tag reading. They read and write tags just as well, but you have to ask: either from an app, or by turning on the <strong>NFC Tag Reader</strong> in Control Center. For this particular use, that's the real difference between a 2017 iPhone and a 2018-or-later one.</p>
+  <p class="fine">Sources: Apple, <a href="https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading">Adding Support for Background Tag Reading</a> (Core NFC documentation) and <a href="https://support.apple.com/en-us/guide/iphone/aside/asd-nfc-reader/15.0/ios">Models that support NFC Tag Reader</a> (iPhone User Guide).</p>
 
   <h2 id="freezer">Does it survive the freezer? Cold and humidity</h2>
   <p>Per the manufacturer's specification, the chip operates between -25°C and +70°C (-13°F to 158°F), well past a typical home freezer's -18°C (0°F). The electronics themselves aren't the issue.</p>
