@@ -24,34 +24,76 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to label food containers with NFC so you know what's inside",
-  "description": "A guide to choosing, sticking, writing and reusing rewritable NFC tags on food containers, so you can tell what's inside and when it expires without opening them.",
-  "step": [
+  "@graph": [
     {
-      "@type": "HowToStep",
-      "name": "Choose the tag",
-      "text": "Buy rewritable NTAG213 or NTAG215 NFC tags, laminated and sold for fridge or freezer use."
+      "@type": "HowTo",
+      "name": "How to label food containers with NFC so you know what's inside",
+      "description": "A guide to choosing, sticking, writing and reusing rewritable NFC tags on food containers, so you can tell what's inside and when it expires without opening them.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Choose the tag",
+          "text": "Buy rewritable NTAG213 or NTAG215 NFC tags, laminated and sold for fridge or freezer use."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Stick it on the lid",
+          "text": "Place it on a flat, accessible spot on the lid, away from any metal parts and away from a hinge or clasp that flexes when you open it."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Write it with your iPhone",
+          "text": "Using any NDEF-compatible NFC app, create a text record with the contents and the date, then hold the top back of your iPhone against the tag until the app confirms the write."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Read it to see what's inside",
+          "text": "Tap your iPhone on the tag to read the contents without opening the container."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Reuse it once the container is empty",
+          "text": "Write over the same tag with the next contents; an NFC tag handles hundreds of thousands of rewrites."
+        }
+      ]
     },
     {
-      "@type": "HowToStep",
-      "name": "Stick it on the lid",
-      "text": "Place it on a flat, accessible spot on the lid, away from any metal parts and away from a hinge or clasp that flexes when you open it."
+      "@type": "Article",
+      "headline": "NFC labels for food containers: complete guide",
+      "description": "Which NFC tag to buy, where to stick it, how to write it with your iPhone and whether it survives the freezer.",
+      "inLanguage": "en",
+      "mainEntityOfPage": "https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html",
+      "url": "https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html",
+      "image": "https://freshtrack.softapp.tech/img/og-en.png",
+      "datePublished": "2026-09-07",
+      "dateModified": "2026-09-07",
+      "author": {
+        "@type": "Organization",
+        "name": "SOFTAPP SOLUTIONS LLC",
+        "url": "https://freshtrack.softapp.tech/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SOFTAPP SOLUTIONS LLC",
+        "url": "https://freshtrack.softapp.tech/"
+      }
     },
     {
-      "@type": "HowToStep",
-      "name": "Write it with your iPhone",
-      "text": "Using any NDEF-compatible NFC app, create a text record with the contents and the date, then hold the top back of your iPhone against the tag until the app confirms the write."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Read it to see what's inside",
-      "text": "Tap your iPhone on the tag to read the contents without opening the container."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Reuse it once the container is empty",
-      "text": "Write over the same tag with the next contents; an NFC tag handles hundreds of thousands of rewrites."
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "FreshTrack",
+          "item": "https://freshtrack.softapp.tech/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "NFC labels for food containers: complete guide",
+          "item": "https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html"
+        }
+      ]
     }
   ]
 }
@@ -127,6 +169,7 @@
   .doc { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
   .doc h1 { font-size: clamp(30px, 5vw, 42px); font-weight: 800; letter-spacing: -.02em; margin-top: 12px; line-height: 1.12; }
   .doc .lead { color: var(--muted); font-size: 18px; margin-top: 14px; }
+  .doc .byline { color: var(--muted); font-size: 14px; margin-top: 10px; }
   .doc h2 { font-size: clamp(20px, 3vw, 25px); font-weight: 800; letter-spacing: -.01em; margin-top: 52px; margin-bottom: 10px; scroll-margin-top: 76px; }
   .doc h3 { font-size: 16.5px; font-weight: 700; margin-top: 22px; margin-bottom: 4px; }
   .doc p { margin-top: 12px; }
@@ -232,6 +275,7 @@
   <span class="kicker">Guide</span>
   <h1>NFC labels for food containers: complete guide</h1>
   <p class="lead">Which tag to buy, where to stick it, how to write and read it with your iPhone, and whether it really survives the freezer. You can follow the whole thing without installing anything.</p>
+  <p class="byline">Published on 7 September 2026 by SOFTAPP SOLUTIONS LLC</p>
 
   <nav class="toc" aria-label="Guide contents">
     <p>In this guide</p>
