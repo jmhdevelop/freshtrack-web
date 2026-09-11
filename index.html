@@ -90,7 +90,7 @@
           "name": "¿Necesito etiquetas NFC para usar la app?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Los tuppers se crean, editan y borran a mano desde la app; la etiqueta solo añade poder acercar el iPhone al tupper para ver qué hay dentro y cuándo caduca. Sirven las NTAG213 o NTAG215 regrabables, pegadas en la tapa y lejos del metal."
+            "text": "No. Los tuppers se crean, editan y borran a mano desde la app; la etiqueta solo añade poder acercar el iPhone al tupper para ver qué hay dentro y cuándo caduca. Sirven las NTAG213 o NTAG215 regrabables, pegadas en la tapa y lejos del metal. Si quieres saber más, tenemos una guía completa de etiquetas NFC para tuppers: https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html"
           }
         },
         {
@@ -248,6 +248,10 @@
                  display: flex; align-items: center; justify-content: space-between; gap: 16px; }
   .faq summary::-webkit-details-marker { display: none; }
   .faq p a { color: var(--brand); }
+  .panel p a { color: var(--brand); }
+  .faq-more { max-width: 760px; margin: 18px auto 0; text-align: center;
+    color: var(--muted); font-size: 15.5px; }
+  .faq-more a { color: var(--brand); }
   .faq summary::after { content: ""; flex: none; width: 9px; height: 9px; margin-right: 3px;
                         border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
                         transform: rotate(45deg) translateY(-2px);
@@ -573,7 +577,7 @@
         <div class="panel-shot"><div class="phone"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/tuppers-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/tuppers-dark.jpg"><source type="image/avif" srcset="img/tuppers.avif"><img loading="lazy" src="img/tuppers.jpg" alt="Tuppers con imagen del plato y caducidad" width="496" height="1080"></picture></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 9h16v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V9z"/><path d="M4.5 9L6 5h12l1.5 4"/></svg></div>
         <h3>Tuppers con etiqueta NFC</h3>
-        <p>Pega una etiqueta NFC regrabable en la tapa, grábala desde la app y acerca el iPhone para saber qué hay dentro y cuándo caduca.</p>
+        <p>Pega una etiqueta NFC regrabable en la tapa, grábala desde la app y acerca el iPhone para saber qué hay dentro y cuándo caduca. En la <a href="guias/etiquetas-nfc-tuppers.html">guía de etiquetas NFC para tuppers</a> contamos cuál comprar, dónde pegarla y si aguanta el congelador.</p>
         <ul>
           <li>Etiquetas reutilizables al vaciar el tupper</li>
           <li>Caducidad según el tipo de comida y dónde lo guardes</li>
@@ -655,7 +659,7 @@
       </details>
       <details>
         <summary>¿Necesito etiquetas NFC para usar la app?</summary>
-        <p>No. Los tuppers se crean, editan y borran a mano desde la app; la etiqueta solo añade poder acercar el iPhone al tupper para ver qué hay dentro y cuándo caduca. Sirven las NTAG213 o NTAG215 regrabables, pegadas en la tapa y lejos del metal.</p>
+        <p>No. Los tuppers se crean, editan y borran a mano desde la app; la etiqueta solo añade poder acercar el iPhone al tupper para ver qué hay dentro y cuándo caduca. Sirven las NTAG213 o NTAG215 regrabables, pegadas en la tapa y lejos del metal. Si quieres saber más, tenemos una <a href="guias/etiquetas-nfc-tuppers.html">guía completa de etiquetas NFC para tuppers</a>.</p>
       </details>
       <details>
         <summary>¿Funciona sin Apple Intelligence?</summary>
@@ -678,6 +682,7 @@
         <p>Un iPhone o iPad con iOS 17 o posterior. Leer y grabar etiquetas NFC necesita además un iPhone 7 o posterior.</p>
       </details>
     </div>
+    <p class="faq-more">¿No está tu pregunta aquí? Hay más respuestas en el <a href="soporte.html">soporte de FreshTrack</a>, y también puedes escribirnos.</p>
   </div>
 </section>
 
