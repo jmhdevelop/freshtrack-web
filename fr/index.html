@@ -217,6 +217,11 @@
     .nav-inner .name { font-size: 16px; }
     .pill { padding: 6px 13px; font-size: 13.5px; }
   }
+  @media (max-width: 340px) {
+    /* «Télécharger» es más largo que «Descargar»/«Download» y se salía del viewport. */
+    .nav-links { gap: 10px; }
+    .pill { padding: 5px 10px; font-size: 12.5px; }
+  }
 
   /* ---- Hero ---- */
   header { position: relative; padding: 84px 0 40px; overflow: hidden; }
