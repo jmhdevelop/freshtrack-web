@@ -211,16 +211,11 @@
   .pill { background: var(--brand); color: #fff !important; font-weight: 600; padding: 7px 14px; border-radius: 999px; }
   .lang { font-weight: 700; }
   @media (max-width: 620px) {
-    .nav-links a:not(.pill):not(.lang) { display: none; }
+    .nav-links > a:not(.pill) { display: none; }
     .nav-links { gap: 14px; }
     .nav-inner { padding-block: 10px; }
     .nav-inner .name { font-size: 16px; }
     .pill { padding: 6px 13px; font-size: 13.5px; }
-  }
-  @media (max-width: 340px) {
-    /* «Télécharger» es más largo que «Descargar»/«Download» y se salía del viewport. */
-    .nav-links { gap: 10px; }
-    .pill { padding: 5px 10px; font-size: 12.5px; }
   }
 
   /* ---- Hero ---- */
@@ -493,11 +488,40 @@
   }
   #langbar button:hover { color: var(--text); background: var(--brand-soft) }
   #langbar a:focus-visible, #langbar button:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px }
-  .lang-switch { display: inline-flex; gap: 8px; }
+  .lang-menu { position: relative; }
+  .lang-menu > summary {
+    list-style: none; display: inline-flex; align-items: center; gap: 6px;
+    height: 34px; padding: 0 12px; border-radius: 17px; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); cursor: pointer;
+    font-size: 13px; font-weight: 600; white-space: nowrap;
+  }
+  .lang-menu > summary::-webkit-details-marker { display: none; }
+  .lang-menu > summary svg { flex: none; stroke: currentColor; stroke-width: 1.8;
+    fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .lang-menu > summary .globe { width: 15px; height: 15px; }
+  .lang-menu > summary .chev { width: 9px; height: 9px; transition: transform .2s var(--ease); }
+  .lang-menu[open] > summary { border-color: var(--brand); }
+  .lang-menu[open] > summary .chev { transform: rotate(180deg); }
+  .lang-list {
+    position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
+    min-width: 178px; margin: 0; padding: 6px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    box-shadow: var(--shadow);
+  }
+  .lang-list a {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 9px 10px; border-radius: 9px; color: var(--text); text-decoration: none;
+    font-size: 14.5px;
+  }
+  .lang-list a:hover { background: var(--brand-soft); }
+  .lang-list a svg { flex: none; width: 15px; height: 15px; stroke: var(--brand);
+    stroke-width: 2.1; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0; }
+  .lang-list a[aria-current="page"] { font-weight: 700; }
+  .lang-list a[aria-current="page"] svg { opacity: 1; }
+  .lang-menu > summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+  .lang-list a:focus-visible { outline: 2px solid var(--brand); outline-offset: -2px; }
   @media (max-width: 480px) {
     .nav-inner .name { display: none }
-    .lang-switch { gap: 4px }
-    .lang-switch a { font-size: 12px }
   }
 </style>
   <script defer src="https://softmetrics.softapp.tech/b.js"></script>
@@ -519,7 +543,7 @@
       <a href="#features">Fonctionnalités</a>
       <a href="#privacy">Confidentialité</a>
       <button class="theme" type="button" aria-label="Changer de thème"><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M19.2 4.8l-1.7 1.7M6.5 17.5l-1.7 1.7"/></svg><svg class="moon" viewBox="0 0 24 24"><path d="M20.4 14.2A8.4 8.4 0 0 1 9.8 3.6a8.4 8.4 0 1 0 10.6 10.6z"/></svg></button>
-      <span class="lang-switch"><a class="lang" href="../" hreflang="es" lang="es" onclick="try{localStorage.setItem('ft-lang','es')}catch(e){}">ES</a><a class="lang" href="../en/" hreflang="en" lang="en" onclick="try{localStorage.setItem('ft-lang','en')}catch(e){}">EN</a><a class="lang" href="../de/" hreflang="de" lang="de" onclick="try{localStorage.setItem('ft-lang','de')}catch(e){}">DE</a><a class="lang" href="../it/" hreflang="it" lang="it" onclick="try{localStorage.setItem('ft-lang','it')}catch(e){}">IT</a><a class="lang" href="../pt/" hreflang="pt-BR" lang="pt-BR" onclick="try{localStorage.setItem('ft-lang','pt')}catch(e){}">PT</a></span>
+      <details class="lang-menu"><summary aria-label="Changer de langue. Actuelle : Français"><svg class="globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.6 4.3 6 4.3 9.5s-1.5 6.9-4.3 9.5c-2.8-2.6-4.3-6-4.3-9.5s1.5-6.9 4.3-9.5z"/></svg><span aria-hidden="true">FR</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8l7 7 7-7"/></svg></summary><div class="lang-list"><a href="../" hreflang="es" lang="es" onclick="try{localStorage.setItem('ft-lang','es')}catch(e){}">Español<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="../en/" hreflang="en" lang="en" onclick="try{localStorage.setItem('ft-lang','en')}catch(e){}">English<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="../de/" hreflang="de" lang="de" onclick="try{localStorage.setItem('ft-lang','de')}catch(e){}">Deutsch<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="./" hreflang="fr" lang="fr" aria-current="page" onclick="try{localStorage.setItem('ft-lang','fr')}catch(e){}">Français<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="../it/" hreflang="it" lang="it" onclick="try{localStorage.setItem('ft-lang','it')}catch(e){}">Italiano<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="../pt/" hreflang="pt-BR" lang="pt-BR" onclick="try{localStorage.setItem('ft-lang','pt')}catch(e){}">Português<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a></div></details>
       <a class="pill" href="https://apps.apple.com/app/id6791699550">Télécharger</a>
     </div>
   </div>
@@ -753,6 +777,16 @@
     try { localStorage.setItem("ft-theme", theme); } catch (e) {}
     applyTheme(theme);
   });
+  document.querySelectorAll(".lang-menu").forEach(menu => {
+    const summary = menu.querySelector("summary");
+    document.addEventListener("click", e => {
+      if (menu.open && !menu.contains(e.target)) menu.open = false;
+    });
+    menu.addEventListener("keydown", e => {
+      if (e.key === "Escape" && menu.open) { menu.open = false; summary.focus(); }
+    });
+  });
+
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
     let stored; try { stored = localStorage.getItem("ft-theme"); } catch (err) {}
     if (!stored) { theme = e.matches ? "dark" : "light"; applyTheme(theme); }
