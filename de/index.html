@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expiry tracker: pantry, fridge, NFC containers — FreshTrack</title>
+<meta name="description" content="Track expiry dates across your pantry, fridge and freezer, and tap your iPhone on a container's NFC tag to see what's inside. Free and no ads.">
+<link rel="icon" href="../img/icon.png">
+<link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/">
+<link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/">
+<link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/">
+<link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/">
+<link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/">
+<link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/">
+<link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/">
+<link rel="canonical" href="https://freshtrack.softapp.tech/de/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f5f8f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c110f" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="../img/icon.png">
+<meta name="apple-itunes-app" content="app-id=6791699550">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreshTrack">
+<meta property="og:title" content="FreshTrack — No more expired food">
+<meta property="og:description" content="Track expiry dates across your pantry, fridge, freezer and NFC-tagged food containers. Scan the product and let on-device AI do the rest. Free, no ads, no data collection.">
+<meta property="og:url" content="https://freshtrack.softapp.tech/de/">
+<meta property="og:image" content="https://freshtrack.softapp.tech/img/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FreshTrack — No more expired food">
+<meta name="twitter:description" content="Track expiry dates across your pantry, fridge, freezer and NFC-tagged food containers. Scan the product and let on-device AI do the rest. Free, no ads, no data collection.">
+<meta name="twitter:image" content="https://freshtrack.softapp.tech/img/og-en.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "name": "FreshTrack",
+      "url": "https://freshtrack.softapp.tech/de/",
+      "image": "https://freshtrack.softapp.tech/img/og-en.png",
+      "description": "Track expiry dates across your pantry, fridge, freezer and NFC-tagged food containers. Scan the product and let on-device AI do the rest. Free, no ads, no data collection.",
+      "operatingSystem": "iOS 17.0 or later",
+      "applicationCategory": "LifestyleApplication",
+      "inLanguage": "de",
+      "softwareVersion": "1.1",
+      "installUrl": "https://apps.apple.com/app/id6791699550",
+      "downloadUrl": "https://apps.apple.com/app/id6791699550",
+      "sameAs": "https://apps.apple.com/app/id6791699550",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://apps.apple.com/app/id6791699550"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "SOFTAPP SOLUTIONS LLC",
+        "email": "freshtrack@softapp.tech",
+        "url": "https://freshtrack.softapp.tech/"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "name": "FreshTrack",
+      "url": "https://freshtrack.softapp.tech/de/",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where can I download FreshTrack?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On the App Store, for free: https://apps.apple.com/app/id6791699550. It runs on iPhone and iPad with iOS 17 or later."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is FreshTrack free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, completely: no limits, no subscriptions, no in-app purchases and no ads. Everything is unlocked from day one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need NFC tags to use the app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Containers can be created, edited and deleted by hand in the app; the tag only adds being able to tap your iPhone on the container to see what's inside and when it expires. Rewritable NTAG213 or NTAG215 tags work, stuck on the lid and away from metal. Want to know more? Read our full guide to NFC labels for food containers: https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work without Apple Intelligence?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. On a device without Apple Intelligence, label reading falls back to classic OCR and product images are the built-in ones per food type. No feature is blocked."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it sync between my iPhone and iPad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, over iCloud and automatically across devices signed in to the same Apple Account. If iCloud is unavailable, the app keeps working locally."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does FreshTrack collect my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It collects none. Everything lives on your device and in your private iCloud database. Scanning a barcode sends only the product number to Open Food Facts, with no identifier of you or your device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I keep more than one home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Each home has its own pantry, containers, shopping list and settings, and you switch between them in two taps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do I need to use it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An iPhone or iPad running iOS 17 or later. Reading and writing NFC tags also needs an iPhone 7 or later."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --brand: #0D9E78;
+    --brand-bright: #0b8a69;
+    --brand-soft: rgba(13, 158, 120, .12);
+    --bg: #f5f8f6;
+    --card: #ffffff;
+    --border: rgba(18, 42, 33, .08);
+    --text: #14231d;
+    --muted: rgba(20, 35, 29, .66);
+    --shadow: 0 8px 28px rgba(18, 42, 33, .08);
+    --radius: 20px;
+    --nav-h: 56px;
+    /* Curva de iOS: sale rápido y frena largo. Toda transición del
+       escaparate usa esta misma para que el conjunto sea coherente. */
+    --ease: cubic-bezier(.32, .72, 0, 1);
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c110f;
+    --card: #151c18;
+    --border: rgba(255, 255, 255, .09);
+    --text: #e9f2ee;
+    --muted: rgba(233, 242, 238, .6);
+    --shadow: 0 8px 28px rgba(0, 0, 0, .4);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  picture { display: contents; }
+  /* clip y no hidden: hidden convierte a html/body en contenedor de scroll
+     y eso deja muerto el position:sticky del escaparate. */
+  html { scroll-behavior: smooth; overflow-x: clip; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    -webkit-font-smoothing: antialiased; overflow-x: clip;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---- Nav ---- */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+    background: color-mix(in srgb, var(--bg) 80%, transparent); border-bottom: 1px solid var(--border);
+  }
+  /* El cambio de tema funde colores y capturas a la vez. */
+  body, nav, .stat, .privacy, .cta, .badge.soft { transition: background-color .45s ease, border-color .45s ease; }
+  .screen, .phone img { transition: opacity .3s ease; }
+  .theme {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); cursor: pointer; padding: 0;
+  }
+  .theme svg { width: 17px; height: 17px; stroke: currentColor; stroke-width: 1.8;
+               fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .theme .moon { display: none; }
+  :root[data-theme="dark"] .theme .sun { display: none; }
+  :root[data-theme="dark"] .theme .moon { display: block; }
+  .nav-inner { display: flex; align-items: center; gap: 10px; padding-block: 12px; }
+  .nav-inner img { width: 32px; height: 32px; border-radius: 8px; }
+  .nav-inner .name { font-weight: 700; font-size: 17px; }
+  .nav-links { margin-left: auto; display: flex; gap: 22px; align-items: center; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 14.5px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--text); }
+  .pill { background: var(--brand); color: #fff !important; font-weight: 600; padding: 7px 14px; border-radius: 999px; }
+  .lang { font-weight: 700; }
+  @media (max-width: 620px) {
+    .nav-links a:not(.pill):not(.lang) { display: none; }
+    .nav-links { gap: 14px; }
+    .nav-inner { padding-block: 10px; }
+    .nav-inner .name { font-size: 16px; }
+    .pill { padding: 6px 13px; font-size: 13.5px; }
+  }
+
+  /* ---- Hero ---- */
+  header { position: relative; padding: 84px 0 40px; overflow: hidden; }
+  header::before {
+    content: ""; position: absolute; top: -320px; left: 50%; transform: translateX(-50%);
+    width: 1100px; height: 780px; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(13,158,120,.16), transparent 70%);
+    pointer-events: none;
+  }
+  .hero { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 44px; align-items: center; }
+  @media (max-width: 820px) { .hero { grid-template-columns: 1fr; text-align: center; } }
+  .hero h1 { font-size: clamp(38px, 6vw, 60px); font-weight: 800; letter-spacing: -.025em; line-height: 1.08; }
+  .hero h1 .grad {
+    background: linear-gradient(100deg, var(--brand), #34b48d);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hero p { margin-top: 18px; font-size: clamp(17px, 2.4vw, 20px); color: var(--muted); max-width: 480px; }
+  @media (max-width: 820px) { .hero p { margin-inline: auto; } }
+  .badges { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+  @media (max-width: 820px) { .badges { justify-content: center; } }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px;
+           border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; }
+  .badge svg { flex: none; width: 18px; height: 21px; }
+  .badge.main { background: var(--brand); color: #fff; box-shadow: 0 10px 26px rgba(13,158,120,.3); }
+  a.badge.main { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+  a.badge.main:hover { background: var(--brand-bright); transform: translateY(-2px);
+                       box-shadow: 0 14px 32px rgba(13,158,120,.38); }
+  .badge.soft { background: var(--card); border: 1px solid var(--border); color: var(--text); box-shadow: var(--shadow); }
+  :root[data-theme="dark"] header::before { opacity: .5; }
+
+  /* ---- Preguntas frecuentes ---- */
+  .faq { max-width: 760px; margin: 28px auto 0; }
+  .faq details { background: var(--card); border: 1px solid var(--border);
+                 border-radius: var(--radius); padding: 0 20px; margin-top: 10px;
+                 box-shadow: var(--shadow); }
+  .faq summary { cursor: pointer; font-weight: 600; padding: 15px 0; list-style: none;
+                 display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq p a { color: var(--brand); }
+  .panel p a { color: var(--brand); }
+  .faq-more { max-width: 760px; margin: 18px auto 0; text-align: center;
+    color: var(--muted); font-size: 15.5px; }
+  .faq-more a { color: var(--brand); }
+  .faq summary::after { content: ""; flex: none; width: 9px; height: 9px; margin-right: 3px;
+                        border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+                        transform: rotate(45deg) translateY(-2px);
+                        transition: transform .25s var(--ease); }
+  .faq details[open] summary::after { transform: rotate(-135deg) translateY(-1px); }
+  .faq details p { color: var(--muted); padding: 0 0 17px; }
+
+  .phone {
+    border-radius: 42px; border: 1px solid rgba(18,42,33,.14); background: #101311;
+    padding: 7px; box-shadow: 0 30px 70px rgba(18, 42, 33, .22);
+    width: min(300px, 78vw); margin: 0 auto;
+  }
+  .phone img { display: block; width: 100%; height: auto; border-radius: 36px; }
+  .float { animation: float 5.5s ease-in-out infinite; }
+  @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
+
+  /* ---- Secciones ---- */
+  section { padding: 72px 0 8px; }
+  .kicker { display: flex; align-items: center; gap: 7px; justify-content: center;
+            color: var(--muted); font-size: 14px; font-weight: 600;
+            text-transform: uppercase; letter-spacing: .08em; }
+  .kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--brand); }
+  h2 { font-size: clamp(28px, 4.4vw, 40px); font-weight: 800; letter-spacing: -.02em; text-align: center; margin-top: 10px; }
+  .sub { text-align: center; color: var(--muted); max-width: 600px; margin: 12px auto 0; }
+
+  /* ================= Escaparate ================= */
+  .showcase {
+    display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    gap: 60px;
+    /* Imprescindible: con el stretch por defecto el sticky no se despega. */
+    align-items: start;
+    margin-top: 28px;
+  }
+  .stage { position: sticky; top: 0; height: 100vh; height: 100svh;
+           display: flex; align-items: center; justify-content: center; }
+  .stage-inner { position: relative; display: flex; align-items: center; justify-content: center;
+                 perspective: 1600px; }
+  /* Luz de ambiente: respira detrás del marco y da profundidad a la escena. */
+  .glow {
+    position: absolute; z-index: 0; width: 118%; aspect-ratio: 1; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(13,158,120,.20), rgba(13,158,120,.05) 55%, transparent 72%);
+    filter: blur(14px); pointer-events: none;
+    transform: scale(var(--gs, 1)); transition: transform 1.1s var(--ease);
+  }
+
+  /* ---- El dispositivo ---- */
+  .device {
+    position: relative; z-index: 1; width: min(348px, 74vw); padding: 12px;
+    border-radius: 56px;
+    background: linear-gradient(155deg, #343935 0%, #0c0f0d 38%, #0a0c0b 62%, #2b302c 100%);
+    box-shadow: 0 50px 100px rgba(18,42,33,.22), 0 12px 34px rgba(18,42,33,.12),
+                inset 0 0 0 1px rgba(255,255,255,.10);
+    cursor: pointer; -webkit-tap-highlight-color: transparent;
+    transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) scale(var(--s, 1));
+    transform-style: preserve-3d;
+    transition: transform .55s var(--ease), box-shadow .55s var(--ease);
+  }
+  .device:focus-visible { outline: 3px solid var(--brand); outline-offset: 6px; }
+  .device.is-pressed { --s: .975; }
+  /* Botones físicos: dan volumen al marco sin una sola imagen. */
+  .device::before, .device::after {
+    content: ""; position: absolute; width: 3px; border-radius: 3px;
+    background: linear-gradient(#414742, #191d1a);
+  }
+  .device::before { left: -2px; top: 21%; height: 8%; box-shadow: 0 3.2em 0 #2a2f2b, 0 5.6em 0 #2a2f2b; }
+  .device::after  { right: -2px; top: 30%; height: 11%; }
+
+  .island {
+    position: absolute; z-index: 6; top: 22px; left: 50%; transform: translateX(-50%);
+    width: 26%; height: 21px; border-radius: 999px; background: #000;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+  }
+
+  .screens {
+    position: relative; aspect-ratio: 497 / 1080; border-radius: 45px;
+    overflow: hidden; background: #0b0d0c; isolation: isolate;
+  }
+  /* Las pantallas las mueve el scroll, píxel a píxel: la entrante llega desde
+     la derecha y la anterior queda empujada y en sombra, como una pila de
+     navegación de iOS que arrastras tú. El JS pone el transform directamente. */
+  .screen {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    transform: translate3d(100%, 0, 0);
+    will-change: transform, filter;
+  }
+
+  /* El toque que provoca el cambio: aparece sobre la pestaña de destino. */
+  .tap {
+    position: absolute; z-index: 7; width: 46px; height: 46px; margin: -23px 0 0 -23px;
+    border-radius: 50%; pointer-events: none; opacity: 0;
+    background: radial-gradient(circle, rgba(255,255,255,.85) 0%, rgba(255,255,255,.35) 45%, transparent 70%);
+    box-shadow: 0 0 0 1.5px rgba(255,255,255,.5);
+  }
+  .tap.go { animation: tap .62s var(--ease); }
+  @keyframes tap {
+    0%   { opacity: 0;   transform: scale(.3); }
+    22%  { opacity: .95; transform: scale(.8); }
+    100% { opacity: 0;   transform: scale(2.1); }
+  }
+
+  /* Reflejo del cristal: se desplaza con la inclinación. */
+  .glare {
+    position: absolute; inset: 0; z-index: 5; pointer-events: none; border-radius: 45px;
+    background: linear-gradient(102deg, transparent 32%, rgba(255,255,255,.14) 46%,
+                                rgba(255,255,255,.05) 54%, transparent 66%);
+    transform: translate3d(var(--g, 0px), 0, 0);
+    transition: transform .55s var(--ease), opacity .45s ease;
+  }
+  /* Sobre una pantalla oscura el reflejo parece un degradado de la propia
+     app: en dark se apaga. */
+  :root[data-theme="dark"] .glare { opacity: 0; }
+
+
+  /* ---- Los textos ---- */
+  .panels { padding-bottom: 12vh; }
+  .panel {
+    min-height: 88vh; min-height: 88svh;
+    display: flex; flex-direction: column; justify-content: center;
+    /* Estado, no interpolación: el bloque activo entra entero y el resto
+       se retira desenfocado. Así la transición se lee como un cambio. */
+    opacity: 0; filter: blur(7px);
+    transform: translateY(var(--dy, 36px)) scale(.97);
+    transition: opacity .6s var(--ease), filter .6s var(--ease), transform .6s var(--ease);
+    will-change: opacity, transform;
+  }
+  .panel.is-active { opacity: 1; filter: none; transform: none; }
+  .panel h3 { font-size: clamp(26px, 3.6vw, 34px); font-weight: 800; letter-spacing: -.015em; margin-top: 18px; }
+  .panel p { color: var(--muted); margin-top: 12px; font-size: 16.5px; max-width: 440px; }
+  .panel ul { margin: 16px 0 0 2px; list-style: none; }
+  .panel li { display: flex; gap: 10px; color: var(--muted); font-size: 15.5px; margin-top: 8px; }
+  .panel li::before { content: "\2713"; color: var(--brand); font-weight: 700; }
+  .icon { width: 52px; height: 52px; border-radius: 15px; background: var(--brand-soft);
+          display: flex; align-items: center; justify-content: center; }
+  .icon svg { width: 26px; height: 26px; stroke: var(--brand); stroke-width: 1.8;
+              fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+
+  .panel-shot { display: none; }
+
+  @media (max-width: 900px) {
+    /* En vertical no cabe el escaparate: el marco fijo se come la mitad de la
+       pantalla y el título del texto queda detrás. Se apila cada captura con
+       su bloque, que es lo que se lee bien en un móvil. */
+    .showcase { grid-template-columns: 1fr; gap: 0; }
+    .stage { display: none; }
+    .panels { padding-bottom: 0; }
+    .panel {
+      min-height: 0; padding: 30px 0;
+      opacity: 1; filter: none; transform: none; transition: none;
+    }
+    .panel-shot { display: block; margin-bottom: 24px; }
+    .panel-shot .phone { width: min(240px, 64vw); }
+  }
+
+  /* ---- Cinta de filosofía ---- */
+  .strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 44px; }
+  .stat { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+          padding: 26px 22px; text-align: center; box-shadow: var(--shadow);
+          transition: transform .25s ease, border-color .25s ease; }
+  .stat:hover { transform: translateY(-4px); border-color: rgba(13,158,120,.4); }
+  .stat .big { font-size: 30px; font-weight: 800; color: var(--brand); }
+  .stat .label { color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+  /* ---- Privacidad ---- */
+  .privacy { background: linear-gradient(160deg, rgba(13,158,120,.12), rgba(13,158,120,.03));
+             border: 1px solid rgba(13,158,120,.25); border-radius: 26px;
+             padding: 48px 32px; text-align: center; margin-top: 40px; }
+  .privacy .icon { margin: 0 auto; }
+  .privacy h2 { margin-top: 12px; }
+  .privacy p { color: var(--muted); max-width: 640px; margin: 14px auto 0; }
+  .privacy a { display: inline-block; margin-top: 22px; color: #fff; background: var(--brand);
+               padding: 12px 22px; border-radius: 999px; text-decoration: none; font-weight: 600; }
+
+  /* ---- Llamada final a descargar ---- */
+  .cta { background: var(--card); border: 1px solid var(--border); border-radius: 26px;
+         padding: 48px 32px; text-align: center; margin-top: 40px; box-shadow: var(--shadow); }
+  .cta p { color: var(--muted); max-width: 560px; margin: 14px auto 26px; }
+
+  footer { padding: 56px 0 64px; text-align: center; color: var(--muted); font-size: 14px; }
+  footer .links { display: flex; gap: 22px; justify-content: center; margin-bottom: 14px; flex-wrap: wrap; }
+  footer a { color: var(--muted); }
+
+  /* ---- Animaciones de scroll ---- */
+  #progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+              background: linear-gradient(90deg, var(--brand), #34b48d);
+              z-index: 60; border-radius: 0 3px 3px 0; }
+  .reveal { opacity: 0; transform: translateY(30px);
+            transition: opacity .8s var(--ease), transform .8s var(--ease);
+            transition-delay: var(--d, 0s); }
+  .reveal.visible { opacity: 1; transform: none; }
+  .parallax { will-change: transform; }
+  nav { transition: box-shadow .3s ease; }
+  nav.scrolled { box-shadow: 0 10px 30px rgba(18,42,33,.1); }
+  @media (max-width: 820px) {
+    header { padding: 56px 0 28px; }
+    section { padding: 48px 0 8px; }
+    .phone { width: min(250px, 68vw); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .float { animation: none; }
+    html { scroll-behavior: auto; }
+    #progress { display: none; }
+    /* Sin movimiento se deshace el escaparate: cada bloque recupera su propia
+       captura, igual que en vertical, en vez de dejar un solo marco suelto. */
+    .stage { display: none; }
+    .panels { padding-bottom: 0; }
+    .panel { min-height: 0; padding: 26px 0; opacity: 1; filter: none; transform: none; transition: none; }
+    .panel-shot { display: block; margin-bottom: 24px; }
+    .screen, .device, .glare, .tap { transition: none; animation: none; }
+  }
+  /* Aviso de idioma. Antes esto era una redirección por navigator.language, y
+     Googlebot rastrea en en-US: la seguía y dejaba de indexar la portada española.
+     El aviso respeta la URL en la que aterriza cada uno. */
+  #langbar[hidden] { display: none }
+  #langbar {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    padding: 10px 20px; background: var(--card); border-bottom: 1px solid var(--border);
+    font-size: 14px; color: var(--muted);
+  }
+  #langbar p { margin: 0 }
+  #langbar a { color: var(--brand-bright); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px }
+  #langbar button {
+    margin-left: auto; background: none; border: 0; color: var(--muted); font-size: 20px;
+    line-height: 1; cursor: pointer; padding: 2px 6px; border-radius: 6px;
+  }
+  #langbar button:hover { color: var(--text); background: var(--brand-soft) }
+  #langbar a:focus-visible, #langbar button:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px }
+  .lang-switch { display: inline-flex; gap: 8px; }
+  @media (max-width: 480px) {
+    .nav-inner .name { display: none }
+    .lang-switch { gap: 4px }
+    .lang-switch a { font-size: 12px }
+  }
+</style>
+  <script defer src="https://softmetrics.softapp.tech/b.js"></script>
+</head>
+<body>
+<div id="langbar" hidden>
+  <p id="langtxt"></p>
+  <a id="langgo" href="#"></a>
+  <button id="langno" type="button" aria-label="Dismiss">&times;</button>
+</div>
+
+<div id="progress"></div>
+
+<nav>
+  <div class="wrap nav-inner">
+    <img src="../img/icon.png" alt="" width="256" height="256">
+    <span class="name">FreshTrack</span>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <button class="theme" type="button" aria-label="Cambiar tema"><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M19.2 4.8l-1.7 1.7M6.5 17.5l-1.7 1.7"/></svg><svg class="moon" viewBox="0 0 24 24"><path d="M20.4 14.2A8.4 8.4 0 0 1 9.8 3.6a8.4 8.4 0 1 0 10.6 10.6z"/></svg></button>
+      <span class="lang-switch"><a class="lang" href="../" hreflang="es" lang="es" onclick="try{localStorage.setItem('ft-lang','es')}catch(e){}">ES</a><a class="lang" href="../en/" hreflang="en" lang="en" onclick="try{localStorage.setItem('ft-lang','en')}catch(e){}">EN</a><a class="lang" href="../fr/" hreflang="fr" lang="fr" onclick="try{localStorage.setItem('ft-lang','fr')}catch(e){}">FR</a><a class="lang" href="../it/" hreflang="it" lang="it" onclick="try{localStorage.setItem('ft-lang','it')}catch(e){}">IT</a><a class="lang" href="../pt/" hreflang="pt-BR" lang="pt-BR" onclick="try{localStorage.setItem('ft-lang','pt')}catch(e){}">PT</a></span>
+      <a class="pill" href="https://apps.apple.com/app/id6791699550">Download</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<header id="hero">
+  <div class="wrap hero">
+    <div class="text reveal">
+      <h1>No more<br><span class="grad">expired food</span></h1>
+      <p>Pantry, fridge, freezer and food containers under control. Scan, let the AI on your iPhone do the rest and use up what you already have.</p>
+      <div class="badges">
+        <a class="badge main" href="https://apps.apple.com/app/id6791699550"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.05 12.54c-.03-2.9 2.37-4.29 2.48-4.36-1.35-1.97-3.45-2.24-4.2-2.27-1.78-.18-3.48 1.05-4.39 1.05-.9 0-2.3-1.03-3.78-1-1.95.03-3.75 1.14-4.75 2.88-2.02 3.5-.51 8.7 1.46 11.54.96 1.4 2.1 2.96 3.61 2.9 1.45-.05 2-.93 3.75-.93s2.25.93 3.78.9c1.56-.02 2.55-1.42 3.5-2.81 1.1-1.62 1.56-3.18 1.58-3.26-.03-.01-3.03-1.16-3.06-4.62zM14.29 4.03c.8-.97 1.34-2.32 1.19-3.66-1.15.05-2.55.77-3.37 1.73-.75.87-1.4 2.24-1.22 3.55 1.29.1 2.6-.65 3.4-1.62z"/></svg> Download on the App Store</a>
+        <span class="badge soft">iPhone & iPad · Free forever</span>
+      </div>
+    </div>
+    <div class="parallax"><div class="phone float reveal"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="../img/de-products-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="../img/de-products-dark.jpg"><source type="image/avif" srcset="../img/de-products.avif"><img fetchpriority="high" src="../img/de-products.jpg" alt="FreshTrack: products grouped by expiry urgency" width="496" height="1080"></picture></div></div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <div class="kicker reveal">Features</div>
+    <h2 class="reveal">Expiry dates, NFC containers and the shopping list</h2>
+    <p class="sub reveal">Every feature built for one thing: nothing expires on you, and adding it all takes seconds.</p>
+  </div>
+
+  <div class="wrap">
+    <div class="showcase">
+      <div class="stage">
+        <div class="stage-inner">
+          <div class="glow"></div>
+          <div class="device" role="button" tabindex="0" aria-label="Everything it does for you">
+            <div class="island"></div>
+            <div class="screens">
+              <picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="../img/en-add-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="../img/en-add-dark.jpg"><source type="image/avif" srcset="../img/en-add.avif"><img class="screen is-active" src="../img/en-add.jpg" alt="Add product sheet: scan or manual" data-tap="18%,95%" width="496" height="1080"></picture>
+              <picture><source type="image/avif" srcset="../img/de-detail.avif"><img class="screen" loading="lazy" src="../img/de-detail.jpg" alt="Product detail with data read by on-device AI" data-tap="18%,95%" width="496" height="1080"></picture>
+              <picture><source type="image/avif" srcset="../img/de-tuppers.avif"><img class="screen" loading="lazy" src="../img/de-tuppers.jpg" alt="Containers with dish image and expiry" data-tap="39%,95%" width="496" height="1080"></picture>
+              <picture><source type="image/avif" srcset="../img/de-casas.avif"><img class="screen" loading="lazy" src="../img/de-casas.jpg" alt="FreshTrack homes manager" data-tap="82%,95%" width="496" height="1080"></picture>
+              <picture><source type="image/avif" srcset="../img/de-compra.avif"><img class="screen" loading="lazy" src="../img/de-compra.jpg" alt="FreshTrack shopping list" data-tap="61%,95%" width="496" height="1080"></picture>
+              <picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="../img/en-settings-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="../img/en-settings-dark.jpg"><source type="image/avif" srcset="../img/en-settings.avif"><img class="screen" loading="lazy" src="../img/en-settings.jpg" alt="FreshTrack settings with alert configuration" data-tap="82%,95%" width="496" height="1080"></picture>
+              <span class="tap"></span>
+              <span class="glare"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panels">
+      <article class="panel is-active">
+        <div class="panel-shot"><div class="phone"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="../img/en-add-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="../img/en-add-dark.jpg"><source type="image/avif" srcset="../img/en-add.avif"><img loading="lazy" src="../img/en-add.jpg" alt="Add product sheet: scan or manual" width="496" height="1080"></picture></div></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M4 12h16"/></svg></div>
+        <h3>Adding is scanning</h3>
+        <p>Point at the barcode and the product sheet fills itself in with the online lookup. No typing.</p>
+        <ul>
+          <li>Barcode and QR, with tap to focus</li>
+          <li>Type, location and standard shelf life set automatically</li>
+          <li>Multipacks detected (“24 × 330 ml” → 24 units)</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <div class="panel-shot"><div class="phone"><picture><source type="image/avif" srcset="../img/de-detail.avif"><img loading="lazy" src="../img/de-detail.jpg" alt="Product detail with data read by on-device AI" width="496" height="1080"></picture></div></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.7 4.6L18.3 9.3l-4.6 1.7L12 15.6l-1.7-4.6L5.7 9.3l4.6-1.7L12 3z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z"/></svg></div>
+        <h3>AI reads the label</h3>
+        <p>Apple Intelligence reads the package with the camera and saves everything, running entirely on your iPhone.</p>
+        <ul>
+          <li>Date, lot, nutrition, ingredients and allergens</li>
+          <li>Product image generated by AI, consistent style</li>
+          <li>Nothing leaves your device</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <div class="panel-shot"><div class="phone"><picture><source type="image/avif" srcset="../img/de-tuppers.avif"><img loading="lazy" src="../img/de-tuppers.jpg" alt="Containers with dish image and expiry" width="496" height="1080"></picture></div></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 9h16v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V9z"/><path d="M4.5 9L6 5h12l1.5 4"/></svg></div>
+        <h3>Containers with NFC tags</h3>
+        <p>Stick a rewritable NFC tag on the lid, write it from the app and tap your iPhone to see what’s inside and when it expires. Our <a href="../en/guides/nfc-labels-food-containers.html">guide to NFC labels for food containers</a> covers which tag to buy, where to stick it and whether it survives the freezer.</p>
+        <ul>
+          <li>Tags reusable when you empty the container</li>
+          <li>Expiry based on the food type and where you store it</li>
+          <li>With an AI-generated photo of the dish</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <div class="panel-shot"><div class="phone"><picture><source type="image/avif" srcset="../img/de-casas.avif"><img loading="lazy" src="../img/de-casas.jpg" alt="FreshTrack homes manager" width="496" height="1080"></picture></div></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V19a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9.5"/></svg></div>
+        <h3>All your homes</h3>
+        <p>Your everyday home, the beach house, the village house. Each with its own pantry, containers, shopping list and settings.</p>
+        <ul>
+          <li>Switch homes in two taps</li>
+          <li>Synced across your devices with iCloud</li>
+          <li>Custom accent color and app icon per home</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <div class="panel-shot"><div class="phone"><picture><source type="image/avif" srcset="../img/de-compra.avif"><img loading="lazy" src="../img/de-compra.jpg" alt="FreshTrack shopping list" width="496" height="1080"></picture></div></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M3 4h2l2.5 12h11L21 8H6"/></svg></div>
+        <h3>Shopping, come full circle</h3>
+        <p>What you consume goes to the history, and from the history to the shopping list in one gesture. Back from the store, rescan and the product re-adds itself with all its data.</p>
+        <ul>
+          <li>Mark as bought with one tap, with a note per item</li>
+          <li>Add from the history or type it right in</li>
+          <li>Each home with its own list, synced with iCloud</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <div class="panel-shot"><div class="phone"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="../img/en-settings-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="../img/en-settings-dark.jpg"><source type="image/avif" srcset="../img/en-settings.avif"><img loading="lazy" src="../img/en-settings.jpg" alt="FreshTrack settings with alert configuration" width="496" height="1080"></picture></div></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 10a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></div>
+        <h3>Smart alerts</h3>
+        <p>One alert a day with what’s about to expire, grouped and spam-free. You choose how far in advance.</p>
+        <ul>
+          <li>One daily alert per section: products and containers</li>
+          <li>Urgency groups: expired, today, this week</li>
+          <li>Tap the alert and the right tab opens</li>
+        </ul>
+      </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="strip">
+      <div class="stat reveal"><div class="big">$0</div><div class="label">no limits, no subscriptions, no ads</div></div>
+      <div class="stat reveal"><div class="big">0</div><div class="label">data collected</div></div>
+      <div class="stat reveal"><div class="big" data-count="100" data-suffix="%">100%</div><div class="label">on-device AI</div></div>
+      <div class="stat reveal"><div class="big" data-count="22">22</div><div class="label">product types with standard shelf life</div></div>
+      <div class="stat reveal"><div class="big">∞</div><div class="label">homes, containers and products</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="wrap">
+    <div class="privacy reveal">
+      <div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2.5"/><path d="M8 11V8a4 4 0 1 1 8 0v3"/></svg></div>
+      <h2>Privacy, for real</h2>
+      <p>FreshTrack collects no data at all. Everything lives on your device and in your private iCloud; the AI runs locally and product lookups only send the barcode, never your identity. The App Store privacy label says it plainly: “Data Not Collected”.</p>
+      <a href="datenschutz.html">Read the privacy policy</a>
+    </div>
+  </div>
+</section>
+
+
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker reveal">FAQ</div>
+    <h2 class="reveal">The questions people ask</h2>
+    <div class="faq reveal">
+      <details>
+        <summary>Where can I download FreshTrack?</summary>
+        <p>On the <a href="https://apps.apple.com/app/id6791699550">App Store</a>, for free. It runs on iPhone and iPad with iOS 17 or later.</p>
+      </details>
+      <details>
+        <summary>Is FreshTrack free?</summary>
+        <p>Yes, completely: no limits, no subscriptions, no in-app purchases and no ads. Everything is unlocked from day one.</p>
+      </details>
+      <details>
+        <summary>Do I need NFC tags to use the app?</summary>
+        <p>No. Containers can be created, edited and deleted by hand in the app; the tag only adds being able to tap your iPhone on the container to see what's inside and when it expires. Rewritable NTAG213 or NTAG215 tags work, stuck on the lid and away from metal. Want to know more? Read our full <a href="../en/guides/nfc-labels-food-containers.html">guide to NFC labels for food containers</a>.</p>
+      </details>
+      <details>
+        <summary>Does it work without Apple Intelligence?</summary>
+        <p>Yes. On a device without Apple Intelligence, label reading falls back to classic OCR and product images are the built-in ones per food type. No feature is blocked.</p>
+      </details>
+      <details>
+        <summary>Does it sync between my iPhone and iPad?</summary>
+        <p>Yes, over iCloud and automatically across devices signed in to the same Apple Account. If iCloud is unavailable, the app keeps working locally.</p>
+      </details>
+      <details>
+        <summary>Does FreshTrack collect my data?</summary>
+        <p>It collects none. Everything lives on your device and in your private iCloud database. Scanning a barcode sends only the product number to Open Food Facts, with no identifier of you or your device.</p>
+      </details>
+      <details>
+        <summary>Can I keep more than one home?</summary>
+        <p>Yes. Each home has its own pantry, containers, shopping list and settings, and you switch between them in two taps.</p>
+      </details>
+      <details>
+        <summary>What do I need to use it?</summary>
+        <p>An iPhone or iPad running iOS 17 or later. Reading and writing NFC tags also needs an iPhone 7 or later.</p>
+      </details>
+    </div>
+    <p class="faq-more">Not your question? There are more answers on the <a href="support.html">FreshTrack support page</a>, and you can always write to us.</p>
+  </div>
+</section>
+
+<section id="download">
+  <div class="wrap">
+    <div class="cta reveal">
+      <h2>Out now on the App Store</h2>
+      <p>Free, no ads and no data collected. For iPhone and iPad running iOS 17 or later.</p>
+      <a class="badge main" href="https://apps.apple.com/app/id6791699550"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.05 12.54c-.03-2.9 2.37-4.29 2.48-4.36-1.35-1.97-3.45-2.24-4.2-2.27-1.78-.18-3.48 1.05-4.39 1.05-.9 0-2.3-1.03-3.78-1-1.95.03-3.75 1.14-4.75 2.88-2.02 3.5-.51 8.7 1.46 11.54.96 1.4 2.1 2.96 3.61 2.9 1.45-.05 2-.93 3.75-.93s2.25.93 3.78.9c1.56-.02 2.55-1.42 3.5-2.81 1.1-1.62 1.56-3.18 1.58-3.26-.03-.01-3.03-1.16-3.06-4.62zM14.29 4.03c.8-.97 1.34-2.32 1.19-3.66-1.15.05-2.55.77-3.37 1.73-.75.87-1.4 2.24-1.22 3.55 1.29.1 2.6-.65 3.4-1.62z"/></svg> Download on the App Store</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="../en/guides/nfc-labels-food-containers.html">NFC Guide</a>
+      <a href="https://dibus.softapp.tech/">Dibus</a>
+      <a href="https://devtoolbox.softapp.tech/">DevToolbox</a>
+      <a href="https://softapp.tech/">SoftApp Solutions</a>
+      <a href="https://apps.apple.com/app/id6791699550">App Store</a>
+      <a href="datenschutz.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </div>
+    © 2026 SOFTAPP SOLUTIONS LLC
+  </div>
+</footer>
+
+<script>
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ---- Tema: sigue al sistema, el botón lo fija, y las capturas van a juego ----
+  const applyTheme = t => {
+    document.documentElement.dataset.theme = t;
+    // "not all" nunca casa, así que apagar la fuente oscura devuelve la clara.
+    // Antes del primer applyTheme las fuentes llevan (prefers-color-scheme: dark),
+    // así que el navegador ya acierta solo y no se descarga la imagen dos veces.
+    document.querySelectorAll("picture source[data-dark]").forEach(f => {
+      f.media = t === "dark" ? "all" : "not all";
+    });
+  };
+  let theme;
+  try { theme = localStorage.getItem("ft-theme"); } catch (e) {}
+  if (theme !== "dark" && theme !== "light")
+    theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  applyTheme(theme);
+  document.querySelector(".theme")?.addEventListener("click", () => {
+    theme = theme === "dark" ? "light" : "dark";
+    try { localStorage.setItem("ft-theme", theme); } catch (e) {}
+    applyTheme(theme);
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+    let stored; try { stored = localStorage.getItem("ft-theme"); } catch (err) {}
+    if (!stored) { theme = e.matches ? "dark" : "light"; applyTheme(theme); }
+  });
+
+  document.querySelectorAll(".hero, .strip").forEach(group => {
+    group.querySelectorAll(".reveal").forEach((el, i) => el.style.setProperty("--d", (i * .12) + "s"));
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) { entry.target.classList.add("visible"); observer.unobserve(entry.target); }
+    }
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+  const countUp = el => {
+    const target = parseInt(el.dataset.count, 10);
+    const t0 = performance.now();
+    const step = now => {
+      const p = Math.min((now - t0) / 900, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + (el.dataset.suffix || "");
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const statObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) { countUp(entry.target); statObserver.unobserve(entry.target); }
+    }
+  }, { threshold: 0.6 });
+  document.querySelectorAll(".big[data-count]").forEach(el => {
+    if (reduced) { el.textContent = el.dataset.count + (el.dataset.suffix || ""); return; }
+    el.textContent = "0" + (el.dataset.suffix || "");
+    statObserver.observe(el);
+  });
+
+  // ================= Escaparate =================
+  (function () {
+    const showcase = document.querySelector(".showcase");
+    if (!showcase) return;
+    const panels  = [...showcase.querySelectorAll(".panel")];
+    const screens = [...showcase.querySelectorAll(".screen")];
+
+    const device  = showcase.querySelector(".device");
+    const glare   = showcase.querySelector(".glare");
+    const tap     = showcase.querySelector(".tap");
+
+    if (!panels.length || !device) return;
+
+    const narrow = () => innerWidth <= 900;
+    const off = () => narrow() || reduced;   // sin escaparate: manda el CSS
+
+    let active = -1;
+
+    // Posición continua de la pila (0..n-1): cada pantalla se coloca según su
+    // distancia a ese punto, así el deslizamiento sigue al scroll píxel a píxel.
+    const place = pos => {
+      screens.forEach((s, j) => {
+        const d = j - pos;
+        let x, b;
+        if (d >= 0) {                     // por llegar: espera a la derecha
+          x = Math.min(d, 1) * 100; b = 1;
+        } else {                          // pasada: empujada y en sombra
+          const t = Math.min(-d, 1);
+          x = t * -26; b = 1 - t * .45;
+        }
+        s.style.transform = `translate3d(${x.toFixed(2)}%, 0, 0)`;
+        s.style.filter = b < .999 ? `brightness(${b.toFixed(3)})` : "";
+      });
+    };
+
+    // El toque cae sobre la pestaña que abriría esa pantalla.
+    const ripple = i => {
+      const spot = screens[i].dataset.tap;
+      if (!spot || reduced) return;
+      const [x, y] = spot.split(",");
+      tap.style.left = x; tap.style.top = y;
+      tap.classList.remove("go");
+      void tap.offsetWidth;            // reinicia la animación
+      tap.classList.add("go");
+    };
+
+    const glow = showcase.querySelector(".glow");
+    let pulseT;
+    const pulse = () => {
+      if (!glow || reduced) return;
+      glow.style.setProperty("--gs", "1.09");
+      clearTimeout(pulseT);
+      pulseT = setTimeout(() => glow.style.setProperty("--gs", "1"), 620);
+    };
+
+    const setActive = i => {
+      if (i === active) return;
+      const first = active === -1;
+      active = i;
+      if (!first) { ripple(i); pulse(); }
+      panels.forEach((p, j) => {
+        p.classList.toggle("is-active", j === i);
+        p.style.setProperty("--dy", j > i ? "36px" : "-36px");
+      });
+    };
+
+    // ---- Movimiento ----
+    // Dos cosas lo separan de seguir al scroll 1:1, que es lo que se notaba
+    // seco. Una: el objetivo se persigue con inercia, así los tirones de la
+    // rueda y del trackpad dejan de llegar tal cual a la pantalla.
+    //
+    // Y dos: el tramo entre dos bloques ya no se recorre a velocidad
+    // constante. Con la lineal, la pantalla llegaba a su sitio y en ese mismo
+    // instante arrancaba la siguiente, con un cambio brusco de velocidad justo
+    // en la frontera. Smoothstep sale de cero y llega a uno con velocidad
+    // nula, así que cada pantalla se posa y la siguiente arranca suave.
+    //
+    // Cuidado con tentarse y meter aquí una curva fuerte (easeOutCubic y
+    // compañía): al ir atada al scroll, deja la pantalla colocada en el primer
+    // tercio del recorrido y luego quieta mientras sigues bajando. Se nota
+    // peor que la lineal. El asentamiento lo pone la inercia, no esta curva.
+    const ease = t => t * t * (3 - 2 * t);
+
+    let objetivo = 0, suave = 0, raf = 0, previo = 0;
+
+    // Leer posiciones obliga al navegador a calcular la maquetación, así que
+    // se hace solo cuando hay scroll, no en cada fotograma de la animación.
+    const medir = () => {
+      const focus = innerHeight / 2;
+      // Posición fraccionaria: 0 en el centro del primer bloque, 1 en el del
+      // segundo… interpolando entre centros.
+      const centros = panels.map(p => {
+        const r = p.getBoundingClientRect();
+        return r.top + r.height / 2;
+      });
+      if (focus <= centros[0]) objetivo = 0;
+      else if (focus >= centros[centros.length - 1]) objetivo = centros.length - 1;
+      else {
+        let i = 0;
+        while (focus > centros[i + 1]) i++;
+        objetivo = i + (focus - centros[i]) / (centros[i + 1] - centros[i]);
+      }
+    };
+
+    const pintar = () => {
+      const i = Math.min(screens.length - 1, Math.floor(suave));
+      place(i + ease(suave - i));
+      setActive(Math.round(suave));
+    };
+
+    const paso = ahora => {
+      if (off()) { raf = 0; return; }
+      const dt = Math.min(64, ahora - previo || 16);
+      previo = ahora;
+      // Constante de tiempo de 110 ms, independiente de los FPS: se mueve
+      // igual a 60 Hz que a 120.
+      suave += (objetivo - suave) * (1 - Math.exp(-dt / 110));
+      if (Math.abs(objetivo - suave) < 4e-4) { suave = objetivo; raf = 0; pintar(); return; }
+      pintar();
+      raf = requestAnimationFrame(paso);
+    };
+
+    const onScroll = () => {
+      if (off()) return;
+      medir();
+      if (!raf) { previo = performance.now(); raf = requestAnimationFrame(paso); }
+    };
+    addEventListener("scroll", onScroll, { passive: true });
+    addEventListener("resize", onScroll);
+
+    // ---- Interacción ----
+    const goTo = i => {
+      const n = Math.max(0, Math.min(panels.length - 1, i));
+      panels[n].scrollIntoView({ block: "center", behavior: reduced ? "auto" : "smooth" });
+    };
+
+    // Tocar el dispositivo avanza, como pasar de pantalla en la app.
+    device.addEventListener("click", () => goTo(active + 1 >= panels.length ? 0 : active + 1));
+    device.addEventListener("pointerdown", () => device.classList.add("is-pressed"));
+    for (const ev of ["pointerup", "pointerleave", "pointercancel"])
+      device.addEventListener(ev, () => device.classList.remove("is-pressed"));
+    device.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); device.click(); }
+    });
+
+    // Flechas cuando el escaparate ocupa la pantalla.
+    addEventListener("keydown", e => {
+      if (off() || !["ArrowDown", "ArrowUp", "ArrowRight", "ArrowLeft"].includes(e.key)) return;
+      const r = showcase.getBoundingClientRect();
+      if (r.top > innerHeight * .4 || r.bottom < innerHeight * .6) return;
+      if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || "")) return;
+      e.preventDefault();
+      goTo(active + (e.key === "ArrowDown" || e.key === "ArrowRight" ? 1 : -1));
+    });
+
+    // El marco se inclina hacia el cursor: da la sensación de tenerlo en la mano.
+    const fine = matchMedia("(pointer: fine)").matches;
+    if (fine && !reduced) {
+      const stage = showcase.querySelector(".stage");
+      stage.addEventListener("pointermove", e => {
+        const r = device.getBoundingClientRect();
+        const dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
+        const dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
+        const cl = v => Math.max(-1, Math.min(1, v));
+        device.style.setProperty("--ry", (cl(dx) * 7).toFixed(2) + "deg");
+        device.style.setProperty("--rx", (cl(dy) * -5).toFixed(2) + "deg");
+        glare.style.setProperty("--g", (cl(dx) * 42).toFixed(1) + "px");
+      });
+      stage.addEventListener("pointerleave", () => {
+        device.style.setProperty("--ry", "0deg");
+        device.style.setProperty("--rx", "0deg");
+        glare.style.setProperty("--g", "0px");
+      });
+    }
+
+    // El primer fotograma se coloca sin inercia: la página no debe recibirte
+    // animándose sola.
+    if (!off()) { medir(); suave = objetivo; pintar(); }
+  })();
+
+  // Parallax del teléfono del hero + sombra de la nav + barra de progreso.
+  const fine = matchMedia("(pointer: fine) and (min-width: 821px)").matches;
+  const phones = fine ? [...document.querySelectorAll("header .parallax")] : [];
+  const nav = document.querySelector("nav");
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking || reduced) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const mid = innerHeight / 2;
+      for (const el of phones) {
+        const r = el.getBoundingClientRect();
+        el.style.transform = `translateY(${(r.top + r.height / 2 - mid) * -0.05}px)`;
+      }
+      nav.classList.toggle("scrolled", scrollY > 8);
+      document.getElementById("progress").style.width =
+        (scrollY / (document.body.scrollHeight - innerHeight) * 100) + "%";
+      ticking = false;
+    });
+  };
+  addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+</script>
+
+<script>
+  (function () {
+    try {
+      var MSG = {
+        es: ["Esta página también está disponible en español.", "Leerla en español"],
+        en: ["This page is also available in English.", "Read it in English"],
+        de: ["Diese Seite ist auch auf Deutsch verfügbar.", "Auf Deutsch lesen"],
+        fr: ["Cette page est aussi disponible en français.", "La lire en français"],
+        it: ["Questa pagina è disponibile anche in italiano.", "Leggila in italiano"],
+        pt: ["Esta página também está disponível em português.", "Ler em português"]
+      };
+      var KEY = "ft-lang", here = "de";
+      var bar = document.getElementById("langbar");
+      if (!bar) return;
+      var map = {};
+      document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (link) {
+        var code = link.hreflang.toLowerCase();
+        if (code === "x-default") return;
+        map[code.split("-")[0]] = link.href;
+      });
+      var txt = document.getElementById("langtxt"), go = document.getElementById("langgo"), no = document.getElementById("langno");
+      function remember(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+      no.addEventListener("click", function () { remember(here); bar.hidden = true; });
+      if (localStorage.getItem(KEY)) return;
+      var list = navigator.languages || [navigator.language || "en"];
+      var wants = here;
+      for (var i = 0; i < list.length; i++) {
+        var short = list[i].toLowerCase().split("-")[0];
+        if (map[short] && short !== here) { wants = short; break; }
+      }
+      if (wants !== here && MSG[wants]) {
+        txt.textContent = MSG[wants][0]; txt.lang = wants;
+        go.textContent = MSG[wants][1]; go.href = map[wants]; go.hreflang = wants; go.lang = wants;
+        go.addEventListener("click", function () { remember(wants); });
+        bar.hidden = false;
+      }
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
