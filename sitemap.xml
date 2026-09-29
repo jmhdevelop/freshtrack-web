@@ -3,96 +3,134 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://freshtrack.softapp.tech/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/"/>
   </url>
   <url>
     <loc>https://freshtrack.softapp.tech/en/</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/"/>
   </url>
   <url>
-    <loc>https://freshtrack.softapp.tech/privacidad.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/datenschutz.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/privacidade.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/privacidad.html"/>
+    <loc>https://freshtrack.softapp.tech/de/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/"/>
   </url>
   <url>
-    <loc>https://freshtrack.softapp.tech/en/privacy.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/datenschutz.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/privacidade.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/privacidad.html"/>
+    <loc>https://freshtrack.softapp.tech/fr/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/"/>
   </url>
   <url>
-    <loc>https://freshtrack.softapp.tech/de/datenschutz.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/datenschutz.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/privacidade.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/privacidad.html"/>
+    <loc>https://freshtrack.softapp.tech/it/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/"/>
   </url>
   <url>
-    <loc>https://freshtrack.softapp.tech/fr/confidentialite.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/datenschutz.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/privacidade.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/privacidad.html"/>
-  </url>
-  <url>
-    <loc>https://freshtrack.softapp.tech/it/privacy.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/datenschutz.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/privacidade.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/privacidad.html"/>
-  </url>
-  <url>
-    <loc>https://freshtrack.softapp.tech/pt/privacidade.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/privacidad.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/datenschutz.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/confidentialite.html"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/privacidade.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/privacidad.html"/>
+    <loc>https://freshtrack.softapp.tech/pt/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/"/>
   </url>
   <url>
     <loc>https://freshtrack.softapp.tech/soporte.html</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/soporte.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/assistance.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/supporto.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/suporte.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/soporte.html"/>
   </url>
   <url>
     <loc>https://freshtrack.softapp.tech/en/support.html</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/soporte.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/assistance.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/supporto.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/suporte.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://freshtrack.softapp.tech/de/support.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/assistance.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/supporto.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/suporte.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://freshtrack.softapp.tech/fr/assistance.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/assistance.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/supporto.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/suporte.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://freshtrack.softapp.tech/it/supporto.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/assistance.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/supporto.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/suporte.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/soporte.html"/>
+  </url>
+  <url>
+    <loc>https://freshtrack.softapp.tech/pt/suporte.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/soporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/support.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/assistance.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/supporto.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/suporte.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/soporte.html"/>
   </url>
   <url>
