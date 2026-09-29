@@ -8,6 +8,10 @@
 <link rel="canonical" href="https://freshtrack.softapp.tech/en/support.html">
 <link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/soporte.html">
 <link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/support.html">
+<link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/support.html">
+<link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/assistance.html">
+<link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/supporto.html">
+<link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/suporte.html">
 <link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/soporte.html">
 <link rel="icon" href="../img/icon.png">
 <link rel="apple-touch-icon" href="../img/icon.png">
@@ -21,6 +25,11 @@
 <meta property="og:url" content="https://freshtrack.softapp.tech/en/support.html">
 <meta property="og:image" content="https://freshtrack.softapp.tech/img/og-en.png">
 <meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pt_BR">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -188,6 +197,9 @@
   footer .links { display: flex; gap: 22px; justify-content: center; margin-bottom: 14px; flex-wrap: wrap; }
   footer a { color: var(--muted); }
 
+  /* Aviso de idioma. Antes esto era una redirección por navigator.language, y
+     Googlebot rastrea en en-US: la seguía y dejaba de indexar la portada española.
+     El aviso respeta la URL en la que aterriza cada uno. */
   #langbar[hidden] { display: none }
   #langbar {
     display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
@@ -201,14 +213,20 @@
     line-height: 1; cursor: pointer; padding: 2px 6px; border-radius: 6px;
   }
   #langbar button:hover { color: var(--text); background: var(--brand-soft) }
+  .lang-switch { display: inline-flex; gap: 8px; }
+  @media (max-width: 480px) {
+    .nav-inner .name { display: none }
+    .lang-switch { gap: 4px }
+    .lang-switch a { font-size: 12px }
+  }
 </style>
   <script defer src="https://softmetrics.softapp.tech/b.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div id="langbar" hidden>
-  <p lang="es">Esta página también está disponible en español.</p>
-  <a id="langgo" href="../soporte.html" hreflang="es" lang="es">Leerla en español</a>
+  <p id="langtxt"></p>
+  <a id="langgo" href="#"></a>
   <button id="langno" type="button" aria-label="Dismiss">&times;</button>
 </div>
 
@@ -223,7 +241,7 @@
       <a href="guides/nfc-labels-food-containers.html">NFC Guide</a>
       <a href="support.html" aria-current="page">Support</a>
       <button class="theme" type="button" aria-label="Toggle theme"><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M19.2 4.8l-1.7 1.7M6.5 17.5l-1.7 1.7"/></svg><svg class="moon" viewBox="0 0 24 24"><path d="M20.4 14.2A8.4 8.4 0 0 1 9.8 3.6a8.4 8.4 0 1 0 10.6 10.6z"/></svg></button>
-      <a class="lang" href="../" hreflang="es" lang="es" onclick="try{localStorage.setItem('ft-lang','es')}catch(e){}">ES</a>
+      <span class="lang-switch"><a class="lang" href="../soporte.html" hreflang="es" lang="es" onclick="try{localStorage.setItem('ft-lang','es')}catch(e){}">ES</a><a class="lang" href="../de/support.html" hreflang="de" lang="de" onclick="try{localStorage.setItem('ft-lang','de')}catch(e){}">DE</a><a class="lang" href="../fr/assistance.html" hreflang="fr" lang="fr" onclick="try{localStorage.setItem('ft-lang','fr')}catch(e){}">FR</a><a class="lang" href="../it/supporto.html" hreflang="it" lang="it" onclick="try{localStorage.setItem('ft-lang','it')}catch(e){}">IT</a><a class="lang" href="../pt/suporte.html" hreflang="pt-BR" lang="pt-BR" onclick="try{localStorage.setItem('ft-lang','pt')}catch(e){}">PT</a></span>
       <a class="pill" href="https://apps.apple.com/app/id6791699550">Download</a>
     </div>
   </div>
@@ -279,7 +297,7 @@
   <p>FreshTrack doesn't collect any data: no accounts, no in-app analytics, no ads. Read the full <a href="privacy.html">privacy policy</a>.</p>
 
   <hr style="border:0;border-top:1px solid var(--border);margin:2.5rem 0 1.5rem">
-  <p><a href="../soporte.html" hreflang="es" lang="es">Lee esta página en español</a></p>
+  <p>Also available in: <a href="../soporte.html" hreflang="es" lang="es">Español</a> · <a href="../de/support.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/assistance.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/supporto.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt/suporte.html" hreflang="pt-BR" lang="pt-BR">Português</a></p>
 </main>
 
 <footer>
@@ -316,17 +334,39 @@
 <script>
   (function () {
     try {
-      var KEY = "ft-lang", here = "en", other = "es";
+      var MSG = {
+        es: ["Esta página también está disponible en español.", "Leerla en español"],
+        en: ["This page is also available in English.", "Read it in English"],
+        de: ["Diese Seite ist auch auf Deutsch verfügbar.", "Auf Deutsch lesen"],
+        fr: ["Cette page est aussi disponible en français.", "La lire en français"],
+        it: ["Questa pagina è disponibile anche in italiano.", "Leggila in italiano"],
+        pt: ["Esta página também está disponível em português.", "Ler em português"]
+      };
+      var KEY = "ft-lang", here = "en";
       var bar = document.getElementById("langbar");
       if (!bar) return;
-      var go = document.getElementById("langgo"), no = document.getElementById("langno");
+      var map = {};
+      document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (link) {
+        var code = link.hreflang.toLowerCase();
+        if (code === "x-default") return;
+        map[code.split("-")[0]] = link.href;
+      });
+      var txt = document.getElementById("langtxt"), go = document.getElementById("langgo"), no = document.getElementById("langno");
       function remember(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
-      go.addEventListener("click", function () { remember(other); });
       no.addEventListener("click", function () { remember(here); bar.hidden = true; });
       if (localStorage.getItem(KEY)) return;
       var list = navigator.languages || [navigator.language || "en"];
-      var wants = list.some(function (l) { return l.toLowerCase().indexOf("es") === 0; }) ? "es" : "en";
-      if (wants !== here) bar.hidden = false;
+      var wants = here;
+      for (var i = 0; i < list.length; i++) {
+        var short = list[i].toLowerCase().split("-")[0];
+        if (map[short] && short !== here) { wants = short; break; }
+      }
+      if (wants !== here && MSG[wants]) {
+        txt.textContent = MSG[wants][0]; txt.lang = wants;
+        go.textContent = MSG[wants][1]; go.href = map[wants]; go.hreflang = wants; go.lang = wants;
+        go.addEventListener("click", function () { remember(wants); });
+        bar.hidden = false;
+      }
     } catch (e) {}
   })();
 </script>
