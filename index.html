@@ -8,6 +8,10 @@
 <link rel="icon" href="img/icon.png">
 <link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/">
 <link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/">
+<link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/">
+<link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/">
+<link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/">
+<link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/">
 <link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/">
 <link rel="canonical" href="https://freshtrack.softapp.tech/">
 <meta name="robots" content="index, follow">
@@ -25,6 +29,10 @@
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="es_ES">
 <meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="FreshTrack — Nunca más comida caducada">
 <meta name="twitter:description" content="Controla las caducidades de tu despensa, nevera, congelador y tuppers con etiqueta NFC. Escanea el producto y deja que la IA local haga el resto. Gratis, sin anuncios y sin recopilar datos.">
@@ -42,7 +50,7 @@
       "operatingSystem": "iOS 17.0 o posterior",
       "applicationCategory": "LifestyleApplication",
       "inLanguage": "es",
-      "softwareVersion": "1.0",
+      "softwareVersion": "1.1",
       "installUrl": "https://apps.apple.com/app/id6791699550",
       "downloadUrl": "https://apps.apple.com/app/id6791699550",
       "sameAs": "https://apps.apple.com/app/id6791699550",
@@ -481,14 +489,20 @@
   }
   #langbar button:hover { color: var(--text); background: var(--brand-soft) }
   #langbar a:focus-visible, #langbar button:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px }
+  .lang-switch { display: inline-flex; gap: 8px; }
+  @media (max-width: 480px) {
+    .nav-inner .name { display: none }
+    .lang-switch { gap: 4px }
+    .lang-switch a { font-size: 12px }
+  }
 </style>
   <script defer src="https://softmetrics.softapp.tech/b.js"></script>
 </head>
 <body>
 <div id="langbar" hidden>
-  <p lang="en">This page is also available in English.</p>
-  <a id="langgo" href="en/" hreflang="en" lang="en">Read it in English</a>
-  <button id="langno" type="button" lang="en" aria-label="Dismiss">&times;</button>
+  <p id="langtxt"></p>
+  <a id="langgo" href="#"></a>
+  <button id="langno" type="button" aria-label="Dismiss">&times;</button>
 </div>
 
 <div id="progress"></div>
@@ -501,7 +515,7 @@
       <a href="#funciones">Funciones</a>
       <a href="#privacidad">Privacidad</a>
       <button class="theme" type="button" aria-label="Cambiar tema"><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M19.2 4.8l-1.7 1.7M6.5 17.5l-1.7 1.7"/></svg><svg class="moon" viewBox="0 0 24 24"><path d="M20.4 14.2A8.4 8.4 0 0 1 9.8 3.6a8.4 8.4 0 1 0 10.6 10.6z"/></svg></button>
-      <a class="lang" href="en/" onclick="try{localStorage.setItem('ft-lang','en')}catch(e){}">EN</a>
+      <span class="lang-switch"><a class="lang" href="en/" hreflang="en" lang="en" onclick="try{localStorage.setItem('ft-lang','en')}catch(e){}">EN</a><a class="lang" href="de/" hreflang="de" lang="de" onclick="try{localStorage.setItem('ft-lang','de')}catch(e){}">DE</a><a class="lang" href="fr/" hreflang="fr" lang="fr" onclick="try{localStorage.setItem('ft-lang','fr')}catch(e){}">FR</a><a class="lang" href="it/" hreflang="it" lang="it" onclick="try{localStorage.setItem('ft-lang','it')}catch(e){}">IT</a><a class="lang" href="pt/" hreflang="pt-BR" lang="pt-BR" onclick="try{localStorage.setItem('ft-lang','pt')}catch(e){}">PT</a></span>
       <a class="pill" href="https://apps.apple.com/app/id6791699550">Descargar</a>
     </div>
   </div>
@@ -980,17 +994,39 @@
   // Sin redirección automática: solo un aviso, y la elección se recuerda.
   (function () {
     try {
-      var KEY = "ft-lang", here = "es", other = "en";
+      var MSG = {
+        es: ["Esta página también está disponible en español.", "Leerla en español"],
+        en: ["This page is also available in English.", "Read it in English"],
+        de: ["Diese Seite ist auch auf Deutsch verfügbar.", "Auf Deutsch lesen"],
+        fr: ["Cette page est aussi disponible en français.", "La lire en français"],
+        it: ["Questa pagina è disponibile anche in italiano.", "Leggila in italiano"],
+        pt: ["Esta página também está disponível em português.", "Ler em português"]
+      };
+      var KEY = "ft-lang", here = "es";
       var bar = document.getElementById("langbar");
       if (!bar) return;
-      var go = document.getElementById("langgo"), no = document.getElementById("langno");
+      var map = {};
+      document.querySelectorAll('link[rel="alternate"][hreflang]').forEach(function (link) {
+        var code = link.hreflang.toLowerCase();
+        if (code === "x-default") return;
+        map[code.split("-")[0]] = link.href;
+      });
+      var txt = document.getElementById("langtxt"), go = document.getElementById("langgo"), no = document.getElementById("langno");
       function remember(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
-      go.addEventListener("click", function () { remember(other); });
       no.addEventListener("click", function () { remember(here); bar.hidden = true; });
       if (localStorage.getItem(KEY)) return;
       var list = navigator.languages || [navigator.language || "en"];
-      var wants = list.some(function (l) { return l.toLowerCase().indexOf("es") === 0; }) ? "es" : "en";
-      if (wants !== here) bar.hidden = false;
+      var wants = here;
+      for (var i = 0; i < list.length; i++) {
+        var short = list[i].toLowerCase().split("-")[0];
+        if (map[short] && short !== here) { wants = short; break; }
+      }
+      if (wants !== here && MSG[wants]) {
+        txt.textContent = MSG[wants][0]; txt.lang = wants;
+        go.textContent = MSG[wants][1]; go.href = map[wants]; go.hreflang = wants; go.lang = wants;
+        go.addEventListener("click", function () { remember(wants); });
+        bar.hidden = false;
+      }
     } catch (e) {}
   })();
 </script>
