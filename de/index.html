@@ -1017,7 +1017,7 @@
       var wants = here;
       for (var i = 0; i < list.length; i++) {
         var short = list[i].toLowerCase().split("-")[0];
-        if (map[short] && short !== here) { wants = short; break; }
+        if (map[short]) { wants = short; break; }
       }
       if (wants !== here && MSG[wants]) {
         txt.textContent = MSG[wants][0]; txt.lang = wants;
