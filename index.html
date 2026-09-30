@@ -103,6 +103,14 @@
         },
         {
           "@type": "Question",
+          "name": "¿De dónde salen las fechas que calcula la app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Son estimaciones orientativas basadas en estándares generales de conservación de alimentos (guías tipo FoodKeeper del USDA y recomendaciones de seguridad alimentaria). No sustituyen la fecha impresa en el envase ni tu propio criterio: ante la duda, no lo consumas. Los días de cada tipo de comida de los tuppers se pueden cambiar en Ajustes. Las cifras oficiales, con sus fuentes, están en cuánto dura la comida cocinada en la nevera (https://freshtrack.softapp.tech/guias/cuanto-dura-comida-cocinada-nevera.html) y en cuánto dura cada alimento en el congelador (https://freshtrack.softapp.tech/guias/cuanto-dura-comida-congelador.html)."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "¿Funciona sin Apple Intelligence?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -541,6 +549,7 @@
     <span class="name">FreshTrack</span>
     <div class="nav-links">
       <a href="#funciones">Funciones</a>
+      <a href="guias/">Guías</a>
       <a href="#privacidad">Privacidad</a>
       <button class="theme" type="button" aria-label="Cambiar tema"><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M19.2 4.8l-1.7 1.7M6.5 17.5l-1.7 1.7"/></svg><svg class="moon" viewBox="0 0 24 24"><path d="M20.4 14.2A8.4 8.4 0 0 1 9.8 3.6a8.4 8.4 0 1 0 10.6 10.6z"/></svg></button>
       <details class="lang-menu"><summary aria-label="Cambiar idioma. Actual: Español"><svg class="globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.6 4.3 6 4.3 9.5s-1.5 6.9-4.3 9.5c-2.8-2.6-4.3-6-4.3-9.5s1.5-6.9 4.3-9.5z"/></svg><span aria-hidden="true">ES</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8l7 7 7-7"/></svg></summary><div class="lang-list"><a href="./" hreflang="es" lang="es" aria-current="page" onclick="try{localStorage.setItem('ft-lang','es')}catch(e){}">Español<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="en/" hreflang="en" lang="en" onclick="try{localStorage.setItem('ft-lang','en')}catch(e){}">English<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="de/" hreflang="de" lang="de" onclick="try{localStorage.setItem('ft-lang','de')}catch(e){}">Deutsch<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="fr/" hreflang="fr" lang="fr" onclick="try{localStorage.setItem('ft-lang','fr')}catch(e){}">Français<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="it/" hreflang="it" lang="it" onclick="try{localStorage.setItem('ft-lang','it')}catch(e){}">Italiano<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="pt/" hreflang="pt-BR" lang="pt-BR" onclick="try{localStorage.setItem('ft-lang','pt')}catch(e){}">Português<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a></div></details>
@@ -622,7 +631,7 @@
         <p>Pega una etiqueta NFC regrabable en la tapa, grábala desde la app y acerca el iPhone para saber qué hay dentro y cuándo caduca. En la <a href="guias/etiquetas-nfc-tuppers.html">guía de etiquetas NFC para tuppers</a> contamos cuál comprar, dónde pegarla y si aguanta el congelador.</p>
         <ul>
           <li>Etiquetas reutilizables al vaciar el tupper</li>
-          <li>Caducidad según el tipo de comida y dónde lo guardes</li>
+          <li><a href="guias/cuanto-dura-comida-cocinada-nevera.html">Caducidad según el tipo de comida</a> y dónde lo guardes</li>
           <li>Con su foto del plato, generada por IA</li>
         </ul>
       </article>
@@ -704,6 +713,10 @@
         <p>No. Los tuppers se crean, editan y borran a mano desde la app; la etiqueta solo añade poder acercar el iPhone al tupper para ver qué hay dentro y cuándo caduca. Sirven las NTAG213 o NTAG215 regrabables, pegadas en la tapa y lejos del metal. Si quieres saber más, tenemos una <a href="guias/etiquetas-nfc-tuppers.html">guía completa de etiquetas NFC para tuppers</a>.</p>
       </details>
       <details>
+        <summary>¿De dónde salen las fechas que calcula la app?</summary>
+        <p>Son estimaciones orientativas basadas en estándares generales de conservación de alimentos (guías tipo FoodKeeper del USDA y recomendaciones de seguridad alimentaria). No sustituyen la fecha impresa en el envase ni tu propio criterio: ante la duda, no lo consumas. Los días de cada tipo de comida de los tuppers se pueden cambiar en Ajustes. Las cifras oficiales, con sus fuentes, están en <a href="guias/cuanto-dura-comida-cocinada-nevera.html">cuánto dura la comida cocinada en la nevera</a> y en <a href="guias/cuanto-dura-comida-congelador.html">cuánto dura cada alimento en el congelador</a>.</p>
+      </details>
+      <details>
         <summary>¿Funciona sin Apple Intelligence?</summary>
         <p>Sí. En un dispositivo sin Apple Intelligence, la lectura de etiquetas usa el OCR clásico y las imágenes de producto son las de serie por tipo de comida. Ninguna función queda bloqueada.</p>
       </details>
@@ -742,7 +755,7 @@
 <footer>
   <div class="wrap">
     <div class="links">
-      <a href="guias/etiquetas-nfc-tuppers.html">Guía NFC</a>
+      <a href="guias/">Guías</a>
       <a href="https://dibus.softapp.tech/">Dibus</a>
       <a href="https://devtoolbox.softapp.tech/">DevToolbox</a>
       <a href="https://softapp.tech/">SoftApp Solutions</a>
