@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guías de FreshTrack: conservar, congelar y organizar la comida</title>
+<meta name="description" content="Guías con fuentes oficiales: cuánto dura la comida en la nevera y el congelador, cómo llevar el inventario del congelador y cómo etiquetar tuppers con NFC.">
+<link rel="canonical" href="https://freshtrack.softapp.tech/guias/">
+<link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/">
+<link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/">
+<link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/">
+<link rel="icon" href="../img/icon.png">
+<link rel="apple-touch-icon" href="../img/icon.png">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f5f8f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c110f" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreshTrack">
+<meta property="og:title" content="Guías de FreshTrack: conservar, congelar y organizar la comida">
+<meta property="og:description" content="Cuánto dura la comida en la nevera y el congelador, inventario del congelador y etiquetas NFC, con fuentes oficiales.">
+<meta property="og:url" content="https://freshtrack.softapp.tech/guias/">
+<meta property="og:image" content="https://freshtrack.softapp.tech/img/og.png">
+<meta property="og:locale" content="es_ES">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://freshtrack.softapp.tech/guias/#page",
+      "name": "Guías para conservar, congelar y organizar la comida",
+      "description": "Guías con fuentes oficiales: cuánto dura la comida en la nevera y el congelador, cómo llevar el inventario del congelador y cómo etiquetar tuppers con NFC.",
+      "url": "https://freshtrack.softapp.tech/guias/",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "FreshTrack",
+        "url": "https://freshtrack.softapp.tech/"
+      },
+      "mainEntity": {
+        "@id": "https://freshtrack.softapp.tech/guias/#list"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://freshtrack.softapp.tech/guias/#list",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://freshtrack.softapp.tech/guias/cuanto-dura-comida-cocinada-nevera.html",
+          "name": "Cuánto dura la comida cocinada en la nevera"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://freshtrack.softapp.tech/guias/cuanto-dura-comida-congelador.html",
+          "name": "Cuánto dura cada alimento en el congelador, y qué no congelar"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://freshtrack.softapp.tech/guias/inventario-congelador.html",
+          "name": "Inventario del congelador: saber qué tienes sin vaciarlo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html",
+          "name": "Etiquetas NFC para tuppers: guía completa"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "FreshTrack",
+          "item": "https://freshtrack.softapp.tech/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guías",
+          "item": "https://freshtrack.softapp.tech/guias/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --brand: #0D9E78;
+    --brand-bright: #0b8a69;
+    --brand-soft: rgba(13, 158, 120, .12);
+    --bg: #f5f8f6;
+    --card: #ffffff;
+    --border: rgba(18, 42, 33, .08);
+    --text: #14231d;
+    --muted: rgba(20, 35, 29, .66);
+    --shadow: 0 8px 28px rgba(18, 42, 33, .08);
+    --radius: 20px;
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c110f;
+    --card: #151c18;
+    --border: rgba(255, 255, 255, .09);
+    --text: #e9f2ee;
+    --muted: rgba(233, 242, 238, .6);
+    --shadow: 0 8px 28px rgba(0, 0, 0, .4);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { overflow-x: clip; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    -webkit-font-smoothing: antialiased; overflow-x: clip;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--brand-bright); }
+  .skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: #fff;
+          padding: 10px 16px; border-radius: 0 0 10px 0; z-index: 100; }
+  .skip:focus { left: 0; }
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+  nav:not(.toc) { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+        background: color-mix(in srgb, var(--bg) 80%, transparent); border-bottom: 1px solid var(--border); }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .theme {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); cursor: pointer; padding: 0;
+  }
+  .theme svg { width: 17px; height: 17px; stroke: currentColor; stroke-width: 1.8;
+               fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .theme .moon { display: none; }
+  :root[data-theme="dark"] .theme .sun { display: none; }
+  :root[data-theme="dark"] .theme .moon { display: block; }
+  .nav-inner { display: flex; align-items: center; gap: 10px; padding-block: 12px; }
+  .nav-inner img { width: 32px; height: 32px; border-radius: 8px; }
+  .nav-inner .name { font-weight: 700; font-size: 17px; }
+  .nav-links { margin-left: auto; display: flex; gap: 22px; align-items: center; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 14.5px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover, .nav-links a[aria-current] { color: var(--text); }
+  .pill { background: var(--brand); color: #fff !important; font-weight: 600; padding: 7px 14px; border-radius: 999px; }
+  .lang { font-weight: 700; }
+  @media (max-width: 700px) {
+    .nav-links a:not(.pill):not(.lang) { display: none; }
+    .nav-links { gap: 14px; }
+    .nav-inner { padding-block: 10px; }
+    .nav-inner .name { font-size: 16px; }
+    .pill { padding: 6px 13px; font-size: 13.5px; }
+  }
+
+  .kicker { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 14px; font-weight: 600;
+            text-transform: uppercase; letter-spacing: .08em; }
+  .kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--brand); }
+
+  /* ---- Documento / artículo ---- */
+  .doc { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+  .doc h1 { font-size: clamp(30px, 5vw, 42px); font-weight: 800; letter-spacing: -.02em; margin-top: 12px; line-height: 1.12; }
+  .doc .lead { color: var(--muted); font-size: 18px; margin-top: 14px; }
+  .doc .byline { color: var(--muted); font-size: 14px; margin-top: 10px; }
+  .doc h2 { font-size: clamp(20px, 3vw, 25px); font-weight: 800; letter-spacing: -.01em; margin-top: 52px; margin-bottom: 10px; scroll-margin-top: 76px; }
+  .doc h3 { font-size: 16.5px; font-weight: 700; margin-top: 22px; margin-bottom: 4px; }
+  .doc p { margin-top: 12px; }
+  .doc ul, .doc ol { margin: 14px 0 0 22px; }
+  .doc li { margin-top: 8px; }
+  .doc .fine { color: var(--muted); font-size: 14.5px; }
+  .doc strong { font-weight: 700; }
+
+  /* Índice */
+  .toc { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+         box-shadow: var(--shadow); padding: 20px 22px; margin-top: 26px; }
+  .toc p { margin: 0; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  .toc ol { margin: 12px 0 0 20px; columns: 2; column-gap: 24px; }
+  .toc li { margin-top: 6px; font-size: 14.5px; break-inside: avoid; }
+  @media (max-width: 560px) { .toc ol { columns: 1; } }
+
+  /* Tarjetas de comparación */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-top: 18px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+          padding: 20px 20px 22px; box-shadow: var(--shadow); }
+  .card h3 { margin-top: 0; }
+  .card p { margin-top: 8px; font-size: 15px; color: var(--muted); }
+  .card .fail { color: var(--text); font-size: 14px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .card .fail b { color: var(--brand-bright); }
+
+  /* Tabla NTAG213 vs NTAG215 y tabla de congelación */
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 420px; }
+  th, td { padding: 11px 14px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
+  td:first-child, th:first-child { white-space: normal; }
+  thead th { color: var(--muted); font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; background: var(--bg); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* Pasos numerados */
+  ol.steps { list-style: none; margin: 18px 0 0; counter-reset: step; }
+  ol.steps li { position: relative; padding-left: 44px; margin-top: 16px; counter-increment: step; }
+  /* El numero va posicionado, no como item de flex: con `display:flex` en el <li>
+     cada <strong> y cada trozo de texto se convertia en un item independiente y la
+     frase se descolocaba en columnas. */
+  ol.steps li::before {
+    content: counter(step); position: absolute; left: 0; top: 1px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--brand-soft); color: var(--brand-bright); font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* Recuadro de aviso/consejo */
+  .box { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+         box-shadow: var(--shadow); padding: 20px 22px; margin-top: 18px; }
+  .box p:first-child { margin-top: 0; }
+
+  /* CTA final */
+  .cta { background: var(--card); border: 1px solid var(--border); border-radius: 26px;
+         padding: 44px 30px; text-align: center; margin-top: 20px; box-shadow: var(--shadow); }
+  .cta p { color: var(--muted); max-width: 520px; margin: 12px auto 24px; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px;
+           border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; }
+  .badge svg { flex: none; width: 18px; height: 21px; }
+  .badge.main { background: var(--brand); color: #fff; box-shadow: 0 10px 26px rgba(13,158,120,.3); }
+  a.badge.main { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+  a.badge.main:hover { background: var(--brand-bright); transform: translateY(-2px); box-shadow: 0 14px 32px rgba(13,158,120,.38); }
+
+  footer { padding: 56px 0 64px; text-align: center; color: var(--muted); font-size: 14px; }
+  footer .links { display: flex; gap: 22px; justify-content: center; margin-bottom: 14px; flex-wrap: wrap; }
+  footer a { color: var(--muted); }
+
+  #langbar[hidden] { display: none }
+  #langbar {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    padding: 10px 20px; background: var(--card); border-bottom: 1px solid var(--border);
+    font-size: 14px; color: var(--muted);
+  }
+  #langbar p { margin: 0 }
+  #langbar a { color: var(--brand-bright); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px }
+  #langbar button {
+    margin-left: auto; background: none; border: 0; color: var(--muted); font-size: 20px;
+    line-height: 1; cursor: pointer; padding: 2px 6px; border-radius: 6px;
+  }
+  #langbar button:hover { color: var(--text); background: var(--brand-soft) }
+  /* Migas de pan (reutilizable en todas las guías) */
+  nav.crumbs { position: static; z-index: auto; backdrop-filter: none; -webkit-backdrop-filter: none; background: none; border: 0;
+              font-size: 14px; color: var(--muted); }
+  .crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 8px; }
+  .crumbs li { margin: 0; display: flex; gap: 8px; }
+  .crumbs li + li::before { content: "\203A"; opacity: .7; }
+  .crumbs a { color: var(--muted); text-decoration: none; }
+  .crumbs a:hover { color: var(--text); text-decoration: underline; }
+  .crumbs [aria-current] { color: var(--text); }
+  .crumbs + .kicker { margin-top: 14px; }
+
+  /* Índice de guías */
+  .doc .guide-list { list-style: none; margin: 26px 0 0; display: grid; gap: 14px; }
+  .guide-list li { margin: 0; }
+  .guide { display: block; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+           padding: 22px 24px; box-shadow: var(--shadow); }
+  .guide h2 { font-size: clamp(19px, 3vw, 22px); margin: 0; line-height: 1.25; scroll-margin-top: 76px; }
+  .guide h2 a { color: var(--text); text-decoration: none; }
+  .guide h2 a::after { content: ""; position: absolute; inset: 0; }
+  .guide { position: relative; }
+  .guide:hover h2 a { color: var(--brand-bright); }
+  .guide:focus-within { outline: 2px solid var(--brand); outline-offset: 2px; }
+  .guide h2 a:focus-visible { outline: none; }
+  .guide .q { margin-top: 6px; font-weight: 600; }
+  .guide .fact { margin-top: 8px; color: var(--muted); font-size: 15px; }
+</style>
+  <script defer src="https://softmetrics.softapp.tech/b.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div id="langbar" hidden>
+  <p lang="en">This page is also available in English.</p>
+  <a id="langgo" href="../en/guides/" hreflang="en" lang="en">Read it in English</a>
+  <button id="langno" type="button" lang="en" aria-label="Dismiss">&times;</button>
+</div>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="../" aria-label="FreshTrack">
+      <img src="../img/icon.png" alt="" width="256" height="256">
+      <span class="name">FreshTrack</span>
+    </a>
+    <div class="nav-links">
+      <a href="../#funciones">Funciones</a>
+      <a href="./" aria-current="page">Guías</a>
+      <a href="../soporte.html">Soporte</a>
+      <button class="theme" type="button" aria-label="Cambiar tema"><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M19.2 4.8l-1.7 1.7M6.5 17.5l-1.7 1.7"/></svg><svg class="moon" viewBox="0 0 24 24"><path d="M20.4 14.2A8.4 8.4 0 0 1 9.8 3.6a8.4 8.4 0 1 0 10.6 10.6z"/></svg></button>
+      <a class="lang" href="../en/guides/" hreflang="en" lang="en" onclick="try{localStorage.setItem('ft-lang','en')}catch(e){}">EN</a>
+      <a class="pill" href="https://apps.apple.com/app/id6791699550">Descargar</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main" class="doc">
+  <nav class="crumbs" aria-label="Migas de pan">
+    <ol>
+      <li><a href="../">FreshTrack</a></li>
+      <li><span aria-current="page">Guías</span></li>
+    </ol>
+  </nav>
+  <span class="kicker">Guías</span>
+  <h1>Guías para conservar, congelar y organizar la comida</h1>
+  <p class="lead">Cuánto dura la comida en la nevera y en el congelador, cómo llevar la cuenta de lo que tienes y cómo etiquetar los tuppers. Cada cifra lleva su fuente oficial y, cuando dos agencias no coinciden, lo decimos.</p>
+
+  <ul class="guide-list">
+    <li>
+      <article class="guide">
+        <h2><a href="cuanto-dura-comida-cocinada-nevera.html">Cuánto dura la comida cocinada en la nevera</a></h2>
+        <p class="q">¿Me como este tupper o lo tiro?</p>
+        <p class="fact">Sobras: 48 horas según la FSA británica; carne cocinada y guisos, 3-4 días según la FDA de EE.&nbsp;UU.</p>
+      </article>
+    </li>
+    <li>
+      <article class="guide">
+        <h2><a href="cuanto-dura-comida-congelador.html">Cuánto dura cada alimento en el congelador, y qué no congelar</a></h2>
+        <p class="q">¿Cuánto tiempo puedo tener esto congelado?</p>
+        <p class="fact">A -18&nbsp;°C la comida es segura indefinidamente; los meses de la tabla son de calidad, no de seguridad (FDA).</p>
+      </article>
+    </li>
+    <li>
+      <article class="guide">
+        <h2><a href="inventario-congelador.html">Inventario del congelador: saber qué tienes sin vaciarlo</a></h2>
+        <p class="q">¿Cómo sé qué hay en el congelador sin sacarlo todo?</p>
+        <p class="fact">En España, el 77,5&nbsp;% del volumen de alimentos y bebidas que se tira en casa son productos sin usar, no platos cocinados (MAPA, 2025).</p>
+      </article>
+    </li>
+    <li>
+      <article class="guide">
+        <h2><a href="etiquetas-nfc-tuppers.html">Etiquetas NFC para tuppers: guía completa</a></h2>
+        <p class="q">¿Qué etiqueta compro, y aguanta el congelador?</p>
+        <p class="fact">El chip funciona entre -25&nbsp;°C y 70&nbsp;°C; lo que hay que elegir bien es el adhesivo (NXP).</p>
+      </article>
+    </li>
+  </ul>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="../">Inicio</a>
+      <a href="./">Guías</a>
+      <a href="../soporte.html">Soporte</a>
+      <a href="../privacidad.html">Privacidad</a>
+      <a href="https://dibus.softapp.tech/">Dibus</a>
+      <a href="https://devtoolbox.softapp.tech/">DevToolbox</a>
+      <a href="https://softapp.tech/">SoftApp Solutions</a>
+      <a href="https://apps.apple.com/app/id6791699550">App Store</a>
+    </div>
+    © 2026 SOFTAPP SOLUTIONS LLC
+  </div>
+</footer>
+
+<script>
+  let theme;
+  try { theme = localStorage.getItem("ft-theme"); } catch (e) {}
+  if (theme !== "dark" && theme !== "light")
+    theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.dataset.theme = theme;
+  document.querySelector(".theme")?.addEventListener("click", () => {
+    theme = theme === "dark" ? "light" : "dark";
+    try { localStorage.setItem("ft-theme", theme); } catch (e) {}
+    document.documentElement.dataset.theme = theme;
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+    let stored; try { stored = localStorage.getItem("ft-theme"); } catch (err) {}
+    if (!stored) { theme = e.matches ? "dark" : "light"; document.documentElement.dataset.theme = theme; }
+  });
+</script>
+<script>
+  (function () {
+    try {
+      var KEY = "ft-lang", here = "es", other = "en";
+      var bar = document.getElementById("langbar");
+      if (!bar) return;
+      var go = document.getElementById("langgo"), no = document.getElementById("langno");
+      function remember(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+      go.addEventListener("click", function () { remember(other); });
+      no.addEventListener("click", function () { remember(here); bar.hidden = true; });
+      if (localStorage.getItem(KEY)) return;
+      var list = navigator.languages || [navigator.language || "en"];
+      var wants = list.some(function (l) { return l.toLowerCase().indexOf("es") === 0; }) ? "es" : "en";
+      if (wants !== here) bar.hidden = false;
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
