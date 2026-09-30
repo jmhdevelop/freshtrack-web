@@ -185,6 +185,7 @@
 
   /* Tabla NTAG213 vs NTAG215 y tabla de congelación */
   .table-wrap { container-type: inline-size; overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
+  .table-wrap:focus-visible { outline-offset: -2px; }
   table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 420px; }
   th, td { padding: 11px 14px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
   td:first-child, th:first-child { white-space: normal; }
@@ -323,7 +324,7 @@
 
   <h2 id="tabla">Alimento por alimento</h2>
   <p>Dos tablas: carne, aves, pescado y embutido (FDA), y después huevos, lácteos, pan, fruta y verdura (huevos de la FDA; el resto, del fichero FoodKeeper del USDA). La segunda columna son meses de <strong>calidad</strong> a -18 °C. La tercera es el tipo de FreshTrack que mejor le corresponde y el plazo que propone, tal cual lo muestra la app: la app no distingue dentro de cada tipo.</p>
-  <div class="table-wrap">
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Tabla desplazable: carne, aves, pescado y embutido">
     <table class="chart">
       <caption>Meses de congelador a -18 °C (calidad) para carne, aves, pescado y embutido, y plazo que propone FreshTrack</caption>
       <thead>
@@ -351,7 +352,7 @@
   </div>
   <p class="fine">Fuentes: FDA (EE. UU.), <a href="https://www.fda.gov/media/74435/download">Refrigerator &amp; Freezer Storage Chart</a> (marzo de 2018; edición en español: <a href="https://www.fda.gov/media/76116/download">Tabla de almacenamiento en refrigerador y congelador</a>). La tabla actual del USDA (<a href="https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts">Cold Food Storage Chart</a>) da 4-12 meses para filetes, chuletas y asados: si dudas, el extremo bajo.</p>
   <p>La app usa <strong>un solo plazo por grupo</strong>, y por eso a veces se pasa o se queda corta: en carne fresca, 6 meses para todo, cuando la picada y los despojos son de 3 a 4; en pescado, 3 meses para todo, cuando el ahumado son 2 y el magro llega a 6-8; en fiambre y embutido, 2 meses cuando el bacon es 1. Más abajo, en <a href="#freshtrack">A mano, o con FreshTrack</a>, está qué puedes hacer con eso.</p>
-  <div class="table-wrap">
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Tabla desplazable: huevos, lácteos, pan, fruta y verdura">
     <table class="chart">
       <caption>Meses de congelador a -18 °C (calidad) para huevos, lácteos, pan, fruta, verdura y platos congelados, y plazo que propone FreshTrack</caption>
       <thead>
