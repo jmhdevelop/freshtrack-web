@@ -184,7 +184,7 @@
   .card .fail b { color: var(--brand-bright); }
 
   /* Tabla NTAG213 vs NTAG215 y tabla de congelación */
-  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
+  .table-wrap { container-type: inline-size; overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
   table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 420px; }
   th, td { padding: 11px 14px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
   td:first-child, th:first-child { white-space: normal; }
@@ -249,15 +249,13 @@
   .crumbs + .kicker { margin-top: 14px; }
 
   /* Tablas con celdas que se parten (guías con tabla de varias columnas) y leyenda */
-  table.wrapcells { min-width: 560px; }
-  table.wrapcells th, table.wrapcells td { white-space: normal; vertical-align: top; }
-  caption { caption-side: bottom; text-align: left; white-space: normal; padding: 11px 14px; color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--border); }
+  caption { caption-side: top; text-align: left; white-space: normal; box-sizing: border-box; width: 100cqw; position: sticky; left: 0;
+            padding: 12px 14px; font-size: 13.5px; color: var(--muted); border-bottom: 1px solid var(--border); }
   .cta ul { text-align: left; max-width: 520px; margin: 0 auto 24px; color: var(--muted); }
+  .cta ul strong { color: var(--text); }
   table.chart { min-width: 0; }
-  table.chart th, table.chart td { white-space: normal; vertical-align: top; }
+  table.chart th, table.chart td { white-space: normal; vertical-align: top; padding: 10px 10px; }
   table.chart tbody th { font-weight: 400; }
-  table.chart th, table.chart td { padding: 10px 10px; }
-  table.chart caption { min-width: 0; }
   table.chart thead th { letter-spacing: 0; }
   table.chart tbody tr:last-child th { border-bottom: none; }
   tr:target th, tr:target td { background: var(--brand-soft); }
@@ -292,13 +290,13 @@
 </nav>
 
 <main id="main" class="doc">
-  <div class="crumbs" role="navigation" aria-label="Breadcrumb">
+  <nav class="crumbs" aria-label="Breadcrumb">
     <ol>
       <li><a href="../">FreshTrack</a></li>
       <li><a href="./">Guides</a></li>
-      <li aria-current="page">How long food lasts in the freezer</li>
+      <li><span aria-current="page">How long food lasts in the freezer</span></li>
     </ol>
-  </div>
+  </nav>
   <span class="kicker">Guide</span>
   <h1>How long food lasts in the freezer (and what not to freeze)</h1>
   <p class="lead">At 0 °F (-18 °C), frozen food stays safe indefinitely: what runs out is quality. Here are the months for each food, what not to freeze, and what to do about the use-by date and a power cut, with the source for every figure.</p>
