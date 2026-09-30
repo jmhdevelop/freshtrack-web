@@ -182,7 +182,7 @@
   .card .fail b { color: var(--brand-bright); }
 
   /* Tabla NTAG213 vs NTAG215 y tabla de congelación */
-  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
+  .table-wrap { container-type: inline-size; overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
   table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 420px; }
   th, td { padding: 11px 14px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
   td:first-child, th:first-child { white-space: normal; }
@@ -249,7 +249,10 @@
   /* Tablas con celdas que se parten (guías con tabla de varias columnas) y leyenda */
   table.wrapcells { min-width: 560px; }
   table.wrapcells th, table.wrapcells td { white-space: normal; vertical-align: top; }
-  caption { caption-side: bottom; text-align: left; white-space: normal; padding: 11px 14px; color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--border); }
+  table.wrapcells tbody th { font-weight: 400; }
+  table.wrapcells tbody tr:last-child th { border-bottom: none; }
+  caption { caption-side: top; text-align: left; white-space: normal; box-sizing: border-box; width: 100cqw; position: sticky; left: 0;
+            padding: 12px 14px; font-size: 13.5px; color: var(--muted); border-bottom: 1px solid var(--border); }
   .cta .fine { text-align: left; max-width: 560px; margin: 22px auto 0; }
 </style>
   <script defer src="https://softmetrics.softapp.tech/b.js"></script>
@@ -318,23 +321,23 @@
 
   <h2 id="tabla">Plato a plato</h2>
   <p>FreshTrack trae de serie diez tipos de comida cocinada (y dos crudos, carne y pescado, que no son de esta guía). Para cada uno: lo que dicen las dos agencias y los días que la app propone por defecto.</p>
-  <div class="table-wrap">
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Tabla desplazable: comida cocinada">
     <table class="wrapcells">
       <caption>Días en la nevera y meses en el congelador de la comida cocinada según la FDA y la FSA, y valores por defecto de FreshTrack (consultadas el 30 de septiembre de 2026)</caption>
       <thead>
         <tr><th scope="col">Plato</th><th scope="col">Nevera según la FDA</th><th scope="col">Nevera según la FSA</th><th scope="col">Congelador según la FDA (calidad)</th><th scope="col">FreshTrack por defecto (nevera / congelador)</th></tr>
       </thead>
       <tbody>
-        <tr><td>Arroz cocinado</td><td>3-4 días†</td><td><strong>24 horas</strong></td><td>sin cifra</td><td>2 días / 3 meses</td></tr>
-        <tr><td>Pasta cocinada</td><td>3-4 días†</td><td>48 horas†</td><td>sin cifra</td><td>3 días / 2 meses</td></tr>
-        <tr><td>Legumbres / guiso</td><td>3-4 días</td><td>48 horas†</td><td>2-3 meses</td><td>3 días / 3 meses</td></tr>
-        <tr><td>Sopa / crema</td><td>3-4 días</td><td>48 horas†</td><td>2-3 meses</td><td>3 días / 3 meses</td></tr>
-        <tr><td>Carne cocinada</td><td>3-4 días</td><td>48 horas†</td><td>2-3 meses</td><td>3 días / 3 meses</td></tr>
-        <tr><td>Pescado cocinado</td><td>3-4 días</td><td>48 horas†</td><td>4-6 meses</td><td>2 días / 2 meses</td></tr>
-        <tr><td>Verdura cocinada</td><td>3-4 días†</td><td>48 horas†</td><td>sin cifra</td><td>3 días / 2 meses</td></tr>
-        <tr><td>Tortilla / huevo</td><td>3-4 días†</td><td>48 horas†</td><td>sin cifra</td><td>2 días / 1 mes</td></tr>
-        <tr><td>Salsa casera</td><td>3-4 días†</td><td>48 horas†</td><td>sin cifra</td><td>4 días / 3 meses</td></tr>
-        <tr><td>Postre casero</td><td>3-4 días†</td><td>48 horas†</td><td>sin cifra</td><td>3 días / 1 mes</td></tr>
+        <tr><th scope="row">Arroz cocinado</th><td>3-4 días†</td><td><strong>24 horas</strong></td><td>sin cifra</td><td>2 días / 3 meses</td></tr>
+        <tr><th scope="row">Pasta cocinada</th><td>3-4 días†</td><td>48 horas†</td><td>sin cifra</td><td>3 días / 2 meses</td></tr>
+        <tr><th scope="row">Legumbres / guiso</th><td>3-4 días</td><td>48 horas†</td><td>2-3 meses</td><td>3 días / 3 meses</td></tr>
+        <tr><th scope="row">Sopa / crema</th><td>3-4 días</td><td>48 horas†</td><td>2-3 meses</td><td>3 días / 3 meses</td></tr>
+        <tr><th scope="row">Carne cocinada</th><td>3-4 días</td><td>48 horas†</td><td>2-3 meses</td><td>3 días / 3 meses</td></tr>
+        <tr><th scope="row">Pescado cocinado</th><td>3-4 días</td><td>48 horas†</td><td>4-6 meses</td><td>2 días / 2 meses</td></tr>
+        <tr><th scope="row">Verdura cocinada</th><td>3-4 días†</td><td>48 horas†</td><td>sin cifra</td><td>3 días / 2 meses</td></tr>
+        <tr><th scope="row">Tortilla / huevo</th><td>3-4 días†</td><td>48 horas†</td><td>sin cifra</td><td>2 días / 1 mes</td></tr>
+        <tr><th scope="row">Salsa casera</th><td>3-4 días†</td><td>48 horas†</td><td>sin cifra</td><td>4 días / 3 meses</td></tr>
+        <tr><th scope="row">Postre casero</th><td>3-4 días†</td><td>48 horas†</td><td>sin cifra</td><td>3 días / 1 mes</td></tr>
       </tbody>
     </table>
   </div>
