@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://freshtrack.softapp.tech/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/"/>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://freshtrack.softapp.tech/en/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/"/>
@@ -36,7 +36,7 @@
   </url>
   <url>
     <loc>https://freshtrack.softapp.tech/fr/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/"/>
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://freshtrack.softapp.tech/it/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/"/>
@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https://freshtrack.softapp.tech/pt/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/"/>
@@ -69,7 +69,7 @@
   </url>
   <url>
     <loc>https://freshtrack.softapp.tech/privacidad.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/privacidad.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/datenschutz.html"/>
@@ -80,7 +80,7 @@
   </url>
   <url>
     <loc>https://freshtrack.softapp.tech/en/privacy.html</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/privacidad.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/datenschutz.html"/>
@@ -135,7 +135,7 @@
   </url>
   <url>
     <loc>https://freshtrack.softapp.tech/soporte.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/soporte.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/support.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/support.html"/>
@@ -146,7 +146,7 @@
   </url>
   <url>
     <loc>https://freshtrack.softapp.tech/en/support.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/soporte.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/support.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/support.html"/>
@@ -201,16 +201,72 @@
   </url>
   <url>
     <loc>https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html"/>
   </url>
   <url>
     <loc>https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html"/>
+  </url>
+  <url>
+    <loc>https://freshtrack.softapp.tech/guias/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/"/>
+  </url>
+  <url>
+    <loc>https://freshtrack.softapp.tech/en/guides/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/"/>
+  </url>
+  <url>
+    <loc>https://freshtrack.softapp.tech/guias/cuanto-dura-comida-cocinada-nevera.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/cuanto-dura-comida-cocinada-nevera.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/how-long-leftovers-last.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/how-long-leftovers-last.html"/>
+  </url>
+  <url>
+    <loc>https://freshtrack.softapp.tech/en/guides/how-long-leftovers-last.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/cuanto-dura-comida-cocinada-nevera.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/how-long-leftovers-last.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/how-long-leftovers-last.html"/>
+  </url>
+  <url>
+    <loc>https://freshtrack.softapp.tech/guias/cuanto-dura-comida-congelador.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/cuanto-dura-comida-congelador.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/how-long-food-lasts-in-freezer.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/how-long-food-lasts-in-freezer.html"/>
+  </url>
+  <url>
+    <loc>https://freshtrack.softapp.tech/en/guides/how-long-food-lasts-in-freezer.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/cuanto-dura-comida-congelador.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/how-long-food-lasts-in-freezer.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/how-long-food-lasts-in-freezer.html"/>
+  </url>
+  <url>
+    <loc>https://freshtrack.softapp.tech/guias/inventario-congelador.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/inventario-congelador.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/freezer-inventory.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/freezer-inventory.html"/>
+  </url>
+  <url>
+    <loc>https://freshtrack.softapp.tech/en/guides/freezer-inventory.html</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/inventario-congelador.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/freezer-inventory.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/freezer-inventory.html"/>
   </url>
 </urlset>
