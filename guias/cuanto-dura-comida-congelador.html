@@ -184,7 +184,7 @@
   .card .fail b { color: var(--brand-bright); }
 
   /* Tabla NTAG213 vs NTAG215 y tabla de congelación */
-  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
+  .table-wrap { container-type: inline-size; overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
   table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 420px; }
   th, td { padding: 11px 14px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
   td:first-child, th:first-child { white-space: normal; }
@@ -249,15 +249,13 @@
   .crumbs + .kicker { margin-top: 14px; }
 
   /* Tablas con celdas que se parten (guías con tabla de varias columnas) y leyenda */
-  table.wrapcells { min-width: 560px; }
-  table.wrapcells th, table.wrapcells td { white-space: normal; vertical-align: top; }
-  caption { caption-side: bottom; text-align: left; white-space: normal; padding: 11px 14px; color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--border); }
+  caption { caption-side: top; text-align: left; white-space: normal; box-sizing: border-box; width: 100cqw; position: sticky; left: 0;
+            padding: 12px 14px; font-size: 13.5px; color: var(--muted); border-bottom: 1px solid var(--border); }
   .cta ul { text-align: left; max-width: 520px; margin: 0 auto 24px; color: var(--muted); }
+  .cta ul strong { color: var(--text); }
   table.chart { min-width: 0; }
-  table.chart th, table.chart td { white-space: normal; vertical-align: top; }
+  table.chart th, table.chart td { white-space: normal; vertical-align: top; padding: 10px 10px; }
   table.chart tbody th { font-weight: 400; }
-  table.chart th, table.chart td { padding: 10px 10px; }
-  table.chart caption { min-width: 0; }
   table.chart thead th { letter-spacing: 0; }
   table.chart tbody tr:last-child th { border-bottom: none; }
   tr:target th, tr:target td { background: var(--brand-soft); }
@@ -292,13 +290,13 @@
 </nav>
 
 <main id="main" class="doc">
-  <div class="crumbs" role="navigation" aria-label="Migas de pan">
+  <nav class="crumbs" aria-label="Migas de pan">
     <ol>
       <li><a href="../">FreshTrack</a></li>
       <li><a href="./">Guías</a></li>
-      <li aria-current="page">Cuánto dura la comida en el congelador</li>
+      <li><span aria-current="page">Cuánto dura la comida en el congelador</span></li>
     </ol>
-  </div>
+  </nav>
   <span class="kicker">Guía</span>
   <h1>Cuánto dura cada alimento en el congelador (y qué no conviene congelar)</h1>
   <p class="lead">A -18 °C la comida congelada es segura indefinidamente: lo que se acaba es la calidad. Aquí van los meses por alimento, lo que no conviene congelar y qué hacer con la fecha de caducidad y con un corte de luz, con la fuente de cada cifra.</p>
@@ -404,7 +402,7 @@
     <li>La ACSA catalana: puedes congelar alimentos preenvasados «a más tardar el día anterior» a que expire la fecha de caducidad.</li>
   </ul>
   <p>Si quieres margen, tira por la más prudente: un día antes. Lo que ambas repiten es lo que viene después: descongela en la nevera y consume en un máximo de 24 horas.</p>
-  <p>Ojo con qué fecha lleva el envase. La de caducidad marca hasta cuándo es seguro (pescado fresco, carne picada, pollo crudo), y la ACSA recomienda, al acercarse, consumirlo, cocinarlo o congelarlo. La de consumo preferente marca hasta cuándo tiene la calidad esperada: pasada, sigue siendo seguro si se ha conservado bien y el envase está intacto (<a href="https://acsa.gencat.cat/es/seguretat_alimentaria/consells_sobre_seguretat_alimentaria/consells-generales/distingeix-entre-data-de-consum-preferent-i-data-de-caducitat/index.html">la diferencia, según la ACSA</a>).</p>
+  <p>Ojo con qué fecha lleva el envase. La de caducidad marca hasta cuándo es seguro (pescado fresco, carne picada, pollo crudo), y la ACSA recomienda, al acercarse, consumirlo, cocinarlo o congelarlo. La de consumo preferente marca hasta cuándo tiene la calidad esperada: pasada, sigue siendo seguro si se ha conservado bien y el envase está intacto (<a href="https://acsa.gencat.cat/es/seguretat_alimentaria/consells_sobre_seguretat_alimentaria/consells-generals/distingeix-entre-data-de-consum-preferent-i-data-de-caducitat/index.html">la diferencia, según la ACSA</a>).</p>
   <p>Además, lo que entra en su mejor momento sale mejor: el USDA aconseja congelar ya lo que no vayas a usar pronto, sin esperar a la víspera.</p>
 
   <h2 id="volver-a-congelar">Descongelar y volver a congelar</h2>
