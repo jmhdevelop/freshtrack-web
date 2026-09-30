@@ -185,6 +185,7 @@
 
   /* Tabla NTAG213 vs NTAG215 y tabla de congelación */
   .table-wrap { container-type: inline-size; overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
+  .table-wrap:focus-visible { outline-offset: -2px; }
   table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 420px; }
   th, td { padding: 11px 14px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
   td:first-child, th:first-child { white-space: normal; }
@@ -323,7 +324,7 @@
 
   <h2 id="chart">Food by food</h2>
   <p>Two tables: meat, poultry, fish and deli meats (FDA), then eggs, dairy, bread, fruit and vegetables (eggs from the FDA; the rest from the USDA FoodKeeper data file). The middle column is months of <strong>quality</strong> at 0 °F (-18 °C). The last is the FreshTrack type that fits best and the time it suggests, exactly as the app shows it: the app doesn't tell foods apart within a type.</p>
-  <div class="table-wrap">
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable table: meat, poultry, fish and deli meats">
     <table class="chart">
       <caption>Freezer months at 0 °F (-18 °C), for quality, for meat, poultry, fish and deli meats, and the time FreshTrack suggests</caption>
       <thead>
@@ -351,7 +352,7 @@
   </div>
   <p class="fine">Sources: US FDA, <a href="https://www.fda.gov/media/74435/download">Refrigerator &amp; Freezer Storage Chart</a> (March 2018; Spanish edition: <a href="https://www.fda.gov/media/76116/download">Tabla de almacenamiento en refrigerador y congelador</a>). The USDA's current <a href="https://www.foodsafety.gov/food-safety-charts/cold-food-storage-charts">Cold Food Storage Chart</a> gives 4-12 months for steaks, chops and roasts: if in doubt, take the low end.</p>
   <p>The app uses <strong>one time per group</strong>, so it's sometimes too long and sometimes too short: 6 months for all fresh meat, when ground meat and variety meats are 3-4; 3 months for all fish, when smoked fish is 2 and lean fish goes up to 6-8; 2 months for deli meats, when bacon is 1. What you can do about it is in <a href="#freshtrack">By hand, or with FreshTrack</a>.</p>
-  <div class="table-wrap">
+  <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable table: eggs, dairy, bread, fruit and vegetables">
     <table class="chart">
       <caption>Freezer months at 0 °F (-18 °C), for quality, for eggs, dairy, bread, fruit, vegetables and frozen meals, and the time FreshTrack suggests</caption>
       <thead>
