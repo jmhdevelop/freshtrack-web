@@ -144,7 +144,7 @@
   .skip:focus { left: 0; }
   :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
 
-  nav:not(.toc):not(.crumbs) { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  nav:not(.toc) { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
         background: color-mix(in srgb, var(--bg) 80%, transparent); border-bottom: 1px solid var(--border); }
   .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
   .theme {
@@ -208,7 +208,7 @@
   .card .fail b { color: var(--brand-bright); }
 
   /* Tabla NTAG213 vs NTAG215 y tabla de congelación */
-  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
+  .table-wrap { container-type: inline-size; overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
   table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 420px; }
   th, td { padding: 11px 14px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
   td:first-child, th:first-child { white-space: normal; }
@@ -262,30 +262,30 @@
   }
   #langbar button:hover { color: var(--text); background: var(--brand-soft) }
   /* Migas de pan (reutilizable en todas las guías) */
-  /* ---- Migas ---- */
-  .doc .crumbs ol { list-style: none; margin: 0; display: flex; flex-wrap: wrap; gap: 4px 8px; font-size: 14px; color: var(--muted); }
-  .doc .crumbs li { margin: 0; display: flex; gap: 8px; }
-  .doc .crumbs li + li::before { content: "\203A"; }
-  .doc .crumbs a { color: var(--muted); }
-  .doc .crumbs a:hover { color: var(--text); }
-  .doc .crumbs [aria-current] { color: var(--text); }
-  .doc .crumbs + .kicker { margin-top: 18px; }
+  nav.crumbs { position: static; z-index: auto; backdrop-filter: none; -webkit-backdrop-filter: none; background: none; border: 0;
+              font-size: 14px; color: var(--muted); }
+  .crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 8px; }
+  .crumbs li { margin: 0; display: flex; gap: 8px; }
+  .crumbs li + li::before { content: "\203A"; opacity: .7; }
+  .crumbs a { color: var(--muted); text-decoration: none; }
+  .crumbs a:hover { color: var(--text); text-decoration: underline; }
+  .crumbs [aria-current] { color: var(--text); }
+  .crumbs + .kicker { margin-top: 14px; }
 
   /* ---- Tabla comparativa ancha ---- */
   .table-wrap.wide table { min-width: 880px; }
   .table-wrap.wide th, .table-wrap.wide td { white-space: normal; vertical-align: top; min-width: 130px; }
   .table-wrap.wide td:first-child, .table-wrap.wide th:first-child { min-width: 150px; }
-  table.wrapcells { min-width: 560px; }
-  table.wrapcells th, table.wrapcells td { white-space: normal; vertical-align: top; }
-  caption { caption-side: top; text-align: left; padding: 12px 14px; font-size: 13.5px; color: var(--muted); border-bottom: 1px solid var(--border); }
+  caption { caption-side: top; text-align: left; white-space: normal; box-sizing: border-box; width: 100cqw; position: sticky; left: 0;
+            padding: 12px 14px; font-size: 13.5px; color: var(--muted); border-bottom: 1px solid var(--border); }
   .table-wrap:focus-visible { outline-offset: -2px; }
 
   /* ---- CTA con lista ---- */
-  .doc .cta .fl { text-align: left; max-width: 560px; margin: 0 auto 18px; color: var(--muted); }
-  .doc .cta .fl ul { margin: 0 0 0 20px; }
-  .doc .cta .fl strong { color: var(--text); }
+  .cta ul { text-align: left; max-width: 520px; margin: 0 auto 24px; color: var(--muted); }
+  .cta ul strong { color: var(--text); }
 
   /* ---- Plantilla imprimible ---- */
+  #plantilla { scroll-margin-top: 76px; }
   .tpl { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
          box-shadow: var(--shadow); padding: 20px 20px 16px; margin-top: 18px; }
   .tpl-fill { margin: 0 0 12px; display: flex; flex-wrap: wrap; gap: 8px 28px; }
@@ -317,6 +317,7 @@
     .tpl-table tr { height: 7mm; }
     .tpl-table td { height: 7mm; }
     .tpl-example td { color: #444; }
+    .tpl-table tbody tr:last-child td { border-bottom: 1px solid #000; }
     .doc .tpl-note { color: #000; font-size: 8pt; margin-top: 3mm; }
   }
   @page { size: letter landscape; margin: 0.5in; }
@@ -472,8 +473,8 @@
     </div>
     <p class="tpl-note">The example uses 3 months for “use by”, the top of the FDA range for soups and stews (2-3 months). It’s a quality time, not a safety time. Times for each food are in the guide to how long food lasts in the freezer. Freezer at 0 °F (-18 °C). Thawed: use within 24 hours (FSA).</p>
     </div>
-  <p class="screen-only">Printing shows only the template, on one landscape US Letter sheet. Need more lines? Print another.</p>
-  <button class="print-btn screen-only" type="button" onclick="window.print()">Print the template</button>
+  <p>Printing shows only the template, on one landscape US Letter sheet. Need more lines? Print another.</p>
+  <button class="print-btn" type="button" onclick="window.print()">Print the template</button>
   <p class="fine">Source for the example: FDA, <a href="https://www.fda.gov/media/74435/download">Refrigerator &amp; Freezer Storage Chart</a> (March 2018).</p>
   </section>
 
@@ -485,15 +486,13 @@
   <div class="cta">
     <p style="margin-top:0;color:var(--text);font-weight:700;font-size:18px">All of the above can be done by hand, with a sheet of paper.</p>
     <p>We built FreshTrack because we didn't want to work out each container's date by hand. Here's what it does in the published version:</p>
-    <div class="fl">
-      <ul>
-        <li><strong>Three locations: pantry, fridge and freezer.</strong> In the product list, one tap on "Freezer" shows only what's in there. The list of containers has no such filter, but each container's row says whether it's in the fridge or the freezer, and there's a search box.</li>
-        <li><strong>Each container carries a calculated date.</strong> When you fill one, you pick the food type (there are 12, like cooked rice, legumes / stew or raw meat) and whether it goes in the fridge or the freezer; the date comes from that. You can change the days for each type in Settings.</li>
-        <li><strong>Quantity.</strong> For a product, you note how many units you have, and the number drops as you use one.</li>
-        <li><strong>A daily reminder before it expires.</strong> By default, two days ahead and at 9:00. Both can be changed in Settings.</li>
-        <li><strong>Siri.</strong> Say "What do I have in the freezer in FreshTrack" and it tells you how many things there are and names the first few, with a short list on screen. It covers products and containers together.</li>
-      </ul>
-    </div>
+    <ul>
+      <li><strong>Three locations: pantry, fridge and freezer.</strong> In the product list, one tap on "Freezer" shows only what's in there. The list of containers has no such filter, but each container's row says whether it's in the fridge or the freezer, and there's a search box.</li>
+      <li><strong>Each container carries a calculated date.</strong> When you fill one, you pick the food type (there are 12, like cooked rice, legumes / stew or raw meat) and whether it goes in the fridge or the freezer; the date comes from that. You can change the days for each type in Settings.</li>
+      <li><strong>Quantity.</strong> For a product, you note how many units you have, and the number drops as you use one.</li>
+      <li><strong>A daily reminder before it expires.</strong> By default, two days ahead and at 9:00. Both can be changed in Settings.</li>
+      <li><strong>Siri.</strong> Say "What do I have in the freezer in FreshTrack" and it tells you how many things there are and names the first few, with a short list on screen. It covers products and containers together.</li>
+    </ul>
     <p>What it doesn't do: it can't see inside your freezer. As with any method, someone has to log what goes in. It has no field for drawer or shelf either; if you want that, it goes in the name or the note of the container.</p>
     <p class="fine" style="font-size:14px">The dates FreshTrack calculates are approximate estimates based on general food storage guidelines (such as the USDA FoodKeeper guide and food safety recommendations). They don't replace the use-by or best-before date printed on the package, nor your own judgement about the food's look, smell or taste. When in doubt, throw it out.</p>
     <p>It's free, and it's ours.</p>
