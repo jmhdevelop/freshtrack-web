@@ -243,6 +243,16 @@
     line-height: 1; cursor: pointer; padding: 2px 6px; border-radius: 6px;
   }
   #langbar button:hover { color: var(--text); background: var(--brand-soft) }
+  /* Migas de pan (reutilizable en todas las guías) */
+  nav.crumbs { position: static; z-index: auto; backdrop-filter: none; -webkit-backdrop-filter: none; background: none; border: 0;
+              font-size: 14px; color: var(--muted); }
+  .crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 8px; }
+  .crumbs li { margin: 0; display: flex; gap: 8px; }
+  .crumbs li + li::before { content: "\203A"; opacity: .7; }
+  .crumbs a { color: var(--muted); text-decoration: none; }
+  .crumbs a:hover { color: var(--text); text-decoration: underline; }
+  .crumbs [aria-current] { color: var(--text); }
+  .crumbs + .kicker { margin-top: 14px; }
 </style>
   <script defer src="https://softmetrics.softapp.tech/b.js"></script>
 </head>
@@ -272,6 +282,13 @@
 </nav>
 
 <main id="main" class="doc">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../">FreshTrack</a></li>
+      <li><a href="./">Guides</a></li>
+      <li><span aria-current="page">NFC labels for containers</span></li>
+    </ol>
+  </nav>
   <span class="kicker">Guide</span>
   <h1>NFC labels for food containers: complete guide</h1>
   <p class="lead">Which tag to buy, where to stick it, how to write and read it with your iPhone, and whether it really survives the freezer. You can follow the whole thing without installing anything.</p>
