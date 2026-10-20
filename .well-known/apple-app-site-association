@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["5XRGLQJJ6L.tech.softapp.freshtrack"],
+        "components": [
+          { "/": "/t/", "comment": "Etiquetas NFC de los tuppers. Solo /t/: el resto del sitio sigue en Safari." }
+        ]
+      }
+    ]
+  }
+}
