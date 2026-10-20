@@ -1,0 +1,4 @@
+# Jekyll oculta por defecto los ficheros y carpetas con punto. Apple pide el AASA en
+# /.well-known/apple-app-site-association; se incluye solo esa carpeta (no .nojekyll, que
+# haría públicos también .gitignore y .indexnow-key).
+include: [".well-known"]
