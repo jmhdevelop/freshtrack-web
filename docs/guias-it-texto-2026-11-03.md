@@ -17,7 +17,7 @@ published: false
 
 | Aspecto | Guía ES existente | Aquí |
 |---|---|---|
-| Tamaño | cocinada: 33 KB de HTML (unas 2.000 palabras de cuerpo); NFC: 32 KB | cocinada ≈ 2.300 palabras; NFC ≈ 2.000 |
+| Tamaño | cocinada: 33 KB de HTML (unas 2.000 palabras de cuerpo); NFC: 32 KB | cocinada ≈ 2.600 palabras (con tablas); NFC ≈ 2.100 |
 | Esqueleto | `nav` + migas (`crumbs`) + `kicker` «Guida» + `h1` + `p.lead` + `p.byline` + `nav.toc` + secciones `h2 id=` + bloque `.cta` con insignia App Store + `hr` + enlace a la versión en otro idioma | igual; los `id` de cada `h2` están en el índice de cada guía |
 | Tabla | `.table-wrap` > `table.wrapcells` con `caption`, `th scope`, leyenda `†` en `p.fine` | la guía 1 lleva una tabla igual (5 columnas → 4) |
 | Tarjetas / caja | NFC: `.cards` con `.card` y `p.fail`; `.box` para la conclusión práctica | igual en la guía 2 |
@@ -105,7 +105,7 @@ En el texto, ⚑ + número marca una frase que conviene que lea un nativo. La li
 | Ruta propuesta | `it/guide/quanto-dura-cibo-cotto-in-frigo.html` | — |
 | `<title>` | `Quanto dura il cibo cotto in frigo, piatto per piatto — FreshTrack NFC` | 70 |
 | `<title>` alternativo (más corto, sin marca) | `Quanto dura il cibo cotto in frigo, piatto per piatto` | 53 |
-| `<meta name="description">` y `og:description` | `Riso, pasta, sugo, verdura, carne, pesce e frittata: quanti giorni durano in frigo secondo ISS ed EFSA, dove le fonti non danno un numero e cosa fare allora.` | 159 |
+| `<meta name="description">` y `og:description` | `Riso, pasta, sugo, verdura, carne, pesce e frittata: quanti giorni durano in frigo secondo ISS ed EFSA, dove le fonti non danno un numero e cosa fare allora.` | 157 |
 | `og:title` | `Quanto dura il cibo cotto in frigo, piatto per piatto` | 53 |
 | `og:locale` | `it_IT` | — |
 | JSON-LD `headline` | `Quanto dura il cibo cotto in frigo: piatto per piatto, secondo le fonti ufficiali` | 81 |
