@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NFC-Etiketten für Dosen: NTAG213 oder NTAG215, Gefrierfach, iPhone</title>
+<meta name="description" content="Welches NFC-Etikett du für Frischhaltedosen kaufst, ob es Gefrierfach und Spülmaschine aushält und wie das iPhone es liest, ohne App zu öffnen. Mit Quellen.">
+<link rel="canonical" href="https://freshtrack.softapp.tech/de/ratgeber/nfc-etiketten-dosen.html">
+<link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/ratgeber/nfc-etiketten-dosen.html">
+<link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/guides/etiquettes-nfc-boites.html">
+<link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/guide/etichette-nfc-contenitori.html">
+<link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html">
+<link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html">
+<link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html">
+<link rel="icon" href="../../img/icon.png">
+<link rel="apple-touch-icon" href="../../img/icon.png">
+<meta name="apple-itunes-app" content="app-id=6791699550">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f5f8f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c110f" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FreshTrack">
+<meta property="og:title" content="NFC-Etiketten für Dosen und Gefrierschrank">
+<meta property="og:description" content="Welches NFC-Etikett du für Frischhaltedosen kaufst, ob es Gefrierfach und Spülmaschine aushält und wie das iPhone es liest, ohne App zu öffnen. Mit Quellen.">
+<meta property="og:url" content="https://freshtrack.softapp.tech/de/ratgeber/nfc-etiketten-dosen.html">
+<meta property="og:image" content="https://freshtrack.softapp.tech/img/og-en.png">
+<meta property="og:locale" content="de_DE">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "NFC-Etiketten für Dosen: NTAG213 oder NTAG215, Gefrierfach, iPhone",
+      "description": "Welches NFC-Etikett du für Frischhaltedosen kaufst, ob es Gefrierfach und Spülmaschine aushält und wie das iPhone es liest, ohne App zu öffnen. Mit Quellen.",
+      "inLanguage": "de-DE",
+      "mainEntityOfPage": "https://freshtrack.softapp.tech/de/ratgeber/nfc-etiketten-dosen.html",
+      "url": "https://freshtrack.softapp.tech/de/ratgeber/nfc-etiketten-dosen.html",
+      "image": "https://freshtrack.softapp.tech/img/og-en.png",
+      "datePublished": "2026-11-24",
+      "dateModified": "2026-11-24",
+      "author": {
+        "@type": "Organization",
+        "name": "SOFTAPP SOLUTIONS LLC",
+        "url": "https://freshtrack.softapp.tech/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SOFTAPP SOLUTIONS LLC",
+        "url": "https://freshtrack.softapp.tech/"
+      },
+      "citation": [
+        "https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading",
+        "https://support.apple.com/de-de/guide/iphone/aside/asd-nfc-reader/15.0/ios",
+        "https://datasheet.chipsmall.com/NT2H1311TTDUDZ/368586.pdf"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "FreshTrack",
+          "item": "https://freshtrack.softapp.tech/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ratgeber",
+          "item": "https://freshtrack.softapp.tech/de/ratgeber/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "NFC-Etiketten für Dosen",
+          "item": "https://freshtrack.softapp.tech/de/ratgeber/nfc-etiketten-dosen.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --brand: #0D9E78;
+    --brand-bright: #0b8a69;
+    --brand-soft: rgba(13, 158, 120, .12);
+    --bg: #f5f8f6;
+    --card: #ffffff;
+    --border: rgba(18, 42, 33, .08);
+    --text: #14231d;
+    --muted: rgba(20, 35, 29, .66);
+    --shadow: 0 8px 28px rgba(18, 42, 33, .08);
+    --radius: 20px;
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c110f;
+    --card: #151c18;
+    --border: rgba(255, 255, 255, .09);
+    --text: #e9f2ee;
+    --muted: rgba(233, 242, 238, .6);
+    --shadow: 0 8px 28px rgba(0, 0, 0, .4);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { overflow-x: clip; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    -webkit-font-smoothing: antialiased; overflow-x: clip;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--brand-bright); }
+  .skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: #fff;
+          padding: 10px 16px; border-radius: 0 0 10px 0; z-index: 100; }
+  .skip:focus { left: 0; }
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+  nav:not(.toc) { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+        background: color-mix(in srgb, var(--bg) 80%, transparent); border-bottom: 1px solid var(--border); }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .theme {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); cursor: pointer; padding: 0;
+  }
+  .theme svg { width: 17px; height: 17px; stroke: currentColor; stroke-width: 1.8;
+               fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .theme .moon { display: none; }
+  :root[data-theme="dark"] .theme .sun { display: none; }
+  :root[data-theme="dark"] .theme .moon { display: block; }
+  .nav-inner { display: flex; align-items: center; gap: 10px; padding-block: 12px; }
+  .nav-inner img { width: 32px; height: 32px; border-radius: 8px; }
+  .nav-inner .name { font-weight: 700; font-size: 17px; }
+  .nav-links { margin-left: auto; display: flex; gap: 22px; align-items: center; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 14.5px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover, .nav-links a[aria-current] { color: var(--text); }
+  .pill { background: var(--brand); color: #fff !important; font-weight: 600; padding: 7px 14px; border-radius: 999px; }
+  .lang { font-weight: 700; }
+  @media (max-width: 700px) {
+    .nav-links a:not(.pill):not(.lang) { display: none; }
+    .nav-links { gap: 14px; }
+    .nav-inner { padding-block: 10px; }
+    .nav-inner .name { font-size: 16px; }
+    .pill { padding: 6px 13px; font-size: 13.5px; }
+  }
+
+  .kicker { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 14px; font-weight: 600;
+            text-transform: uppercase; letter-spacing: .08em; }
+  .kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--brand); }
+
+  /* ---- Documento / artículo ---- */
+  .doc { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+  .doc h1 { font-size: clamp(30px, 5vw, 42px); font-weight: 800; letter-spacing: -.02em; margin-top: 12px; line-height: 1.12; }
+  .doc .lead { color: var(--muted); font-size: 18px; margin-top: 14px; }
+  .doc .byline { color: var(--muted); font-size: 14px; margin-top: 10px; }
+  .doc h2 { font-size: clamp(20px, 3vw, 25px); font-weight: 800; letter-spacing: -.01em; margin-top: 52px; margin-bottom: 10px; scroll-margin-top: 76px; }
+  .doc h3 { font-size: 16.5px; font-weight: 700; margin-top: 22px; margin-bottom: 4px; }
+  .doc p { margin-top: 12px; }
+  .doc ul, .doc ol { margin: 14px 0 0 22px; }
+  .doc li { margin-top: 8px; }
+  .doc .fine { color: var(--muted); font-size: 14.5px; }
+  .doc strong { font-weight: 700; }
+
+  /* Índice */
+  .toc { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+         box-shadow: var(--shadow); padding: 20px 22px; margin-top: 26px; }
+  .toc p { margin: 0; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  .toc ol { margin: 12px 0 0 20px; columns: 2; column-gap: 24px; }
+  .toc li { margin-top: 6px; font-size: 14.5px; break-inside: avoid; }
+  @media (max-width: 560px) { .toc ol { columns: 1; } }
+
+  /* Tarjetas de comparación */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-top: 18px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+          padding: 20px 20px 22px; box-shadow: var(--shadow); }
+  .card h3 { margin-top: 0; }
+  .card p { margin-top: 8px; font-size: 15px; color: var(--muted); }
+  .card .fail { color: var(--text); font-size: 14px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .card .fail b { color: var(--brand-bright); }
+
+  /* Tabla NTAG213 vs NTAG215 y tabla de congelación */
+  .table-wrap { container-type: inline-size; overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
+  .table-wrap:focus-visible { outline-offset: -2px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 420px; }
+  th, td { padding: 11px 14px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
+  td:first-child, th:first-child { white-space: normal; }
+  thead th { color: var(--muted); font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; background: var(--bg); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* Pasos numerados */
+  ol.steps { list-style: none; margin: 18px 0 0; counter-reset: step; }
+  ol.steps li { position: relative; padding-left: 44px; margin-top: 16px; counter-increment: step; }
+  /* El numero va posicionado, no como item de flex: con `display:flex` en el <li>
+     cada <strong> y cada trozo de texto se convertia en un item independiente y la
+     frase se descolocaba en columnas. */
+  ol.steps li::before {
+    content: counter(step); position: absolute; left: 0; top: 1px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--brand-soft); color: var(--brand-bright); font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* Recuadro de aviso/consejo */
+  .box { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+         box-shadow: var(--shadow); padding: 20px 22px; margin-top: 18px; }
+  .box p:first-child { margin-top: 0; }
+
+  /* CTA final */
+  .cta { background: var(--card); border: 1px solid var(--border); border-radius: 26px;
+         padding: 44px 30px; text-align: center; margin-top: 20px; box-shadow: var(--shadow); }
+  .cta p { color: var(--muted); max-width: 520px; margin: 12px auto 24px; }
+  .appstore { display: inline-block; line-height: 0; border-radius: 8px; }
+  .appstore img { display: block; }
+  .appstore .as-d { display: none; }
+  :root[data-theme="dark"] .appstore .as-l { display: none; }
+  :root[data-theme="dark"] .appstore .as-d { display: block; }
+  .appstore:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
+
+  footer { padding: 56px 0 64px; text-align: center; color: var(--muted); font-size: 14px; }
+  footer .links { display: flex; gap: 22px; justify-content: center; margin-bottom: 14px; flex-wrap: wrap; }
+  footer a { color: var(--muted); }
+
+  #langbar[hidden] { display: none }
+  #langbar {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    padding: 10px 20px; background: var(--card); border-bottom: 1px solid var(--border);
+    font-size: 14px; color: var(--muted);
+  }
+  #langbar p { margin: 0 }
+  #langbar a { color: var(--brand-bright); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px }
+  #langbar button {
+    margin-left: auto; background: none; border: 0; color: var(--muted); font-size: 20px;
+    line-height: 1; cursor: pointer; padding: 2px 6px; border-radius: 6px;
+  }
+  #langbar button:hover { color: var(--text); background: var(--brand-soft) }
+  /* Migas de pan (reutilizable en todas las guías) */
+  nav.crumbs { position: static; z-index: auto; backdrop-filter: none; -webkit-backdrop-filter: none; background: none; border: 0;
+              font-size: 14px; color: var(--muted); }
+  .crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 8px; }
+  .crumbs li { margin: 0; display: flex; gap: 8px; }
+  .crumbs li + li::before { content: "\203A"; opacity: .7; }
+  .crumbs a { color: var(--muted); text-decoration: none; }
+  .crumbs a:hover { color: var(--text); text-decoration: underline; }
+  .crumbs [aria-current] { color: var(--text); }
+  .crumbs + .kicker { margin-top: 14px; }
+
+  /* Tablas con celdas que se parten (guías con tabla de varias columnas) y leyenda */
+  table.wrapcells { min-width: 560px; }
+  table.wrapcells th, table.wrapcells td { white-space: normal; vertical-align: top; }
+  table.wrapcells tbody th { font-weight: 400; }
+  table.wrapcells tbody tr:last-child th { border-bottom: none; }
+  caption { caption-side: top; text-align: left; white-space: normal; box-sizing: border-box; width: 100cqw; position: sticky; left: 0;
+            padding: 12px 14px; font-size: 13.5px; color: var(--muted); border-bottom: 1px solid var(--border); }
+  .cta .fine { text-align: left; max-width: 560px; margin: 22px auto 0; }
+</style>
+  <script defer src="https://softmetrics.softapp.tech/b.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<div id="langbar" hidden>
+  <p id="langtxt">This page is also available in English.</p>
+  <a id="langgo" href="../../guias/etiquetas-nfc-tuppers.html" data-es="../../guias/etiquetas-nfc-tuppers.html" data-en="../../en/guides/nfc-labels-food-containers.html" hreflang="en" lang="en">Read it in English</a>
+  <button id="langno" type="button" aria-label="Schließen">&times;</button>
+</div>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="../" aria-label="FreshTrack">
+      <img src="../../img/icon.png" alt="" width="256" height="256">
+      <span class="name">FreshTrack</span>
+    </a>
+    <div class="nav-links">
+      <a href="../#features">Funktionen</a>
+      <a href="./">Ratgeber</a>
+      <a href="../support.html">Support</a>
+      <button class="theme" type="button" aria-label="Design wechseln"><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M19.2 4.8l-1.7 1.7M6.5 17.5l-1.7 1.7"/></svg><svg class="moon" viewBox="0 0 24 24"><path d="M20.4 14.2A8.4 8.4 0 0 1 9.8 3.6a8.4 8.4 0 1 0 10.6 10.6z"/></svg></button>
+      <a class="lang" href="../../guias/etiquetas-nfc-tuppers.html" hreflang="es" lang="es" onclick="try{localStorage.setItem('ft-lang','es')}catch(e){}">ES</a>
+      <a class="lang" href="../../en/guides/nfc-labels-food-containers.html" hreflang="en" lang="en" onclick="try{localStorage.setItem('ft-lang','en')}catch(e){}">EN</a>
+      <a class="lang" href="../../it/guide/etichette-nfc-contenitori.html" hreflang="it" lang="it" onclick="try{localStorage.setItem('ft-lang','it')}catch(e){}">IT</a>
+      <a class="pill" href="https://apps.apple.com/de/app/id6791699550?pt=126402967&amp;ct=web-de-guia-nfc-nav&amp;mt=8">Laden</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main" class="doc">
+  <nav class="crumbs" aria-label="Brotkrumen-Navigation">
+    <ol>
+      <li><a href="../">FreshTrack</a></li>
+      <li><a href="./">Ratgeber</a></li>
+      <li><span aria-current="page">NFC-Etiketten für Dosen</span></li>
+    </ol>
+  </nav>
+  <span class="kicker">Ratgeber</span>
+  <h1>NFC-Etiketten für Dosen und Gefrierschrank: welches kaufen, wohin kleben, wie das iPhone sie liest</h1>
+  <p class="lead">Welches NFC-Etikett du brauchst (NTAG213 oder NTAG215), was es im Gefrierfach und in der Spülmaschine aushält, wie du es mit dem iPhone beschreibst und warum neuere iPhones es lesen, ohne dass du eine App öffnest. Das meiste geht ganz ohne unsere App.</p>
+  <p class="byline">Veröffentlicht am 24. November 2026 von SOFTAPP SOLUTIONS LLC · Quellen geprüft am 24. November 2026</p>
+
+  <nav class="toc" aria-label="Inhalt des Ratgebers">
+    <p>In diesem Ratgeber</p>
+    <ol>
+      <li><a href="#kurz">Kurz gesagt</a></li>
+      <li><a href="#was">Was ist ein NFC-Etikett?</a></li>
+      <li><a href="#kaufen">NTAG213 oder NTAG215?</a></li>
+      <li><a href="#kaelte">Gefrierfach und Spülmaschine</a></li>
+      <li><a href="#wohin">Wohin kleben</a></li>
+      <li><a href="#beschreiben">Mit dem iPhone beschreiben</a></li>
+      <li><a href="#hintergrund">Lesen, ohne eine App zu öffnen</a></li>
+      <li><a href="#freshtrack">Von Hand oder mit FreshTrack NFC</a></li>
+      <li><a href="#fragen">Häufige Fragen</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="kurz">Kurz gesagt</h2>
+  <ul>
+    <li><strong>Kauf ein wiederbeschreibbares Etikett mit NTAG213.</strong> Laut Datenblatt des Herstellers NXP hat es 144 Byte Speicher; für einen Link oder eine kurze Notiz reicht das. NTAG215 (504 Byte) brauchst du nur für lange Texte.</li>
+    <li><strong>Ab iPhone XS liest das iPhone das Etikett im Hintergrund:</strong> Du hältst es an den Deckel, es erscheint eine Mitteilung, du tippst darauf. Dafür muss auf dem Etikett ein <strong>Link</strong> stehen, kein reiner Text (Apple).</li>
+    <li><strong>Für das Gefrierfach und die Spülmaschine</strong> gibt weder NXP noch Apple eine Angabe für normale Aufkleber. Was hält, hängt vom Aufkleber ab, nicht vom Chip: Achte auf die Angaben des Verkäufers.</li>
+    <li><strong>Das iPad liest keine NFC-Etiketten</strong>; Apple führt nur iPhone-Modelle auf.</li>
+  </ul>
+
+  <h2 id="was">Was ist ein NFC-Etikett?</h2>
+  <p>Ein NFC-Etikett (auch NFC-Tag oder NFC-Sticker genannt) ist ein dünner Aufkleber mit einem winzigen Chip und einer aufgedruckten Antenne, ohne Batterie. Ab Werk steht nichts darauf. Du beschreibst es mit dem Handy und kannst es wieder überschreiben. Für Dosen ist genau das der Unterschied zu Kreppband oder Papieretiketten: Es nutzt sich nicht ab. Dose leer, spülen, und beim nächsten Mal überschreibst du dasselbe Etikett, ohne etwas abzuziehen oder neu zu kleben.</p>
+
+  <h2 id="kaufen">NTAG213 oder NTAG215?</h2>
+  <p>Die meisten günstigen NFC-Sticker haben einen Chip der Familie NTAG21x von NXP, fast immer NTAG213 oder NTAG215. Der eigentliche Unterschied steht im Datenblatt von NXP: <strong>144 Byte</strong> Nutzerspeicher beim NTAG213, <strong>504 Byte</strong> beim NTAG215 (NTAG216: 888 Byte).</p>
+  <p>Wie viel braucht man? Ein Beispiel aus unserer eigenen App: Der Link, den FreshTrack NFC auf ein Etikett schreibt, belegt nach unserer Rechnung etwa <strong>71 Byte</strong>. Ein NTAG213 reicht also mit Abstand; eine kurze Textnotiz («Linsen · eingefroren 6.9.») ebenso. NTAG215 lohnt sich nur für lange Notizen.</p>
+  <p>Bei der Haltbarkeit sind beide Chips gleich: NXP gibt <strong>10 Jahre</strong> Datenerhalt und <strong>100.000 Schreibzyklen</strong> an, gemessen bei 22 °C. Bei einem Neubeschreiben pro Woche reicht das für viele Jahre.</p>
+  <p>Mit dem iPhone funktionieren beide ohne Zubehör: Apple nennt iPhone 7 und neuer als Modelle mit NFC-Tag-Leser.</p>
+  <p class="fine">In diesem Ratgeber gibt es absichtlich keine Kauflinks.</p>
+
+  <h2 id="kaelte">Gefrierfach und Spülmaschine: was man weiß und was nicht</h2>
+  <p>Ehrlich gesagt: <strong>Eine Herstellerangabe für −18 °C oder für die Spülmaschine haben wir für normale NFC-Aufkleber nicht gefunden.</strong> Die Werte im Datenblatt von NXP (10 Jahre, 100.000 Zyklen) gelten bei 22 °C; einen Temperaturbereich für den Betrieb nennt der Teil des Datenblatts, den wir lesen konnten, nicht.</p>
+  <p>Was wir daraus ableiten:</p>
+  <ul>
+    <li><strong>Der Chip ist selten das Problem, eher der Aufkleber.</strong> Kleber und bedruckte Schicht entscheiden, ob das Etikett im Gefrierfach hält. Kauf Etiketten, die der Verkäufer ausdrücklich für Kühl- oder Gefrierschrank angibt, am besten mit einer Schutzschicht (laminiert).</li>
+    <li><strong>Spülmaschine nur, wenn der Verkäufer «spülmaschinenfest» angibt.</strong> Sonst den Deckel von Hand spülen.</li>
+    <li><strong>Kondenswasser:</strong> Wenn du die Dose aus dem Gefrierfach nimmst, beschlägt der Deckel. Trockne ihn ab, bevor er zurückkommt, damit kein Wasser unter den Kleber zieht.</li>
+  </ul>
+
+  <h2 id="wohin">Wohin kleben</h2>
+  <ul>
+    <li><strong>Auf den Deckel</strong>, nicht an die Seite: So liest du es, ohne die Dose aus dem Stapel zu ziehen.</li>
+    <li><strong>Auf eine flache Stelle, weg von Metall.</strong> Metall stört das Feld der Antenne. Hat der Deckel einen Metallbügel, klebe das Etikett auf den Kunststoffteil, der am weitesten davon entfernt ist.</li>
+    <li><strong>Nicht über ein Scharnier oder einen Verschluss, der sich biegt.</strong> Die Antenne ist eine sehr dünne Leiterbahn; ständiges Knicken kann sie brechen.</li>
+  </ul>
+
+  <h2 id="beschreiben">Mit dem iPhone beschreiben</h2>
+  <p>Das geht mit jeder NFC-App aus dem App Store, die NDEF schreiben kann; es muss nicht unsere sein.</p>
+  <ol>
+    <li>Öffne die App und wähle «Schreiben» (manchmal «Write»).</li>
+    <li>Wähle einen <strong>Link (URL)</strong> oder einen <strong>Text</strong>. Warum das wichtig ist, steht im nächsten Abschnitt.</li>
+    <li>Halte den <strong>oberen Teil der Rückseite</strong> des iPhones (bei der Kamera) an das Etikett, bis die App das Schreiben bestätigt.</li>
+    <li>Zum Wiederverwenden einfach neu schreiben; das überschreibt den alten Inhalt.</li>
+  </ol>
+
+  <h2 id="hintergrund">Lesen, ohne eine App zu öffnen</h2>
+  <p>Das kennen die wenigsten: <strong>Ab iPhone XS liest das iPhone NFC-Etiketten von selbst</strong> («iPhone XS and later support background tag reading», Apple). Keine App muss offen sein. Du hältst das iPhone an das Etikett, oben erscheint eine Mitteilung, und wenn du darauf tippst, öffnet iOS die passende App oder, wenn keine passt, den Link in Safari. Ist das iPhone gesperrt, verlangt iOS erst das Entsperren, bevor es die Daten an die App gibt.</p>
+  <p>Laut Apple automatisch dabei: iPhone XR, XS, XS Max, iPhone SE ab der 2. Generation und alle ab iPhone 11. Beim <strong>iPhone 7, 7 Plus, 8, 8 Plus und X</strong> musst du den <strong>NFC-Tag-Leser im Kontrollzentrum</strong> einschalten.</p>
+  <p><strong>Wann es nicht klappt</strong> (Apple): Der Bildschirm muss an sein, und auch dann nicht, wenn das iPhone seit dem Einschalten noch nie entsperrt wurde, eine App gerade selbst NFC scannt, Wallet mit Apple Pay benutzt wird, die Kamera läuft oder der Flugmodus an ist.</p>
+  <div class="box"><p><strong>Das Wichtigste für Dosen:</strong> Das iPhone sucht auf dem Etikett nach einem <strong>Link</strong> (einem URI-Eintrag) und nimmt den ersten. Ein reiner <strong>Text</strong> wie «Linsen · 6.9.» lässt <strong>keine</strong> Mitteilung erscheinen; du kannst ihn nur mit einer geöffneten NFC-App lesen. Wenn du die Dose antippen und sofort etwas sehen willst, muss ein Link auf dem Etikett stehen.</p></div>
+
+  <h2 id="freshtrack">Von Hand oder mit FreshTrack NFC</h2>
+  <div class="cta">
+    <p style="margin-top:0;color:var(--text);font-weight:700;font-size:18px">Alles oben geht mit jeder NFC-App aus dem App Store, ohne unsere.</p>
+    <p>Wir haben FreshTrack NFC entwickelt, weil wir nicht jeden Sonntag Datum und Haltbarkeit von Hand ausrechnen wollten. Du klebst ein wiederbeschreibbares Etikett auf den Deckel, trägst in der App ein, was drin ist und ob die Dose in den Kühl- oder Gefrierschrank kommt, und die App errechnet das Datum aus Lebensmittelart und Lagerort. Auf das Etikett schreibt sie <strong>nur einen Link</strong>, keinen Inhalt: Was drin ist, steht in der App. Deshalb erkennt ein iPhone ab XS das Etikett von selbst. Halte das iPhone an den Deckel, tippe auf die Mitteilung, und die Dose öffnet sich in der App. Wer die App nicht hat, sieht beim Antippen eine kleine Webseite, die erklärt, was das Etikett ist. Ist die Dose leer, beschreibst du das Etikett für den nächsten Inhalt neu.</p>
+    <p>Etiketten braucht die App nicht: Dosen kannst du auch ohne Etikett anlegen und bearbeiten. Es funktionieren wiederbeschreibbare NTAG213- und NTAG215-Etiketten. NFC lesen und beschreiben geht nur mit einem iPhone; die App gibt es für iPhone und iPad. Kostenlos, ohne Werbung, ohne In-App-Käufe, ohne Konto. Wie lange gekochte Reste halten, steht in unserem Ratgeber <a href="gekochtes-essen-kuehlschrank.html">Wie lange ist gekochtes Essen im Kühlschrank haltbar?</a>.</p>
+    <a class="appstore" href="https://apps.apple.com/de/app/id6791699550?pt=126402967&amp;ct=web-de-guia-nfc&amp;mt=8"><img class="as-l" src="../../img/app-store/de-black.svg" alt="Laden im App Store" width="132" height="44"><img class="as-d" src="../../img/app-store/de-white.svg" alt="Laden im App Store" width="132" height="44"></a>
+  </div>
+
+  <h2 id="fragen">Häufige Fragen</h2>
+  <h3>NTAG213 oder NTAG215 – welches NFC-Etikett für Dosen?</h3>
+  <p>NTAG213 reicht. Laut NXP hat es 144 Byte Speicher; ein Link braucht etwa 70 Byte. NTAG215 (504 Byte) nur für lange Texte.</p>
+  <h3>Funktionieren NFC-Sticker mit dem iPhone?</h3>
+  <p>Ja, ab iPhone 7, ohne Zubehör (Apple). Ab iPhone XS werden sie sogar ohne geöffnete App gelesen.</p>
+  <h3>Hält ein NFC-Etikett im Gefrierschrank?</h3>
+  <p>Eine Herstellerangabe für −18 °C haben wir für normale Aufkleber nicht gefunden; die NXP-Werte gelten bei 22 °C. Entscheidend ist der Aufkleber: Kauf Etiketten, die ausdrücklich für den Gefrierschrank angegeben sind.</p>
+  <h3>Sind NFC-Sticker spülmaschinenfest?</h3>
+  <p>Nur, wenn der Verkäufer das angibt. Eine allgemeine Angabe von NXP oder Apple gibt es nicht. Im Zweifel den Deckel von Hand spülen.</p>
+  <h3>Warum erscheint beim Antippen keine Mitteilung?</h3>
+  <p>Entweder steht auf dem Etikett nur Text statt eines Links, das iPhone ist älter als XS, der Bildschirm ist aus, oder Kamera, Wallet oder Flugmodus sind aktiv (Apple).</p>
+  <h3>Kann das iPad NFC-Etiketten lesen?</h3>
+  <p>Nein. Apple führt für den NFC-Tag-Leser nur iPhone-Modelle auf.</p>
+  <h3>Wie oft kann man ein NFC-Etikett neu beschreiben?</h3>
+  <p>Laut NXP 100.000 Mal (bei 22 °C), bei 10 Jahren Datenerhalt.</p>
+  <h3>Wo klebt man das NFC-Etikett auf die Dose?</h3>
+  <p>Auf eine flache Stelle des Deckels, weg von Metall und nicht über ein Scharnier.</p>
+
+  <p class="fine">Quellen: Apple Developer, <a href="https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading">Adding Support for Background Tag Reading</a>; Apple Support, <a href="https://support.apple.com/de-de/guide/iphone/aside/asd-nfc-reader/15.0/ios">Modelle mit Unterstützung für NFC-Tag-Leser</a>; NXP, <a href="https://datasheet.chipsmall.com/NT2H1311TTDUDZ/368586.pdf">Datenblatt NTAG213/215/216, Rev. 3.2 (Kopie; die Adresse bei NXP liefert derzeit 404)</a>.</p>
+  <hr style="border:0;border-top:1px solid var(--border);margin:3rem 0 1.5rem">
+  <p><a href="../../guias/etiquetas-nfc-tuppers.html" hreflang="es" lang="es">Leer en español</a> · <a href="../../en/guides/nfc-labels-food-containers.html" hreflang="en" lang="en">Read in English</a> · <a href="../../it/guide/etichette-nfc-contenitori.html" hreflang="it" lang="it">Leggi in italiano</a> · <a href="../../fr/guides/etiquettes-nfc-boites.html" hreflang="fr" lang="fr">Lire en français</a></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="../">Home</a>
+      <a href="./">Ratgeber</a>
+      <a href="../support.html">Support</a>
+      <a href="../datenschutz.html">Datenschutz</a>
+      <a href="https://dibus.softapp.tech/">Dibus</a>
+      <a href="https://devtoolbox.softapp.tech/">DevToolbox</a>
+      <a href="https://softapp.tech/">SoftApp Solutions</a>
+      <a href="https://apps.apple.com/de/app/id6791699550?pt=126402967&amp;ct=web-de-guia-nfc-pie&amp;mt=8">App Store</a>
+    </div>
+    © 2026 SOFTAPP SOLUTIONS LLC
+  </div>
+</footer>
+
+<script>
+  let theme;
+  try { theme = localStorage.getItem("ft-theme"); } catch (e) {}
+  if (theme !== "dark" && theme !== "light")
+    theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.dataset.theme = theme;
+  document.querySelector(".theme")?.addEventListener("click", () => {
+    theme = theme === "dark" ? "light" : "dark";
+    try { localStorage.setItem("ft-theme", theme); } catch (e) {}
+    document.documentElement.dataset.theme = theme;
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+    let stored; try { stored = localStorage.getItem("ft-theme"); } catch (err) {}
+    if (!stored) { theme = e.matches ? "dark" : "light"; document.documentElement.dataset.theme = theme; }
+  });
+</script>
+<script>
+  (function () {
+    try {
+      var KEY = "ft-lang", here = "de";
+      var bar = document.getElementById("langbar");
+      if (!bar) return;
+      var txt = document.getElementById("langtxt"), go = document.getElementById("langgo"), no = document.getElementById("langno");
+      function remember(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+      var target = "en";
+      go.addEventListener("click", function () { remember(target); });
+      no.addEventListener("click", function () { remember(here); bar.hidden = true; });
+      if (localStorage.getItem(KEY)) return;
+      var list = navigator.languages || [navigator.language || "en"];
+      function has(c) { return list.some(function (l) { return l.toLowerCase().indexOf(c) === 0; }); }
+      if (has("de")) return;
+      target = has("es") ? "es" : "en";
+      var m = { es: ["Esta página también está disponible en español.", "Leerla en español"], en: ["This page is also available in English.", "Read it in English"] }[target];
+      txt.lang = target; txt.textContent = m[0];
+      go.lang = target; go.hreflang = target; go.textContent = m[1];
+      go.href = go.getAttribute("data-" + target);
+      bar.hidden = false;
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
