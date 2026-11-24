@@ -12,7 +12,7 @@
 <link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/">
 <link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/">
 <link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/">
-<link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/">
+<link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/">
 <link rel="canonical" href="https://freshtrack.softapp.tech/en/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#f5f8f6" media="(prefers-color-scheme: light)">
@@ -43,15 +43,19 @@
   "@graph": [
     {
       "@type": "MobileApplication",
+      "@id": "https://freshtrack.softapp.tech/#app",
       "name": "FreshTrack",
-      "alternateName": "FreshTrack NFC",
+      "alternateName": [
+        "FreshTrack NFC",
+        "FreshTrack: Expiry Tracker"
+      ],
       "url": "https://freshtrack.softapp.tech/en/",
       "image": "https://freshtrack.softapp.tech/img/og-en.png",
       "description": "Track expiry dates across your pantry, fridge, freezer and NFC-tagged food containers. Scan the product and let on-device AI do the rest. Free, no ads, no data collection.",
       "operatingSystem": "iOS 17.0 or later",
       "applicationCategory": "LifestyleApplication",
+      "datePublished": "2026-09-05",
       "inLanguage": "en",
-      "softwareVersion": "1.1",
       "installUrl": "https://apps.apple.com/app/id6791699550",
       "downloadUrl": "https://apps.apple.com/app/id6791699550",
       "sameAs": "https://apps.apple.com/app/id6791699550",
@@ -64,9 +68,9 @@
       },
       "author": {
         "@type": "Organization",
+        "@id": "https://softapp.tech/#org",
         "name": "SOFTAPP SOLUTIONS LLC",
-        "email": "freshtrack@softapp.tech",
-        "url": "https://freshtrack.softapp.tech/"
+        "url": "https://softapp.tech/"
       }
     },
     {
@@ -74,7 +78,10 @@
       "name": "FreshTrack",
       "alternateName": "FreshTrack NFC",
       "url": "https://freshtrack.softapp.tech/en/",
-      "inLanguage": "en"
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://softapp.tech/#org"
+      }
     },
     {
       "@type": "FAQPage",
