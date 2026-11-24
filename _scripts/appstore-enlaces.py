@@ -48,6 +48,7 @@ PAGES = {
     "de/ratgeber/nfc-etiketten-dosen.html": ("de", "guia-nfc", True),
     "fr/guides/index.html": ("fr", "guide-indice", True),
     "fr/guides/etiquettes-nfc-boites.html": ("fr", "guide-nfc", True),
+    "de/ratgeber/gefrierschrank-inventarliste.html": ("de", "guia-inventar", True),
     "pt/index.html": ("pt", "portada", True),
     "pt/suporte.html": ("pt", "soporte", False),
 }
