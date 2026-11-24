@@ -43,6 +43,8 @@ PAGES = {
     "it/guide/quanto-dura-cibo-cotto-in-frigo.html": ("it", "guia-cocinato", True),
     "it/guide/etichette-nfc-contenitori.html": ("it", "guia-nfc", True),
     "it/supporto.html": ("it", "soporte", False),
+    "de/ratgeber/index.html": ("de", "guia-indice", True),
+    "de/ratgeber/gekochtes-essen-kuehlschrank.html": ("de", "guia-gekocht", True),
     "pt/index.html": ("pt", "portada", True),
     "pt/suporte.html": ("pt", "soporte", False),
 }
