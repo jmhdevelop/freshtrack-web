@@ -12,7 +12,7 @@
 <link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/">
 <link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/">
 <link rel="alternate" hreflang="pt-BR" href="https://freshtrack.softapp.tech/pt/">
-<link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/">
+<link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/">
 <link rel="canonical" href="https://freshtrack.softapp.tech/it/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#f5f8f6" media="(prefers-color-scheme: light)">
@@ -43,15 +43,19 @@
   "@graph": [
     {
       "@type": "MobileApplication",
+      "@id": "https://freshtrack.softapp.tech/#app",
       "name": "FreshTrack",
-      "alternateName": "FreshTrack NFC",
+      "alternateName": [
+        "FreshTrack NFC",
+        "FreshTrack: scadenze e NFC"
+      ],
       "url": "https://freshtrack.softapp.tech/it/",
       "image": "https://freshtrack.softapp.tech/img/og-en.png",
       "description": "Tieni sotto controllo le scadenze di dispensa, frigo, congelatore e contenitori con etichetta NFC. Scansiona il prodotto e lascia fare all'IA sul dispositivo. Gratis, senza pubblicità, senza raccolta dati.",
       "operatingSystem": "iOS 17.0 or later",
       "applicationCategory": "LifestyleApplication",
+      "datePublished": "2026-09-05",
       "inLanguage": "it",
-      "softwareVersion": "1.1",
       "installUrl": "https://apps.apple.com/app/id6791699550",
       "downloadUrl": "https://apps.apple.com/app/id6791699550",
       "sameAs": "https://apps.apple.com/app/id6791699550",
@@ -64,9 +68,9 @@
       },
       "author": {
         "@type": "Organization",
+        "@id": "https://softapp.tech/#org",
         "name": "SOFTAPP SOLUTIONS LLC",
-        "email": "freshtrack@softapp.tech",
-        "url": "https://freshtrack.softapp.tech/"
+        "url": "https://softapp.tech/"
       }
     },
     {
@@ -74,7 +78,10 @@
       "name": "FreshTrack",
       "alternateName": "FreshTrack NFC",
       "url": "https://freshtrack.softapp.tech/it/",
-      "inLanguage": "it"
+      "inLanguage": "it",
+      "publisher": {
+        "@id": "https://softapp.tech/#org"
+      }
     },
     {
       "@type": "FAQPage",
@@ -749,6 +756,7 @@
 <footer>
   <div class="wrap">
     <div class="links">
+      <a href="guide/">Guide</a>
       <a href="guide/etichette-nfc-contenitori.html">Guida NFC</a>
       <a href="https://dibus.softapp.tech/">Dibus</a>
       <a href="https://devtoolbox.softapp.tech/">DevToolbox</a>
