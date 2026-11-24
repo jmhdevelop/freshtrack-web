@@ -275,7 +275,10 @@
     padding: 7px; box-shadow: 0 30px 70px rgba(18, 42, 33, .22);
     width: min(300px, 78vw); margin: 0 auto;
   }
-  .phone img { display: block; width: 100%; height: auto; border-radius: 36px; }
+  .phone img, .phone video { display: block; width: 100%; height: auto; border-radius: 36px; }
+  .hero-link { display: inline-block; margin-top: 14px; font-size: 15px; font-weight: 600; color: var(--text);
+    text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+  .hero-link:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; border-radius: 4px; }
   .float { animation: float 5.5s ease-in-out infinite; }
   @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
 
@@ -547,7 +550,7 @@
       <a href="#privacy">Privacidade</a>
       <button class="theme" type="button" aria-label="Alternar tema"><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M19.2 4.8l-1.7 1.7M6.5 17.5l-1.7 1.7"/></svg><svg class="moon" viewBox="0 0 24 24"><path d="M20.4 14.2A8.4 8.4 0 0 1 9.8 3.6a8.4 8.4 0 1 0 10.6 10.6z"/></svg></button>
       <details class="lang-menu"><summary aria-label="Mudar idioma. Atual: Português"><svg class="globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.6 4.3 6 4.3 9.5s-1.5 6.9-4.3 9.5c-2.8-2.6-4.3-6-4.3-9.5s1.5-6.9 4.3-9.5z"/></svg><span aria-hidden="true">PT</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8l7 7 7-7"/></svg></summary><div class="lang-list"><a href="../" hreflang="es" lang="es" onclick="try{localStorage.setItem('ft-lang','es')}catch(e){}">Español<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="../en/" hreflang="en" lang="en" onclick="try{localStorage.setItem('ft-lang','en')}catch(e){}">English<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="../de/" hreflang="de" lang="de" onclick="try{localStorage.setItem('ft-lang','de')}catch(e){}">Deutsch<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="../fr/" hreflang="fr" lang="fr" onclick="try{localStorage.setItem('ft-lang','fr')}catch(e){}">Français<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="../it/" hreflang="it" lang="it" onclick="try{localStorage.setItem('ft-lang','it')}catch(e){}">Italiano<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="./" hreflang="pt-BR" lang="pt-BR" aria-current="page" onclick="try{localStorage.setItem('ft-lang','pt')}catch(e){}">Português<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a></div></details>
-      <a class="pill" href="https://apps.apple.com/app/id6791699550">Baixar</a>
+      <a class="pill" href="https://apps.apple.com/br/app/id6791699550?ct=web-pt-portada-nav&amp;mt=8">Baixar</a>
     </div>
   </div>
 </nav>
@@ -557,13 +560,14 @@
   <div class="wrap hero">
     <div class="text reveal">
       <h1>Chega de<br><span class="grad">comida vencida</span></h1>
-      <p>Despensa, geladeira, freezer e potes sob controle. Escaneie, deixe a IA do seu iPhone fazer o resto e use o que você já tem.</p>
+      <p>Cole uma etiqueta NFC na tampa do pote, encoste o iPhone e veja o que tem dentro e o vencimento. Sem etiquetas, o FreshTrack também avisa o que está para vencer na despensa, na geladeira e no freezer.</p>
       <div class="badges">
-        <a class="appstore" href="https://apps.apple.com/app/id6791699550"><img class="as-l" src="../img/app-store/pt-black.svg" alt="Baixar na App Store" width="132" height="44"><img class="as-d" src="../img/app-store/pt-white.svg" alt="Baixar na App Store" width="132" height="44"></a>
+        <a class="appstore" href="https://apps.apple.com/br/app/id6791699550?ct=web-pt-portada-hero&amp;mt=8"><img class="as-l" src="../img/app-store/pt-black.svg" alt="Baixar na App Store" width="132" height="44"><img class="as-d" src="../img/app-store/pt-white.svg" alt="Baixar na App Store" width="132" height="44"></a>
         <span class="badge soft">iPhone e iPad · Grátis para sempre</span>
       </div>
+      <a class="hero-link" href="../en/guides/nfc-labels-food-containers.html">Como funcionam as etiquetas NFC</a>
     </div>
-    <div class="parallax"><div class="phone float reveal"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="../img/pt-products-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="../img/pt-products-dark.jpg"><source type="image/avif" srcset="../img/pt-products.avif"><img fetchpriority="high" src="../img/pt-products.jpg" alt="FreshTrack: produtos agrupados por urgência de vencimento" width="496" height="1080"></picture></div></div>
+    <div class="parallax"><div class="phone float reveal" data-media="nfc"><!-- NFC: cuando haya vídeo o bucle corto, sustituir el <picture> por <video autoplay muted loop playsinline poster="(esta misma imagen)" width="496" height="1080"> --><picture><source type="image/avif" srcset="../img/pt-tuppers.avif"><img fetchpriority="high" src="../img/pt-tuppers.jpg" alt="Potes com foto do prato e vencimento" width="496" height="1080"></picture></div></div>
   </div>
 </header>
 
@@ -582,12 +586,12 @@
           <div class="device" role="button" tabindex="0" aria-label="Tudo que o app faz por você">
             <div class="island"></div>
             <div class="screens">
-              <picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="../img/en-add-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="../img/en-add-dark.jpg"><source type="image/avif" srcset="../img/en-add.avif"><img class="screen is-active" src="../img/en-add.jpg" alt="Tela de adicionar produto: escaneado ou manual" data-tap="18%,95%" width="496" height="1080"></picture>
+              <picture><source type="image/avif" srcset="../img/pt-add.avif"><img class="screen is-active" src="../img/pt-add.jpg" alt="Lista de produtos no FreshTrack com o botão de escaneamento" data-tap="18%,95%" width="496" height="1080"></picture>
               <picture><source type="image/avif" srcset="../img/pt-detail.avif"><img class="screen" loading="lazy" src="../img/pt-detail.jpg" alt="Detalhes do produto com dados lidos pela IA no aparelho" data-tap="18%,95%" width="496" height="1080"></picture>
               <picture><source type="image/avif" srcset="../img/pt-tuppers.avif"><img class="screen" loading="lazy" src="../img/pt-tuppers.jpg" alt="Potes com foto do prato e vencimento" data-tap="39%,95%" width="496" height="1080"></picture>
               <picture><source type="image/avif" srcset="../img/pt-casas.avif"><img class="screen" loading="lazy" src="../img/pt-casas.jpg" alt="Gerenciador de casas do FreshTrack" data-tap="82%,95%" width="496" height="1080"></picture>
               <picture><source type="image/avif" srcset="../img/pt-compra.avif"><img class="screen" loading="lazy" src="../img/pt-compra.jpg" alt="Lista de compras do FreshTrack" data-tap="61%,95%" width="496" height="1080"></picture>
-              <picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="../img/en-settings-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="../img/en-settings-dark.jpg"><source type="image/avif" srcset="../img/en-settings.avif"><img class="screen" loading="lazy" src="../img/en-settings.jpg" alt="Configurações do FreshTrack com ajuste de avisos" data-tap="82%,95%" width="496" height="1080"></picture>
+              <picture><source type="image/avif" srcset="../img/pt-settings.avif"><img class="screen" loading="lazy" src="../img/pt-settings.jpg" alt="A Siri diz o que vence esta semana" data-tap="82%,95%" width="496" height="1080"></picture>
               <span class="tap"></span>
               <span class="glare"></span>
             </div>
@@ -597,7 +601,7 @@
 
       <div class="panels">
       <article class="panel is-active">
-        <div class="panel-shot"><div class="phone"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="../img/en-add-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="../img/en-add-dark.jpg"><source type="image/avif" srcset="../img/en-add.avif"><img loading="lazy" src="../img/en-add.jpg" alt="Tela de adicionar produto: escaneado ou manual" width="496" height="1080"></picture></div></div>
+        <div class="panel-shot"><div class="phone"><picture><source type="image/avif" srcset="../img/pt-add.avif"><img loading="lazy" src="../img/pt-add.jpg" alt="Lista de produtos no FreshTrack com o botão de escaneamento" width="496" height="1080"></picture></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M4 12h16"/></svg></div>
         <h3>Adicionar é escanear</h3>
         <p>Aponte para o código de barras e a ficha se preenche sozinha com uma busca online. Sem digitar nada.</p>
@@ -652,7 +656,7 @@
         </ul>
       </article>
       <article class="panel">
-        <div class="panel-shot"><div class="phone"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="../img/en-settings-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="../img/en-settings-dark.jpg"><source type="image/avif" srcset="../img/en-settings.avif"><img loading="lazy" src="../img/en-settings.jpg" alt="Configurações do FreshTrack com ajuste de avisos" width="496" height="1080"></picture></div></div>
+        <div class="panel-shot"><div class="phone"><picture><source type="image/avif" srcset="../img/pt-settings.avif"><img loading="lazy" src="../img/pt-settings.jpg" alt="A Siri diz o que vence esta semana" width="496" height="1080"></picture></div></div>
         <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 10a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></div>
         <h3>Avisos sem exagero</h3>
         <p>Um aviso por dia com o que está vencendo, agrupado e sem spam. Você escolhe a antecedência.</p>
@@ -696,7 +700,7 @@
     <div class="faq reveal">
       <details>
         <summary>Onde posso baixar o FreshTrack?</summary>
-        <p>Na <a href="https://apps.apple.com/app/id6791699550">App Store</a>, de graça. Funciona em iPhone e iPad com iOS 17 ou posterior.</p>
+        <p>Na <a href="https://apps.apple.com/br/app/id6791699550?ct=web-pt-portada-faq&amp;mt=8">App Store</a>, de graça. Funciona em iPhone e iPad com iOS 17 ou posterior.</p>
       </details>
       <details>
         <summary>O FreshTrack é grátis?</summary>
@@ -736,7 +740,7 @@
     <div class="cta reveal">
       <h2>Já disponível na App Store</h2>
       <p>Grátis, sem anúncios e sem coleta de dados. Para iPhone e iPad com iOS 17 ou posterior.</p>
-      <a class="pill" href="https://apps.apple.com/app/id6791699550">Baixar</a>
+      <a class="pill" href="https://apps.apple.com/br/app/id6791699550?ct=web-pt-portada-cta&amp;mt=8">Baixar</a>
     </div>
   </div>
 </section>
@@ -749,7 +753,7 @@
       <a href="https://dibus.softapp.tech/">Dibus</a>
       <a href="https://devtoolbox.softapp.tech/">DevToolbox</a>
       <a href="https://softapp.tech/">SoftApp Solutions</a>
-      <a href="https://apps.apple.com/app/id6791699550">App Store</a>
+      <a href="https://apps.apple.com/br/app/id6791699550?ct=web-pt-portada-pie&amp;mt=8">App Store</a>
       <a href="privacidade.html">Privacidade</a>
       <a href="suporte.html">Suporte</a>
     </div>
