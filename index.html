@@ -283,7 +283,10 @@
     padding: 7px; box-shadow: 0 30px 70px rgba(18, 42, 33, .22);
     width: min(300px, 78vw); margin: 0 auto;
   }
-  .phone img { display: block; width: 100%; height: auto; border-radius: 36px; }
+  .phone img, .phone video { display: block; width: 100%; height: auto; border-radius: 36px; }
+  .hero-link { display: inline-block; margin-top: 14px; font-size: 15px; font-weight: 600; color: var(--text);
+    text-decoration: underline; text-decoration-color: var(--brand); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+  .hero-link:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; border-radius: 4px; }
   .float { animation: float 5.5s ease-in-out infinite; }
   @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
 
@@ -557,7 +560,7 @@
       <a href="#privacidad">Privacidad</a>
       <button class="theme" type="button" aria-label="Cambiar tema"><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M19.2 4.8l-1.7 1.7M6.5 17.5l-1.7 1.7"/></svg><svg class="moon" viewBox="0 0 24 24"><path d="M20.4 14.2A8.4 8.4 0 0 1 9.8 3.6a8.4 8.4 0 1 0 10.6 10.6z"/></svg></button>
       <details class="lang-menu"><summary aria-label="Cambiar idioma. Actual: Español"><svg class="globe" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.6 4.3 6 4.3 9.5s-1.5 6.9-4.3 9.5c-2.8-2.6-4.3-6-4.3-9.5s1.5-6.9 4.3-9.5z"/></svg><span aria-hidden="true">ES</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8l7 7 7-7"/></svg></summary><div class="lang-list"><a href="./" hreflang="es" lang="es" aria-current="page" onclick="try{localStorage.setItem('ft-lang','es')}catch(e){}">Español<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="en/" hreflang="en" lang="en" onclick="try{localStorage.setItem('ft-lang','en')}catch(e){}">English<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="de/" hreflang="de" lang="de" onclick="try{localStorage.setItem('ft-lang','de')}catch(e){}">Deutsch<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="fr/" hreflang="fr" lang="fr" onclick="try{localStorage.setItem('ft-lang','fr')}catch(e){}">Français<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="it/" hreflang="it" lang="it" onclick="try{localStorage.setItem('ft-lang','it')}catch(e){}">Italiano<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a><a href="pt/" hreflang="pt-BR" lang="pt-BR" onclick="try{localStorage.setItem('ft-lang','pt')}catch(e){}">Português<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L9.5 17 19 7.5"/></svg></a></div></details>
-      <a class="pill" href="https://apps.apple.com/app/id6791699550">Descargar</a>
+      <a class="pill" href="https://apps.apple.com/es/app/id6791699550?ct=web-es-portada-nav&amp;mt=8">Descargar</a>
     </div>
   </div>
 </nav>
@@ -567,13 +570,14 @@
   <div class="wrap hero">
     <div class="text reveal">
       <h1>Nunca más<br><span class="grad">comida caducada</span></h1>
-      <p>Despensa, nevera, congelador y tuppers bajo control. Escanea, deja que la IA de tu iPhone haga el resto y aprovecha lo que ya tienes.</p>
+      <p>Pega una etiqueta NFC en la tapa del tupper, acerca el iPhone y mira qué hay dentro y cuándo caduca. Sin etiquetas, FreshTrack también te avisa de lo que caduca en la despensa, la nevera y el congelador.</p>
       <div class="badges">
-        <a class="appstore" href="https://apps.apple.com/app/id6791699550"><img class="as-l" src="img/app-store/es-black.svg" alt="Consíguelo en el App Store" width="132" height="44"><img class="as-d" src="img/app-store/es-white.svg" alt="Consíguelo en el App Store" width="132" height="44"></a>
+        <a class="appstore" href="https://apps.apple.com/es/app/id6791699550?ct=web-es-portada-hero&amp;mt=8"><img class="as-l" src="img/app-store/es-black.svg" alt="Consíguelo en el App Store" width="132" height="44"><img class="as-d" src="img/app-store/es-white.svg" alt="Consíguelo en el App Store" width="132" height="44"></a>
         <span class="badge soft">iPhone y iPad · Gratis para siempre</span>
       </div>
+      <a class="hero-link" href="guias/etiquetas-nfc-tuppers.html">Así funcionan las etiquetas NFC</a>
     </div>
-    <div class="parallax"><div class="phone float reveal"><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/products-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/products-dark.jpg"><source type="image/avif" srcset="img/products.avif"><img fetchpriority="high" src="img/products.jpg" alt="FreshTrack: productos agrupados por urgencia de caducidad" width="496" height="1080"></picture></div></div>
+    <div class="parallax"><div class="phone float reveal" data-media="nfc"><!-- NFC: cuando haya vídeo o bucle corto, sustituir el <picture> por <video autoplay muted loop playsinline poster="(esta misma imagen)" width="496" height="1080"> --><picture><source data-dark media="(prefers-color-scheme: dark)" type="image/avif" srcset="img/tuppers-dark.avif"><source data-dark media="(prefers-color-scheme: dark)" srcset="img/tuppers-dark.jpg"><source type="image/avif" srcset="img/tuppers.avif"><img fetchpriority="high" src="img/tuppers.jpg" alt="Tuppers con imagen del plato y caducidad" width="496" height="1080"></picture></div></div>
   </div>
 </header>
 
@@ -706,7 +710,7 @@
     <div class="faq reveal">
       <details>
         <summary>¿Dónde se descarga FreshTrack?</summary>
-        <p>En el <a href="https://apps.apple.com/app/id6791699550">App Store</a>, gratis. Funciona en iPhone y iPad con iOS 17 o posterior.</p>
+        <p>En el <a href="https://apps.apple.com/es/app/id6791699550?ct=web-es-portada-faq&amp;mt=8">App Store</a>, gratis. Funciona en iPhone y iPad con iOS 17 o posterior.</p>
       </details>
       <details>
         <summary>¿FreshTrack es gratis?</summary>
@@ -750,7 +754,7 @@
     <div class="cta reveal">
       <h2>Ya está en el App Store</h2>
       <p>Gratis, sin anuncios y sin recopilar datos. Para iPhone y iPad con iOS 17 o posterior.</p>
-      <a class="pill" href="https://apps.apple.com/app/id6791699550">Descargar</a>
+      <a class="pill" href="https://apps.apple.com/es/app/id6791699550?ct=web-es-portada-cta&amp;mt=8">Descargar</a>
     </div>
   </div>
 </section>
@@ -763,7 +767,7 @@
       <a href="https://dibus.softapp.tech/">Dibus</a>
       <a href="https://devtoolbox.softapp.tech/">DevToolbox</a>
       <a href="https://softapp.tech/">SoftApp Solutions</a>
-      <a href="https://apps.apple.com/app/id6791699550">App Store</a>
+      <a href="https://apps.apple.com/es/app/id6791699550?ct=web-es-portada-pie&amp;mt=8">App Store</a>
       <a href="privacidad.html">Privacidad</a>
       <a href="soporte.html">Soporte</a>
     </div>
