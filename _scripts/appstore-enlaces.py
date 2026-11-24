@@ -51,6 +51,7 @@ PAGES = {
     "de/ratgeber/gefrierschrank-inventarliste.html": ("de", "guia-inventar", True),
     "fr/guides/plat-cuisine-frigo.html": ("fr", "guide-plat-cuisine", True),
     "fr/guides/inventaire-congelateur.html": ("fr", "guide-inventaire", True),
+    "it/guide/quanto-dura-cibo-cotto-in-freezer.html": ("it", "guia-freezer", True),
     "pt/index.html": ("pt", "portada", True),
     "pt/suporte.html": ("pt", "soporte", False),
 }
