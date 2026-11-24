@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Étiquette NFC pour boîtes : NTAG213 ou NTAG215, congélateur, iPhone</title>
+<meta name="description" content="Quelle étiquette NFC acheter pour tes boîtes, si elle tient au congélateur et au lave-vaisselle, et comment l&#x27;iPhone la lit sans ouvrir d&#x27;app. Sources citées.">
+<link rel="canonical" href="https://freshtrack.softapp.tech/fr/guides/etiquettes-nfc-boites.html">
+<link rel="alternate" hreflang="fr" href="https://freshtrack.softapp.tech/fr/guides/etiquettes-nfc-boites.html">
+<link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/ratgeber/nfc-etiketten-dosen.html">
+<link rel="alternate" hreflang="it" href="https://freshtrack.softapp.tech/it/guide/etichette-nfc-contenitori.html">
+<link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/etiquetas-nfc-tuppers.html">
+<link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html">
+<link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/nfc-labels-food-containers.html">
+<link rel="icon" href="../../img/icon.png">
+<link rel="apple-touch-icon" href="../../img/icon.png">
+<meta name="apple-itunes-app" content="app-id=6791699550">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f5f8f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c110f" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FreshTrack">
+<meta property="og:title" content="Étiquettes NFC pour boîtes et congélateur">
+<meta property="og:description" content="Quelle étiquette NFC acheter pour tes boîtes, si elle tient au congélateur et au lave-vaisselle, et comment l&#x27;iPhone la lit sans ouvrir d&#x27;app. Sources citées.">
+<meta property="og:url" content="https://freshtrack.softapp.tech/fr/guides/etiquettes-nfc-boites.html">
+<meta property="og:image" content="https://freshtrack.softapp.tech/img/og-en.png">
+<meta property="og:locale" content="fr_FR">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Étiquette NFC pour boîtes : NTAG213 ou NTAG215, congélateur, iPhone",
+      "description": "Quelle étiquette NFC acheter pour tes boîtes, si elle tient au congélateur et au lave-vaisselle, et comment l'iPhone la lit sans ouvrir d'app. Sources citées.",
+      "inLanguage": "fr-FR",
+      "mainEntityOfPage": "https://freshtrack.softapp.tech/fr/guides/etiquettes-nfc-boites.html",
+      "url": "https://freshtrack.softapp.tech/fr/guides/etiquettes-nfc-boites.html",
+      "image": "https://freshtrack.softapp.tech/img/og-en.png",
+      "datePublished": "2026-11-24",
+      "dateModified": "2026-11-24",
+      "author": {
+        "@type": "Organization",
+        "name": "SOFTAPP SOLUTIONS LLC",
+        "url": "https://freshtrack.softapp.tech/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SOFTAPP SOLUTIONS LLC",
+        "url": "https://freshtrack.softapp.tech/"
+      },
+      "citation": [
+        "https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading",
+        "https://support.apple.com/fr-fr/guide/iphone/aside/asd-nfc-reader/15.0/ios",
+        "https://datasheet.chipsmall.com/NT2H1311TTDUDZ/368586.pdf"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "FreshTrack",
+          "item": "https://freshtrack.softapp.tech/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://freshtrack.softapp.tech/fr/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Étiquettes NFC pour boîtes",
+          "item": "https://freshtrack.softapp.tech/fr/guides/etiquettes-nfc-boites.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --brand: #0D9E78;
+    --brand-bright: #0b8a69;
+    --brand-soft: rgba(13, 158, 120, .12);
+    --bg: #f5f8f6;
+    --card: #ffffff;
+    --border: rgba(18, 42, 33, .08);
+    --text: #14231d;
+    --muted: rgba(20, 35, 29, .66);
+    --shadow: 0 8px 28px rgba(18, 42, 33, .08);
+    --radius: 20px;
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c110f;
+    --card: #151c18;
+    --border: rgba(255, 255, 255, .09);
+    --text: #e9f2ee;
+    --muted: rgba(233, 242, 238, .6);
+    --shadow: 0 8px 28px rgba(0, 0, 0, .4);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { overflow-x: clip; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.65;
+    -webkit-font-smoothing: antialiased; overflow-x: clip;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--brand-bright); }
+  .skip { position: absolute; left: -999px; top: 0; background: var(--brand); color: #fff;
+          padding: 10px 16px; border-radius: 0 0 10px 0; z-index: 100; }
+  .skip:focus { left: 0; }
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+  nav:not(.toc) { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+        background: color-mix(in srgb, var(--bg) 80%, transparent); border-bottom: 1px solid var(--border); }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+  .theme {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--border);
+    background: var(--card); color: var(--text); cursor: pointer; padding: 0;
+  }
+  .theme svg { width: 17px; height: 17px; stroke: currentColor; stroke-width: 1.8;
+               fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .theme .moon { display: none; }
+  :root[data-theme="dark"] .theme .sun { display: none; }
+  :root[data-theme="dark"] .theme .moon { display: block; }
+  .nav-inner { display: flex; align-items: center; gap: 10px; padding-block: 12px; }
+  .nav-inner img { width: 32px; height: 32px; border-radius: 8px; }
+  .nav-inner .name { font-weight: 700; font-size: 17px; }
+  .nav-links { margin-left: auto; display: flex; gap: 22px; align-items: center; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 14.5px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover, .nav-links a[aria-current] { color: var(--text); }
+  .pill { background: var(--brand); color: #fff !important; font-weight: 600; padding: 7px 14px; border-radius: 999px; }
+  .lang { font-weight: 700; }
+  @media (max-width: 700px) {
+    .nav-links a:not(.pill):not(.lang) { display: none; }
+    .nav-links { gap: 14px; }
+    .nav-inner { padding-block: 10px; }
+    .nav-inner .name { font-size: 16px; }
+    .pill { padding: 6px 13px; font-size: 13.5px; }
+  }
+
+  .kicker { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 14px; font-weight: 600;
+            text-transform: uppercase; letter-spacing: .08em; }
+  .kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--brand); }
+
+  /* ---- Documento / artículo ---- */
+  .doc { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+  .doc h1 { font-size: clamp(30px, 5vw, 42px); font-weight: 800; letter-spacing: -.02em; margin-top: 12px; line-height: 1.12; }
+  .doc .lead { color: var(--muted); font-size: 18px; margin-top: 14px; }
+  .doc .byline { color: var(--muted); font-size: 14px; margin-top: 10px; }
+  .doc h2 { font-size: clamp(20px, 3vw, 25px); font-weight: 800; letter-spacing: -.01em; margin-top: 52px; margin-bottom: 10px; scroll-margin-top: 76px; }
+  .doc h3 { font-size: 16.5px; font-weight: 700; margin-top: 22px; margin-bottom: 4px; }
+  .doc p { margin-top: 12px; }
+  .doc ul, .doc ol { margin: 14px 0 0 22px; }
+  .doc li { margin-top: 8px; }
+  .doc .fine { color: var(--muted); font-size: 14.5px; }
+  .doc strong { font-weight: 700; }
+
+  /* Índice */
+  .toc { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+         box-shadow: var(--shadow); padding: 20px 22px; margin-top: 26px; }
+  .toc p { margin: 0; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  .toc ol { margin: 12px 0 0 20px; columns: 2; column-gap: 24px; }
+  .toc li { margin-top: 6px; font-size: 14.5px; break-inside: avoid; }
+  @media (max-width: 560px) { .toc ol { columns: 1; } }
+
+  /* Tarjetas de comparación */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-top: 18px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+          padding: 20px 20px 22px; box-shadow: var(--shadow); }
+  .card h3 { margin-top: 0; }
+  .card p { margin-top: 8px; font-size: 15px; color: var(--muted); }
+  .card .fail { color: var(--text); font-size: 14px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+  .card .fail b { color: var(--brand-bright); }
+
+  /* Tabla NTAG213 vs NTAG215 y tabla de congelación */
+  .table-wrap { container-type: inline-size; overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; margin-top: 18px; }
+  .table-wrap:focus-visible { outline-offset: -2px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 420px; }
+  th, td { padding: 11px 14px; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
+  td:first-child, th:first-child { white-space: normal; }
+  thead th { color: var(--muted); font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: .04em; background: var(--bg); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* Pasos numerados */
+  ol.steps { list-style: none; margin: 18px 0 0; counter-reset: step; }
+  ol.steps li { position: relative; padding-left: 44px; margin-top: 16px; counter-increment: step; }
+  /* El numero va posicionado, no como item de flex: con `display:flex` en el <li>
+     cada <strong> y cada trozo de texto se convertia en un item independiente y la
+     frase se descolocaba en columnas. */
+  ol.steps li::before {
+    content: counter(step); position: absolute; left: 0; top: 1px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--brand-soft); color: var(--brand-bright); font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* Recuadro de aviso/consejo */
+  .box { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+         box-shadow: var(--shadow); padding: 20px 22px; margin-top: 18px; }
+  .box p:first-child { margin-top: 0; }
+
+  /* CTA final */
+  .cta { background: var(--card); border: 1px solid var(--border); border-radius: 26px;
+         padding: 44px 30px; text-align: center; margin-top: 20px; box-shadow: var(--shadow); }
+  .cta p { color: var(--muted); max-width: 520px; margin: 12px auto 24px; }
+  .appstore { display: inline-block; line-height: 0; border-radius: 8px; }
+  .appstore img { display: block; }
+  .appstore .as-d { display: none; }
+  :root[data-theme="dark"] .appstore .as-l { display: none; }
+  :root[data-theme="dark"] .appstore .as-d { display: block; }
+  .appstore:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; }
+
+  footer { padding: 56px 0 64px; text-align: center; color: var(--muted); font-size: 14px; }
+  footer .links { display: flex; gap: 22px; justify-content: center; margin-bottom: 14px; flex-wrap: wrap; }
+  footer a { color: var(--muted); }
+
+  #langbar[hidden] { display: none }
+  #langbar {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    padding: 10px 20px; background: var(--card); border-bottom: 1px solid var(--border);
+    font-size: 14px; color: var(--muted);
+  }
+  #langbar p { margin: 0 }
+  #langbar a { color: var(--brand-bright); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px }
+  #langbar button {
+    margin-left: auto; background: none; border: 0; color: var(--muted); font-size: 20px;
+    line-height: 1; cursor: pointer; padding: 2px 6px; border-radius: 6px;
+  }
+  #langbar button:hover { color: var(--text); background: var(--brand-soft) }
+  /* Migas de pan (reutilizable en todas las guías) */
+  nav.crumbs { position: static; z-index: auto; backdrop-filter: none; -webkit-backdrop-filter: none; background: none; border: 0;
+              font-size: 14px; color: var(--muted); }
+  .crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 8px; }
+  .crumbs li { margin: 0; display: flex; gap: 8px; }
+  .crumbs li + li::before { content: "\203A"; opacity: .7; }
+  .crumbs a { color: var(--muted); text-decoration: none; }
+  .crumbs a:hover { color: var(--text); text-decoration: underline; }
+  .crumbs [aria-current] { color: var(--text); }
+  .crumbs + .kicker { margin-top: 14px; }
+
+  /* Tablas con celdas que se parten (guías con tabla de varias columnas) y leyenda */
+  table.wrapcells { min-width: 560px; }
+  table.wrapcells th, table.wrapcells td { white-space: normal; vertical-align: top; }
+  table.wrapcells tbody th { font-weight: 400; }
+  table.wrapcells tbody tr:last-child th { border-bottom: none; }
+  caption { caption-side: top; text-align: left; white-space: normal; box-sizing: border-box; width: 100cqw; position: sticky; left: 0;
+            padding: 12px 14px; font-size: 13.5px; color: var(--muted); border-bottom: 1px solid var(--border); }
+  .cta .fine { text-align: left; max-width: 560px; margin: 22px auto 0; }
+</style>
+  <script defer src="https://softmetrics.softapp.tech/b.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div id="langbar" hidden>
+  <p id="langtxt">This page is also available in English.</p>
+  <a id="langgo" href="../../guias/etiquetas-nfc-tuppers.html" data-es="../../guias/etiquetas-nfc-tuppers.html" data-en="../../en/guides/nfc-labels-food-containers.html" hreflang="en" lang="en">Read it in English</a>
+  <button id="langno" type="button" aria-label="Fermer">&times;</button>
+</div>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="../" aria-label="FreshTrack">
+      <img src="../../img/icon.png" alt="" width="256" height="256">
+      <span class="name">FreshTrack</span>
+    </a>
+    <div class="nav-links">
+      <a href="../#features">Fonctionnalités</a>
+      <a href="./">Guides</a>
+      <a href="../assistance.html">Assistance</a>
+      <button class="theme" type="button" aria-label="Changer de thème"><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M4.8 4.8l1.7 1.7M17.5 17.5l1.7 1.7M19.2 4.8l-1.7 1.7M6.5 17.5l-1.7 1.7"/></svg><svg class="moon" viewBox="0 0 24 24"><path d="M20.4 14.2A8.4 8.4 0 0 1 9.8 3.6a8.4 8.4 0 1 0 10.6 10.6z"/></svg></button>
+      <a class="lang" href="../../guias/etiquetas-nfc-tuppers.html" hreflang="es" lang="es" onclick="try{localStorage.setItem('ft-lang','es')}catch(e){}">ES</a>
+      <a class="lang" href="../../en/guides/nfc-labels-food-containers.html" hreflang="en" lang="en" onclick="try{localStorage.setItem('ft-lang','en')}catch(e){}">EN</a>
+      <a class="pill" href="https://apps.apple.com/fr/app/id6791699550?pt=126402967&amp;ct=web-fr-guide-nfc-nav&amp;mt=8">Télécharger</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main" class="doc">
+  <nav class="crumbs" aria-label="Fil d'Ariane">
+    <ol>
+      <li><a href="../">FreshTrack</a></li>
+      <li><a href="./">Guides</a></li>
+      <li><span aria-current="page">Étiquettes NFC pour boîtes</span></li>
+    </ol>
+  </nav>
+  <span class="kicker">Guide</span>
+  <h1>Étiquettes NFC pour boîtes et congélateur : laquelle acheter, où la coller, comment l'iPhone la lit</h1>
+  <p class="lead">Quelle étiquette NFC choisir (NTAG213 ou NTAG215), ce qu'elle supporte au congélateur et au lave-vaisselle, comment l'écrire avec l'iPhone, et pourquoi les iPhone récents la lisent sans ouvrir d'app. L'essentiel se fait sans notre app.</p>
+  <p class="byline">Publié le 24 novembre 2026 par SOFTAPP SOLUTIONS LLC · Sources vérifiées le 24 novembre 2026</p>
+
+  <nav class="toc" aria-label="Sommaire du guide">
+    <p>Dans ce guide</p>
+    <ol>
+      <li><a href="#bref">En bref</a></li>
+      <li><a href="#quoi">Une étiquette NFC, c'est quoi ?</a></li>
+      <li><a href="#acheter">NTAG213 ou NTAG215 ?</a></li>
+      <li><a href="#froid">Congélateur et lave-vaisselle</a></li>
+      <li><a href="#ou">Où la coller</a></li>
+      <li><a href="#ecrire">L'écrire avec l'iPhone</a></li>
+      <li><a href="#arriere-plan">La lire sans ouvrir d'app</a></li>
+      <li><a href="#freshtrack">À la main ou avec FreshTrack NFC</a></li>
+      <li><a href="#questions">Questions fréquentes</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="bref">En bref</h2>
+  <ul>
+    <li><strong>Achète une étiquette réinscriptible NTAG213.</strong> D'après la fiche technique du fabricant NXP, elle offre 144 octets de mémoire : assez pour un lien ou une note courte. La NTAG215 (504 octets) ne sert que pour des textes longs.</li>
+    <li><strong>Dès l'iPhone XS, l'iPhone lit l'étiquette en arrière-plan</strong> : tu l'approches du couvercle, une notification apparaît, tu la touches. Pour cela, l'étiquette doit contenir un <strong>lien</strong>, pas seulement du texte (Apple).</li>
+    <li><strong>Pour le congélateur et le lave-vaisselle</strong>, ni NXP ni Apple ne donnent d'indication pour les autocollants ordinaires. Ce qui tient dépend de l'autocollant, pas de la puce : regarde ce qu'annonce le vendeur.</li>
+    <li><strong>L'iPad ne lit pas les étiquettes NFC</strong> : Apple ne liste que des modèles d'iPhone.</li>
+  </ul>
+
+  <h2 id="quoi">Une étiquette NFC, c'est quoi ?</h2>
+  <p>Une étiquette NFC (on dit aussi tag NFC, puce NFC ou autocollant NFC) est un autocollant fin qui contient une minuscule puce et une antenne imprimée, sans pile. Elle sort d'usine vierge : on l'écrit avec le téléphone, et on peut la réécrire. Pour les boîtes, c'est toute la différence avec le ruban de masquage ou l'étiquette papier : elle ne s'use pas. Boîte vide, lavée, et la fois suivante tu réécris la même étiquette, sans rien décoller ni recoller.</p>
+
+  <h2 id="acheter">NTAG213 ou NTAG215 ?</h2>
+  <p>La plupart des autocollants NFC bon marché utilisent une puce de la famille NTAG21x de NXP, presque toujours NTAG213 ou NTAG215. La vraie différence figure dans la fiche technique de NXP : <strong>144 octets</strong> de mémoire utilisateur pour la NTAG213, <strong>504</strong> pour la NTAG215 (888 pour la NTAG216).</p>
+  <p>De combien a-t-on besoin ? Exemple tiré de notre propre app : le lien que FreshTrack NFC écrit sur une étiquette occupe, selon notre calcul, environ <strong>71 octets</strong>. Une NTAG213 suffit largement, une note courte (« Lentilles · congelé le 6/9 ») aussi. La NTAG215 n'a d'intérêt que pour de longues notes.</p>
+  <p>Côté durée de vie, les deux puces sont identiques : NXP indique <strong>10 ans</strong> de conservation des données et <strong>100 000 cycles d'écriture</strong>, mesurés à 22 °C. À une réécriture par semaine, la puce tiendra des années.</p>
+  <p>Avec l'iPhone, les deux fonctionnent sans accessoire : Apple cite l'iPhone 7 et les modèles ultérieurs parmi ceux qui ont le lecteur d'étiquette NFC.</p>
+  <p class="fine">Ce guide ne contient volontairement aucun lien d'achat.</p>
+
+  <h2 id="froid">Congélateur et lave-vaisselle : ce qu'on sait et ce qu'on ne sait pas</h2>
+  <p>Pour être honnêtes : <strong>nous n'avons trouvé aucune indication de fabricant pour −18 °C ni pour le lave-vaisselle concernant les autocollants NFC ordinaires.</strong> Les valeurs de la fiche NXP (10 ans, 100 000 cycles) sont données à 22 °C, et la partie de la fiche que nous avons pu lire n'indique pas de plage de température de fonctionnement.</p>
+  <p>Ce que nous en déduisons :</p>
+  <ul>
+    <li><strong>Le point faible est l'autocollant plus que la puce.</strong> La colle et la couche imprimée décident si l'étiquette tient au congélateur. Choisis des étiquettes que le vendeur annonce expressément pour le réfrigérateur ou le congélateur, idéalement avec une couche de protection (pelliculée).</li>
+    <li><strong>Lave-vaisselle seulement si le vendeur l'indique.</strong> Sinon, lave le couvercle à la main.</li>
+    <li><strong>La condensation :</strong> en sortant la boîte du congélateur, le couvercle se couvre de buée. Essuie-le avant de le remettre au froid, pour que l'eau ne passe pas sous la colle.</li>
+  </ul>
+
+  <h2 id="ou">Où la coller</h2>
+  <ul>
+    <li><strong>Sur le couvercle</strong>, pas sur le côté : tu la lis sans sortir la boîte de la pile.</li>
+    <li><strong>Sur une zone plate, loin du métal.</strong> Le métal perturbe le champ de l'antenne. Si le couvercle a une attache métallique, colle l'étiquette sur la partie en plastique la plus éloignée.</li>
+    <li><strong>Pas sur une charnière ou un clip qui se plie.</strong> L'antenne est une piste très fine ; la plier sans cesse peut la casser.</li>
+  </ul>
+
+  <h2 id="ecrire">L'écrire avec l'iPhone</h2>
+  <p>N'importe quelle app NFC de l'App Store capable d'écrire en NDEF fait l'affaire ; pas besoin que ce soit la nôtre.</p>
+  <ol>
+    <li>Ouvre l'app et choisis « Écrire » (parfois « Write »).</li>
+    <li>Choisis un <strong>lien (URL)</strong> ou un <strong>texte</strong>. La section suivante explique pourquoi c'est important.</li>
+    <li>Approche le <strong>haut du dos</strong> de l'iPhone (près de l'appareil photo) de l'étiquette jusqu'à ce que l'app confirme l'écriture.</li>
+    <li>Pour réutiliser la boîte, écris à nouveau : cela remplace l'ancien contenu.</li>
+  </ol>
+
+  <h2 id="arriere-plan">La lire sans ouvrir d'app : la lecture en arrière-plan</h2>
+  <p>Peu de gens le savent : <strong>dès l'iPhone XS, l'iPhone lit seul les étiquettes NFC</strong> (« iPhone XS and later support background tag reading », Apple). Aucune app n'a besoin d'être ouverte. Tu approches l'iPhone de l'étiquette, une notification apparaît en haut de l'écran, et si tu la touches, iOS ouvre l'app correspondante ou, s'il n'y en a pas, le lien dans Safari. Si l'iPhone est verrouillé, iOS demande d'abord de le déverrouiller avant de transmettre les données à l'app.</p>
+  <p><strong>C'est cette notification que beaucoup découvrent sans comprendre</strong> : elle signifie simplement que l'iPhone vient de lire une étiquette NFC qui contient l'adresse d'un site web. Rien ne s'ouvre tant que tu ne la touches pas.</p>
+  <p>D'après Apple, c'est automatique sur l'iPhone XR, XS, XS Max, l'iPhone SE à partir de la 2e génération et tous les modèles depuis l'iPhone 11. Sur l'<strong>iPhone 7, 7 Plus, 8, 8 Plus et X</strong>, il faut activer le <strong>« Lecteur d'étiquette NFC » dans le Centre de contrôle</strong>.</p>
+  <p><strong>Quand ça ne marche pas</strong> (Apple) : l'écran doit être allumé, et même allumé, la lecture en arrière-plan n'est pas disponible si l'iPhone n'a jamais été déverrouillé depuis son démarrage, si une app est déjà en train de lire du NFC, si Cartes (Wallet) avec Apple Pay est utilisé, si l'appareil photo est ouvert ou si le mode Avion est activé.</p>
+  <div class="box"><p><strong>L'essentiel pour tes boîtes :</strong> l'iPhone cherche sur l'étiquette un <strong>lien</strong> (un enregistrement URI) et prend le premier. Un simple <strong>texte</strong> comme « Lentilles · 6/9 » ne déclenche <strong>aucune</strong> notification : tu ne peux le lire qu'en ouvrant une app NFC. Si tu veux approcher le téléphone de la boîte et voir quelque chose tout de suite, l'étiquette doit contenir un lien.</p></div>
+
+  <h2 id="freshtrack">À la main ou avec FreshTrack NFC</h2>
+  <div class="cta">
+    <p style="margin-top:0;color:var(--text);font-weight:700;font-size:18px">Tout ce qui précède se fait avec n'importe quelle app NFC de l'App Store, sans la nôtre.</p>
+    <p>Nous avons créé FreshTrack NFC parce que nous ne voulions plus recalculer à la main chaque dimanche la date et la durée de conservation. Tu colles une étiquette réinscriptible sur le couvercle, tu indiques dans l'app ce que contient la boîte et si elle va au frigo ou au congélateur, et l'app calcule la date selon le type d'aliment et l'endroit où il est rangé. Sur l'étiquette, elle n'écrit <strong>qu'un lien</strong>, pas le contenu : ce qu'il y a dedans est noté dans l'app. C'est pour cela qu'un iPhone XS ou plus récent reconnaît l'étiquette tout seul. Approche l'iPhone du couvercle, touche la notification, et la boîte s'ouvre dans l'app. Quelqu'un qui n'a pas l'app voit une petite page web qui explique ce qu'est l'étiquette. Une fois la boîte vidée, tu réécris l'étiquette pour le contenu suivant.</p>
+    <p>L'app n'exige pas d'étiquettes : tu peux aussi créer et modifier des boîtes sans étiquette. Les étiquettes réinscriptibles NTAG213 et NTAG215 fonctionnent. Lire et écrire les étiquettes NFC nécessite un iPhone ; l'app existe pour iPhone et iPad. Gratuite, sans pub, sans achat intégré, sans créer de compte.</p>
+    <a class="appstore" href="https://apps.apple.com/fr/app/id6791699550?pt=126402967&amp;ct=web-fr-guide-nfc&amp;mt=8"><img class="as-l" src="../../img/app-store/fr-black.svg" alt="Télécharger dans l’App Store" width="139" height="44"><img class="as-d" src="../../img/app-store/fr-white.svg" alt="Télécharger dans l’App Store" width="139" height="44"></a>
+  </div>
+
+  <h2 id="questions">Questions fréquentes</h2>
+  <h3>NTAG213 ou NTAG215 : quelle étiquette NFC pour des boîtes ?</h3>
+  <p>La NTAG213 suffit. Selon NXP, elle a 144 octets de mémoire ; un lien en demande environ 70. La NTAG215 (504 octets) seulement pour des textes longs.</p>
+  <h3>Que veut dire la notification « étiquette NFC » sur iPhone ?</h3>
+  <p>Que l'iPhone a lu une étiquette NFC contenant un lien. Dès l'iPhone XS, il le fait sans ouvrir d'app ; rien ne s'ouvre tant que tu ne touches pas la notification (Apple).</p>
+  <h3>Les autocollants NFC fonctionnent-ils avec l'iPhone ?</h3>
+  <p>Oui, dès l'iPhone 7, sans accessoire (Apple). Dès l'iPhone XS, ils sont lus même sans app ouverte.</p>
+  <h3>Une étiquette NFC tient-elle au congélateur ?</h3>
+  <p>Nous n'avons pas trouvé d'indication de fabricant pour −18 °C sur les autocollants ordinaires ; les valeurs de NXP sont données à 22 °C. Ce qui compte, c'est l'autocollant : choisis-en un annoncé pour le congélateur.</p>
+  <h3>Les étiquettes NFC passent-elles au lave-vaisselle ?</h3>
+  <p>Seulement si le vendeur l'indique. Ni NXP ni Apple ne donnent d'indication générale. Dans le doute, lave le couvercle à la main.</p>
+  <h3>Pourquoi aucune notification n'apparaît ?</h3>
+  <p>L'étiquette ne contient que du texte au lieu d'un lien, l'iPhone est antérieur au XS, l'écran est éteint, ou l'appareil photo, Wallet ou le mode Avion sont actifs (Apple).</p>
+  <h3>L'iPad peut-il lire les étiquettes NFC ?</h3>
+  <p>Non. Apple ne liste que des modèles d'iPhone pour le lecteur d'étiquette NFC.</p>
+  <h3>Combien de fois peut-on réécrire une étiquette NFC ?</h3>
+  <p>100 000 fois selon NXP (à 22 °C), avec 10 ans de conservation des données.</p>
+
+  <p class="fine">Sources : Apple Developer, <a href="https://developer.apple.com/documentation/corenfc/adding-support-for-background-tag-reading">Adding Support for Background Tag Reading</a>; Apple Assistance, <a href="https://support.apple.com/fr-fr/guide/iphone/aside/asd-nfc-reader/15.0/ios">Modèles prenant en charge le lecteur d'étiquette NFC</a>; NXP, <a href="https://datasheet.chipsmall.com/NT2H1311TTDUDZ/368586.pdf">Fiche technique NTAG213/215/216, rév. 3.2 (copie ; l'adresse de NXP renvoie 404)</a>.</p>
+  <hr style="border:0;border-top:1px solid var(--border);margin:3rem 0 1.5rem">
+  <p><a href="../../guias/etiquetas-nfc-tuppers.html" hreflang="es" lang="es">Leer en español</a> · <a href="../../en/guides/nfc-labels-food-containers.html" hreflang="en" lang="en">Read in English</a> · <a href="../../de/ratgeber/nfc-etiketten-dosen.html" hreflang="de" lang="de">Auf Deutsch lesen</a> · <a href="../../it/guide/etichette-nfc-contenitori.html" hreflang="it" lang="it">Leggi in italiano</a></p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="../">Accueil</a>
+      <a href="./">Guides</a>
+      <a href="../assistance.html">Assistance</a>
+      <a href="../confidentialite.html">Confidentialité</a>
+      <a href="https://dibus.softapp.tech/">Dibus</a>
+      <a href="https://devtoolbox.softapp.tech/">DevToolbox</a>
+      <a href="https://softapp.tech/">SoftApp Solutions</a>
+      <a href="https://apps.apple.com/fr/app/id6791699550?pt=126402967&amp;ct=web-fr-guide-nfc-pie&amp;mt=8">App Store</a>
+    </div>
+    © 2026 SOFTAPP SOLUTIONS LLC
+  </div>
+</footer>
+
+<script>
+  let theme;
+  try { theme = localStorage.getItem("ft-theme"); } catch (e) {}
+  if (theme !== "dark" && theme !== "light")
+    theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  document.documentElement.dataset.theme = theme;
+  document.querySelector(".theme")?.addEventListener("click", () => {
+    theme = theme === "dark" ? "light" : "dark";
+    try { localStorage.setItem("ft-theme", theme); } catch (e) {}
+    document.documentElement.dataset.theme = theme;
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+    let stored; try { stored = localStorage.getItem("ft-theme"); } catch (err) {}
+    if (!stored) { theme = e.matches ? "dark" : "light"; document.documentElement.dataset.theme = theme; }
+  });
+</script>
+<script>
+  (function () {
+    try {
+      var KEY = "ft-lang", here = "fr";
+      var bar = document.getElementById("langbar");
+      if (!bar) return;
+      var txt = document.getElementById("langtxt"), go = document.getElementById("langgo"), no = document.getElementById("langno");
+      function remember(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+      var target = "en";
+      go.addEventListener("click", function () { remember(target); });
+      no.addEventListener("click", function () { remember(here); bar.hidden = true; });
+      if (localStorage.getItem(KEY)) return;
+      var list = navigator.languages || [navigator.language || "en"];
+      function has(c) { return list.some(function (l) { return l.toLowerCase().indexOf(c) === 0; }); }
+      if (has("fr")) return;
+      target = has("es") ? "es" : "en";
+      var m = { es: ["Esta página también está disponible en español.", "Leerla en español"], en: ["This page is also available in English.", "Read it in English"] }[target];
+      txt.lang = target; txt.textContent = m[0];
+      go.lang = target; go.hreflang = target; go.textContent = m[1];
+      go.href = go.getAttribute("data-" + target);
+      bar.hidden = false;
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>
