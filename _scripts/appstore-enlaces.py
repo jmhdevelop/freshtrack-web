@@ -45,6 +45,9 @@ PAGES = {
     "it/supporto.html": ("it", "soporte", False),
     "de/ratgeber/index.html": ("de", "guia-indice", True),
     "de/ratgeber/gekochtes-essen-kuehlschrank.html": ("de", "guia-gekocht", True),
+    "de/ratgeber/nfc-etiketten-dosen.html": ("de", "guia-nfc", True),
+    "fr/guides/index.html": ("fr", "guide-indice", True),
+    "fr/guides/etiquettes-nfc-boites.html": ("fr", "guide-nfc", True),
     "pt/index.html": ("pt", "portada", True),
     "pt/suporte.html": ("pt", "soporte", False),
 }
@@ -60,7 +63,7 @@ def ct_name(lang, tipo, slot, tag):
     base = f"web-{lang}-{tipo}"
     if slot is None:
         slot = "cta" if 'class="appstore"' in tag else "cuerpo"
-    if tipo.startswith("guia-") and slot == "cta":
+    if tipo.startswith(("guia-", "guide-")) and slot == "cta":
         return base
     return f"{base}-{slot}"
 
