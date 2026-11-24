@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Etiqueta los enlaces a la App Store de cada página con ct= (y pt= si hay) y pone el
-Smart App Banner en las páginas de la tabla. Idempotente: se puede relanzar.
+Smart App Banner (solo app-id) en las páginas de la tabla. Idempotente: se puede relanzar.
 
 UN SOLO SITIO PARA EL PROVIDER TOKEN: la constante PT de abajo. Está vacía porque el
 token (App Store Connect → Analytics → Campañas) lo tiene el dueño. Cuando lo haya:
@@ -13,7 +13,7 @@ No toca el JSON-LD (sus URL son la ficha limpia) ni /t/ (ct=tupper).
 """
 import re, sys, pathlib
 
-PT = ""  # Provider Token. Vacío = enlaces solo con ct.
+PT = "126402967"  # Provider Token (ASC > Analytics > Campañas). Vacío = enlaces solo con ct.
 APP = "6791699550"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAIS = {"es": "es", "en": "us", "de": "de", "fr": "fr", "it": "it", "pt": "br"}
@@ -85,8 +85,9 @@ def process(rel, lang, tipo, banner):
     out = TOKENS.sub(sub, html)
     if banner:
         content = f"app-id={APP}"
-        if PT:
-            content += f", affiliate-data=pt={PT}&ct=web-{lang}-{tipo}-banner&mt=8"
+        # Banner solo con app-id: la doc de Apple (Promoting Apps with Smart App Banners) solo
+        # define app-id y app-argument; el formato de pt/ct en el banner no figura en fuente
+        # oficial, así que no se escribe.
         tag = f'<meta name="apple-itunes-app" content="{content}">'
         if BANNER.search(out):
             out = BANNER.sub(tag, out)
@@ -99,6 +100,18 @@ def process(rel, lang, tipo, banner):
         print("actualizado", rel)
 
 
+def process_t():
+    """/t/ (página de la etiqueta NFC) conserva su ct=tupper; solo se le añade el pt."""
+    p = ROOT / "t/index.html"
+    html = p.read_text(encoding="utf-8")
+    q = (f"pt={PT}&amp;" if PT else "") + "ct=tupper"
+    out = re.sub(r'(apps\.apple\.com/app/id' + APP + r')\?(?:pt=\d+&amp;)?ct=tupper"', r'\1?' + q + '"', html)
+    if out != html:
+        p.write_text(out, encoding="utf-8")
+        print("actualizado t/index.html")
+
+
 if __name__ == "__main__":
+    process_t()
     for rel, (lang, tipo, banner) in PAGES.items():
         process(rel, lang, tipo, banner)
