@@ -16,7 +16,7 @@ revisión nativa**: las frases con más riesgo llevan ⚑ (lista en §4).
 | `hreflang` | `de` → esta · `es` → `/guias/etiquetas-nfc-tuppers.html` · `en` → `/en/guides/nfc-labels-food-containers.html` · `it` → `/it/guide/etichette-nfc-contenitori.html` · `fr` → `/fr/guides/etiquettes-nfc-boites.html` (guía FR de hoy) · `x-default` → la inglesa. Recíproco en todas |
 | Enlace a la tienda | `https://apps.apple.com/de/app/id6791699550?pt=126402967&ct=web-de-guia-nfc&mt=8` (mismo formato que la guía DE publicada) |
 | `<title>` (66) | `NFC-Etiketten für Dosen: NTAG213 oder NTAG215, Gefrierfach, iPhone` |
-| `meta description` (153) | `Welches NFC-Etikett du für Frischhaltedosen kaufst, ob es Gefrierfach und Spülmaschine aushält und wie das iPhone es liest, ohne App zu öffnen. Mit Quellen.` |
+| `meta description` (156) | `Welches NFC-Etikett du für Frischhaltedosen kaufst, ob es Gefrierfach und Spülmaschine aushält und wie das iPhone es liest, ohne App zu öffnen. Mit Quellen.` |
 | `og:title` | `NFC-Etiketten für Dosen und Gefrierschrank` |
 | JSON-LD | `Article` (`inLanguage: "de-DE"`, `citation`: las URL de §1.1) + `BreadcrumbList` (FreshTrack › Ratgeber › NFC-Etiketten für Dosen). Ni `FAQPage` ni `HowTo` (motivo en `guia-de-cocido-nevera-2026-11-24.md` §4) |
 | Enlaces internos | Las tres anclas de `de/index.html` que hoy van a la guía inglesa (`de/index.html:625`, `:707`, `:748`) y la URL dentro del texto de la FAQ JSON-LD (`:103`) deberían apuntar a esta. Y desde la guía DE de comida cocinada (`#beschriften`), que hoy enlaza la inglesa |
