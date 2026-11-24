@@ -50,6 +50,7 @@ PAGES = {
     "fr/guides/etiquettes-nfc-boites.html": ("fr", "guide-nfc", True),
     "de/ratgeber/gefrierschrank-inventarliste.html": ("de", "guia-inventar", True),
     "fr/guides/plat-cuisine-frigo.html": ("fr", "guide-plat-cuisine", True),
+    "fr/guides/inventaire-congelateur.html": ("fr", "guide-inventaire", True),
     "pt/index.html": ("pt", "portada", True),
     "pt/suporte.html": ("pt", "soporte", False),
 }
