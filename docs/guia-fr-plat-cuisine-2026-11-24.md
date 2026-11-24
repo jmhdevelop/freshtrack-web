@@ -34,7 +34,7 @@ francesas (o europeas), y donde no hay cifra, se dice.
 | S5 | **DGCCRF**, «La chaîne du froid : adoptez les bons réflexes !», en sante.fr — `https://www.sante.fr/la-chaine-du-froid-adoptez-les-bons-reflexes` | 19/08/2019 | «plats cuisinés maison»: entre 0 °C y +4 °C; restos «dans des emballages fermés et consommez-les rapidement»; termómetro si la nevera no lleva indicador | días |
 | S6 | **EFSA**, Safe2Eat (francés) — `https://www.efsa.europa.eu/fr/safe2eat/proper-food-handling` | — | «Ne pas laisser les aliments cuits à température ambiante plus de 2 heures»; nevera «de préférence en dessous de 5 °C»; sopas y guisos a 70 °C | días |
 | S7 | **FSA** (Reino Unido), «Home food fact checker» — `https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker` (releída hoy) | — | arroz: en la nevera y en 24 horas | — |
-| S8 | **Verbraucherzentrale Niedersachsen** (Alemania), tabla de congelación — `https://www.verbraucherzentrale-niedersachsen.de/wissen/lebensmittel/gesund-ernaehren/tipps-und-tricks-beim-einfrieren-und-auftauen-120371` | Stand 26.09.2025 | «Selbstgekochtes: 1 - 3 Monate» a −18 °C | — |
+| S8 | **FRC** (Fédération romande des consommateurs, Suiza), «Fiche 6 · La congélation» (PDF) — `https://www.frc.ch/wp-content/uploads/2020/09/FRC-GASPI-ALIM-F6-CONGELATION-LR-WEB.pdf` | septiembre 2020 | «Plats précuisinés, restes (rôti ou sauce bolognaise) : 2-3 mois» (según el laboratorio cantonal de Zúrich); la congelación «freine le développement de bactéries nocives mais ne les tue pas»; no recongelar salvo si se ha cocinado entretanto | — |
 
 **Cómo se han leído las de la Anses:** `anses.fr` responde a `curl` y a `WebFetch` con un desafío anti-bots
 (CrowdSec). He leído las tres páginas en la Wayback Machine: S2 en la copia del 31-07-2026, S3 en la del
@@ -96,12 +96,12 @@ FreshTrack NFC propose dix types de plats cuisinés (plus la viande et le poisso
 
 *(`p.fine`)* Sources : Santé publique France – Manger Bouger, [Petit guide de la conservation des aliments](https://www.sante.fr/petit-guide-de-la-conservation-des-aliments-et-regles-dhygiene) (21/04/2022) ; Anses, [Comment bien conserver ses aliments](https://www.anses.fr/fr/content/comment-bien-conserver-ses-aliments-et-ne-pas-interrompre-la-chaine-du-froid) (23/06/2022) ; FSA, [Home food fact checker](https://www.gov.uk/government/publications/home-food-fact-checker/home-food-fact-checker) (en anglais). Jours de FreshTrack NFC : valeurs par défaut de l'app.
 
-**\* Pas de chiffre propre pour ce plat.** C'est la règle générale de Santé publique France pour les restes faits maison (« dans les 3 jours »). **† Pas de durée officielle française** en mois pour les plats cuisinés dans les pages que nous avons lues. À titre de repère étranger, la Verbraucherzentrale de Basse-Saxe (Allemagne) indique [1 à 3 mois](https://www.verbraucherzentrale-niedersachsen.de/wissen/lebensmittel/gesund-ernaehren/tipps-und-tricks-beim-einfrieren-und-auftauen-120371) à −18 °C pour les plats faits maison.
+**\* Pas de chiffre propre pour ce plat.** C'est la règle générale de Santé publique France pour les restes faits maison (« dans les 3 jours »). **† Pas de durée officielle française** en mois pour les plats cuisinés dans les pages que nous avons lues. Repère suisse : la Fédération romande des consommateurs (FRC) conseille [2 à 3 mois](https://www.frc.ch/wp-content/uploads/2020/09/FRC-GASPI-ALIM-F6-CONGELATION-LR-WEB.pdf) pour les plats précuisinés et les restes congelés à la maison.
 
 Trois choses pour lire le tableau :
 - **Les valeurs de FreshTrack NFC ne sont pas officielles.** Ce sont des valeurs de départ, modifiables (voir plus bas).
 - **Là où l'app dépasse les sources, nous le disons** : la sauce (4 jours au lieu de 3) ; le riz (2 jours, alors que la FSA dit 24 heures) ; et tout dessert ou sauce à base d'œufs crus, que l'app ne distingue pas (3 ou 4 jours au lieu de 24 heures). Si tu veux t'en tenir aux sources, règle la sauce sur 3 jours et le riz sur 1, et compte toi-même 24 heures pour une mousse ou une mayonnaise.
-- **Au congélateur**, les 30, 60 ou 90 jours de l'app correspondent à 1 à 3 mois : dans la fourchette du repère allemand, sans source française.
+- **Au congélateur**, l'app propose 30, 60 ou 90 jours, soit 1 à 3 mois : jamais au-delà des 2 à 3 mois de la FRC, parfois en dessous.
 
 **Compte à partir du jour de la cuisson**, pas du jour où tu ouvres la boîte ⚑1. C'est notre lecture : les sources parlent de « restes » sans fixer d'autre point de départ.
 
@@ -129,7 +129,7 @@ En pratique : riz étalé en couche fine pour refroidir vite, au frigo dans les 
 
 - **Le plus tôt possible.** L'Anses : congeler « dès l'achat ou la préparation et non en fin de date limite de consommation ».
 - **−18 °C** (Santé publique France). Le froid arrête la multiplication des bactéries, mais « la plupart des microorganismes survivent à la congélation » (Anses).
-- **Combien de mois ?** Les sources françaises que nous avons lues ne donnent pas de durée pour les plats cuisinés. Repère étranger : 1 à 3 mois pour les plats faits maison (Verbraucherzentrale de Basse-Saxe).
+- **Combien de mois ?** Les sources françaises que nous avons lues ne donnent pas de durée pour les plats cuisinés. Repère suisse : 2 à 3 mois pour les plats précuisinés et les restes (FRC). Plus de durées, aliment par aliment, dans notre [inventaire du congélateur à imprimer](inventaire-congelateur.html).
 - **Décongeler au réfrigérateur**, au micro-ondes en position décongélation, ou directement en réchauffant (Anses). Une fois décongelé : **pas plus de trois jours**, et **ne pas recongeler** (Anses, Santé publique France).
 
 ## Noter la date  `#date`
@@ -169,7 +169,7 @@ Aucune source officielle française que nous avons lue ne donne de durée. La FS
 Il ne doit pas rester plus de 2 heures à température ambiante (Santé publique France, EFSA). Pour qu'il refroidisse vite, répartis-le en petites quantités peu épaisses.
 
 ### Combien de temps se conserve un plat fait maison au congélateur ?
-Les sources françaises consultées ne donnent pas de durée en mois. L'Anses conseille de congeler dès la préparation, pas en fin de conservation. Repère allemand : 1 à 3 mois à −18 °C.
+Les sources françaises consultées ne donnent pas de durée en mois. La FRC (Suisse) conseille 2 à 3 mois pour les restes et plats précuisinés. L'Anses conseille de congeler dès la préparation, pas en fin de conservation.
 
 ### Combien de temps se conserve un plat décongelé ?
 Pas plus de trois jours, au réfrigérateur, et sans le recongeler (Anses).
@@ -198,7 +198,7 @@ como mucho en la zona fría (Anses). Tabla con los diez tipos de la app: Francia
 la regla de 3 días y se dice); **arroz**: ninguna fuente francesa da horas, se cita la FSA británica (24 h) como
 referencia extranjera y se explica con la Anses por qué (Bacillus cereus, primera causa de intoxicaciones
 colectivas bacterianas en Francia, toxina que resiste el calor; enfriar y a la nevera en 2 horas). Congelador:
-sin meses en fuentes francesas (referencia alemana 1-3 meses); congelar pronto, descongelar en nevera,
+sin meses en fuentes francesas (referencia suiza de la FRC: 2-3 meses para restos); congelar pronto, descongelar en nevera,
 descongelado máximo 3 días y sin recongelar (Anses). La guía dice dónde la app pone más días que las fuentes
 (salsa, arroz, y postres o salsas con huevo crudo, que la app no distingue). Etiquetado (dos fechas, contenido
 en claro, tapa, o etiqueta NFC), «el olor no basta», grupos de riesgo. FreshTrack NFC como forma de aplicarlo
