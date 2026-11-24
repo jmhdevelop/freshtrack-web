@@ -274,6 +274,7 @@
   <url>
     <loc>https://freshtrack.softapp.tech/guias/inventario-congelador.html</loc>
     <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/ratgeber/gefrierschrank-inventarliste.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/inventario-congelador.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/freezer-inventory.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/freezer-inventory.html"/>
@@ -281,6 +282,7 @@
   <url>
     <loc>https://freshtrack.softapp.tech/en/guides/freezer-inventory.html</loc>
     <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/ratgeber/gefrierschrank-inventarliste.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/inventario-congelador.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/freezer-inventory.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/freezer-inventory.html"/>
@@ -362,5 +364,13 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/"/>
+  </url>
+  <url>
+    <loc>https://freshtrack.softapp.tech/de/ratgeber/gefrierschrank-inventarliste.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://freshtrack.softapp.tech/de/ratgeber/gefrierschrank-inventarliste.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://freshtrack.softapp.tech/guias/inventario-congelador.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://freshtrack.softapp.tech/en/guides/freezer-inventory.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://freshtrack.softapp.tech/en/guides/freezer-inventory.html"/>
   </url>
 </urlset>
