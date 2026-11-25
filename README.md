@@ -28,6 +28,5 @@ gh api repos/jmhdevelop/freshtrack-web/pages/builds/latest
 ## Otras apps
 
 - [Dibus](https://dibus.softapp.tech/) — colorear para niños
-- [DevToolbox](https://devtoolbox.softapp.tech/) — limpieza y monitorización para Mac
 
 Todas las apps de la casa, en <https://softapp.tech>.
