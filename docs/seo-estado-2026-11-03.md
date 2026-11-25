@@ -103,7 +103,7 @@ mirarlo en la interfaz. Sin dato hoy.
 | Origen | Enlaza a | `rel` | ¿Aporta autoridad? |
 |---|---|---|---|
 | `softapp.tech` | portada y guía NFC ES | normal | **No**: es el mismo dominio registrable (`softapp.tech`). Ayuda a rastrear, no da autoridad |
-| `dibus.softapp.tech`, `devtoolbox.softapp.tech` | portada | normal | No, por lo mismo |
+| `dibus.softapp.tech` | portada | normal | No, por lo mismo |
 | Ficha de App Store `id6791699550` (web del desarrollador y privacidad) | portada y `privacidad.html` | `nofollow noopener noreferrer` | No: sirve para descubrir las páginas |
 | `github.com/jmhdevelop/freshtrack-web`: README y campo `homepage` | portada y `/en/` | `nofollow` | No: sirve para descubrir las páginas. **Novedad:** el repo es **PUBLIC** (en septiembre era privado y Google no lo veía) |
 | Terceros (medios, blogs, foros, directorios) | — | — | **Ninguno encontrado.** Una búsqueda web de `"freshtrack.softapp.tech"` no devuelve ni una página nuestra ni una mención; solo salen otros FreshTrack |
